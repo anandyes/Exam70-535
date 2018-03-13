@@ -57,7 +57,7 @@ Important Azure AD features:
 
     - is a security service that enables you to gain insights into potential security vulnerabilities affecting users in your organization (more specifically, their identities)
 
-### Active Directory editions [^](https://azure.microsoft.com/documentation/articles/active-directory-editions/) [^](https://azure.microsoft.com/en-us/pricing/details/active-directory/)
+### Active Directory editions [^](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis#choose-an-edition) [^](https://azure.microsoft.com/en-us/pricing/details/active-directory/)
 
 * **Free** - manage users, synchronize with on-premises Active Directory, establish SSO across Azure and Office 365, and access SaaS applications in the Azure AD application gallery
 

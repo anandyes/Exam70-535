@@ -70,9 +70,9 @@ Design connectivity to on-premises data from Azure applications using Azure Rela
 
 ## 4. Design Security and Identity Solutions (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=security)
 ### 4.1 Design an identity solution
-Design AD Connect synchronization; design federated identities using Active Directory Federation Services (AD FS); design solutions for Multi-Factor Authentication (MFA); design an architecture using Active Directory on-premises and Azure Active Directory (AAD); determine when to use Azure AD Domain Services; design security for Mobile Apps using AAD
+Design AD Connect synchronization[^](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect); design federated identities using Active Directory Federation Services (AD FS)[^](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-azure-adfs); design solutions for Multi-Factor Authentication (MFA)[^](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/); design an architecture using Active Directory on-premises and Azure Active Directory (AAD)[^](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect); determine when to use Azure AD Domain Services[^](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/active-directory-ds-overview); design security for Mobile Apps using AAD[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)[^](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
 
-Notes:
+My Notes:
 * [Azure AD](notes/AzureAD.md)
 
 ### 4.2 Secure resources by using identity providers
