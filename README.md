@@ -3,8 +3,8 @@
 | Disclaimer: This guide is being updated as I am preparing for the Exam 70-535. All the content referred here are available in public domain and not my creation. This is just a collection for easy reference. Use it with your own discretion. |
 ||
 
-# Architecting Microsoft Azure Solutions (70-535)
-## 1. Design Compute Infrastructure (20-25%)
+# Architecting Microsoft Azure Solutions (70-535)[^](https://www.microsoft.com/en-us/learning/exam-70-535.aspx)
+## 1. Design Compute Infrastructure (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=Compute)
 ### 1.1 Design solutions using virtual machines 
 * Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure; use web app for containers; design VM Scale Sets; design for compute-intensive tasks using Azure Batch; define a migration strategy from cloud services; recommend use of Azure Backup and Azure Site Recovery
 
@@ -32,14 +32,14 @@
 
 ### 1.2 Design solutions for serverless computing 
 * Use Azure Functions to implement event-driven actions; design for serverless computing using Azure Container Instances; design application solutions by using Azure Logic Apps, Azure Functions, or both; determine when to use API management service
-### 1.3 Design microservices-based solutions   
+### 1.3 Design microservices-based solutions [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)   
 * Determine when a container-based solution is appropriate; determine when container-orchestration is appropriate; determine when Azure Service Fabric (ASF) is appropriate; determine when Azure Functions is appropriate; determine when to use API management service; determine when Web API is appropriate; determine which platform is appropriate for container orchestration; consider migrating existing assets versus cloud native deployment; design lifecycle management strategies
-### 1.4 Design web applications 
+### 1.4 Design web applications [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=web)
 * Design Azure App Service Web Apps; design custom web API; secure Web API; design Web Apps for scalability and performance; design for high availability using Azure Web Apps in multiple regions; determine which App service plan to use; design Web Apps for business continuity; determine when to use Azure App Service Environment (ASE); design for API apps; determine when to use API management service; determine when to use Web Apps on Linux; determine when to use a CDN; determine when to use a cache, including Azure Redis cache
 ### 1.5 Create compute-intensive application 
 * Design high-performance computing (HPC) and other compute-intensive applications using Azure Services; determine when to use Azure Batch; design stateless components to accommodate scale; design lifecycle strategy for Azure Batch
 
-## 2. Design Data Implementation (15-20%)
+## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
 ### 2.1 Design for Azure Storage solutions
 Determine when to use Azure Blob Storage, blob tiers, Azure Files, disks, and StorSimple
 ### 2.2 Design for Azure Data Services
@@ -58,7 +58,7 @@ Determine when to use Azure Redis Cache, Azure Table Storage, Azure Data Lake, A
 ### 2.5 Design for CosmosDB storage
 Determine when to use MongoDB API, DocumentDB API, Graph API, Azure Tables API; design for cost, performance, data consistency, availability, and business continuity
 
-## 3. Design Networking Implementation (15-20%)
+## 3. Design Networking Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=network)
 ### 3.1 Design Azure virtual networks
 Design solutions that use Azure networking services: design for load balancing using Azure Load Balancer and Azure Traffic Manager; define DNS, DHCP, and IP strategies; determine when to use Azure Application Gateway; determine when to use multi-node application gateways, Traffic Manager and load balancers
 ### 3.2 Design external connectivity for Azure Virtual Networks
@@ -68,7 +68,7 @@ Determine when to use network virtual appliances; design a perimeter network (DM
 ### 3.4 Design connectivity for hybrid applications
 Design connectivity to on-premises data from Azure applications using Azure Relay Service, Azure Data Management Gateway for Data Factory, Azure On-Premises Data Gateway, Hybrid Connections, or Azure Web App’s virtual private network (VPN) capability; identify constraints for connectivity with VPN; identify options for joining VMs to domains
 
-## 4. Design Security and Identity Solutions (20-25%)
+## 4. Design Security and Identity Solutions (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=security)
 ### 4.1 Design an identity solution
 Design AD Connect synchronization; design federated identities using Active Directory Federation Services (AD FS); design solutions for Multi-Factor Authentication (MFA); design an architecture using Active Directory on-premises and Azure Active Directory (AAD); determine when to use Azure AD Domain Services; design security for Mobile Apps using AAD
 ### 4.2 Secure resources by using identity providers
@@ -81,7 +81,7 @@ Determine when to use Azure RBAC standard roles and custom roles; define an Azur
 ### 4.5 Manage security risks by using an appropriate security solution
 Identify, assess, and mitigate security risks by using Azure Security Center, Operations Management Suite Security and Audit solutions, and other services; determine when to use Azure AD Identity Protection; determine when to use Advanced Threat Detection; determine an appropriate endpoint protection strategy
 
-## 5. Design Solutions by using Platform Services (10-15%)
+## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
 Determine when to use the appropriate Cognitive Services, Azure Bot Service, Azure Machine Learning, and other categories that fall under cognitive AI
 ### 5.2 Design for IoT
@@ -91,7 +91,7 @@ Design a messaging architecture; determine when to use Azure Storage Queues, Azu
 ### 5.4 Design for media service solutions
 Define solutions using Azure Media Services, video indexer, video API, computer vision API, preview, and other media related services
 
-## 6. Design for Operations (10-15%)
+## 6. Design for Operations (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=mgmt)
 ### 6.1 Design an application monitoring and alerting strategy
 Determine the appropriate Microsoft products and services for monitoring applications on Azure; define solutions for analyzing logs and enabling alerts using Azure Log Analytics; define solutions for analyzing performance metrics and enabling alerts using Azure Monitor; define a solution for monitoring applications and enabling alerts using Application Insights
 ### 6.2 Design a platform monitoring and alerting strategy
