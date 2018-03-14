@@ -78,31 +78,37 @@ Design connectivity to on-premises data from Azure applications using Azure Rela
 * Design security for Mobile Apps using AAD[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)[^](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
 
 Notes:
-* [Azure AD](notes/AzureAD.md)
+* [Azure AD Notes](notes/AzureAD.md)
+* [Introduction to Azure Security](https://docs.microsoft.com/en-us/azure/security/azure-security)
 
 ### 4.2 Secure resources by using identity providers
 * Design solutions that use external or consumer identity providers such as Microsoft account, Facebook, Google, and Yahoo;[^](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview) 
 * Determine when to use Azure AD B2C and Azure AD B2B[^](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-compare-b2c); 
 *  Design mobile apps using AAD B2C or AAD B2B [^](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-oauth-code)
 ### 4.3 Design a data security solution
-* Design data security solutions for Azure services; 
-* Determine when to use Azure Storage encryption, Azure Disk Encryption, Azure SQL Database security capabilities, and Azure Key Vault; 
-* Design for protecting secrets in ARM templates using Azure Key Vault; 
-* Design for protecting application secrets
-using Azure Key Vault;
-* Design a solution for managing certificates using Azure Key Vault; 
-* Design solutions that use Azure AD Managed Service Identity
+* Design data security solutions for Azure services[^](https://docs.microsoft.com/en-us/azure/security/security-azure-encryption-overview); 
+* Determine when to use Azure Storage encryption[^](https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption), Azure Disk Encryption[^](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption), Azure SQL Database security capabilities[^](https://docs.microsoft.com/en-us/azure/security/azure-database-security-overview), and Azure Key Vault[^](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis); 
+* Design for protecting secrets in ARM templates using Azure Key Vault[^](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter); 
+* Design for protecting application secrets using Azure Key Vault[^](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/key-vault);
+* Design a solution for managing certificates using Azure Key Vault[^](https://blogs.technet.microsoft.com/kv/2016/09/26/get-started-with-azure-key-vault-certificates/)[^](http://www.rahulpnath.com/blog/manage-certificates-in-azure-key-vault/); 
+* Design solutions that use Azure AD Managed Service Identity[^](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)
+
+Note: The Azure SQL Database service is only available through TCP port 1433.
+
+Useful Links :
+* [Azure Database Security Best Practices](https://docs.microsoft.com/azure/security/azure-database-security-best-practices)
+
 ### 4.4 Design a mechanism of governance and policies for administering Azure resources
 * Determine when to use Azure RBAC standard roles and custom roles; 
 * Define an Azure RBAC strategy; determine when to use Azure resource policies[^](https://docs.microsoft.com/en-us/azure/azure-policy/azure-policy-introduction); 
-* Determine when to use Azure AD Privileged Identity Management; 
-* Design solutions that use Azure AD Managed Service Identity; 
-* Determine when to use HSM-backed keys
+* Determine when to use Azure AD Privileged Identity Management[^](); 
+* Design solutions that use Azure AD Managed Service Identity[^](); 
+* Determine when to use HSM-backed keys[^]()
 ### 4.5 Manage security risks by using an appropriate security solution
-* Identify, assess, and mitigate security risks by using Azure Security Center, Operations Management Suite Security and Audit solutions, and other services; 
-* Determine when to use Azure AD Identity Protection; 
-* Determine when to use Advanced Threat Detection; 
-* Determine an appropriate endpoint protection strategy
+* Identify, assess, and mitigate security risks by using Azure Security Center, Operations Management Suite Security and Audit solutions, and other services[^](); 
+* Determine when to use Azure AD Identity Protection[^](); 
+* Determine when to use Advanced Threat Detection[^](); 
+* Determine an appropriate endpoint protection strategy[^]()
 
 ## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
