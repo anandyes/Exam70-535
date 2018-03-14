@@ -99,16 +99,17 @@ Useful Links :
 * [Azure Database Security Best Practices](https://docs.microsoft.com/azure/security/azure-database-security-best-practices)
 
 ### 4.4 Design a mechanism of governance and policies for administering Azure resources
-* Determine when to use Azure RBAC standard roles and custom roles; 
-* Define an Azure RBAC strategy; determine when to use Azure resource policies[^](https://docs.microsoft.com/en-us/azure/azure-policy/azure-policy-introduction); 
-* Determine when to use Azure AD Privileged Identity Management[^](); 
-* Design solutions that use Azure AD Managed Service Identity[^](); 
-* Determine when to use HSM-backed keys[^]()
+* Determine when to use Azure RBAC standard roles and custom roles[^](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is); 
+* Define an Azure RBAC strategy[^](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-configure);
+* Determine when to use Azure resource policies[^](https://docs.microsoft.com/en-us/azure/azure-policy/azure-policy-introduction); 
+* Determine when to use Azure AD Privileged Identity Management[^](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/azure-pim-resource-rbac); 
+* Design solutions that use Azure AD Managed Service Identity[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-managed-service-identity); 
+* Determine when to use HSM-backed keys[^](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys)[^](https://blogs.technet.microsoft.com/kv/2015/01/08/azure-key-vault-making-the-cloud-safer/)
 ### 4.5 Manage security risks by using an appropriate security solution
-* Identify, assess, and mitigate security risks by using Azure Security Center, Operations Management Suite Security and Audit solutions, and other services[^](); 
-* Determine when to use Azure AD Identity Protection[^](); 
-* Determine when to use Advanced Threat Detection[^](); 
-* Determine an appropriate endpoint protection strategy[^]()
+* Identify, assess, and mitigate security risks by using Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/security-center-get-started), Operations Management Suite Security and Audit solutions, and other services[^](https://docs.microsoft.com/en-us/azure/operations-management-suite/oms-security-getting-started); 
+* Determine when to use Azure AD Identity Protection[^](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-identityprotection); 
+* Determine when to use Advanced Threat Detection[^](https://docs.microsoft.com/en-us/azure/security/azure-threat-detection); 
+* Determine an appropriate endpoint protection strategy[^](https://docs.microsoft.com/en-us/azure/security/azure-security-antimalware)[^](https://docs.microsoft.com/en-us/azure/security-center/security-center-install-endpoint-protection)
 
 ## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
@@ -122,7 +123,10 @@ Define solutions using Azure Media Services, video indexer, video API, computer 
 
 ## 6. Design for Operations (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=mgmt)
 ### 6.1 Design an application monitoring and alerting strategy
-Determine the appropriate Microsoft products and services for monitoring applications on Azure; define solutions for analyzing logs and enabling alerts using Azure Log Analytics; define solutions for analyzing performance metrics and enabling alerts using Azure Monitor; define a solution for monitoring applications and enabling alerts using Application Insights
+* Determine the appropriate Microsoft products and services for monitoring applications on Azure; 
+* Define solutions for analyzing logs and enabling alerts using Azure Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-overview);
+* Define solutions for analyzing performance metrics and enabling alerts using Azure Monitor; 
+* Define a solution for monitoring applications and enabling alerts using Application Insights
 ### 6.2 Design a platform monitoring and alerting strategy
 Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health, Azure Advisor, and Activity Log; define a monitoring solution for Azure Networks using Log Analytics and Network Watcher service; monitor security with Azure Security Center
 ### 6.3 Design an operations automation strategy
