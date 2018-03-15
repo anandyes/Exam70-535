@@ -131,3 +131,8 @@ Define solutions using Azure Media Services, video indexer, video API, computer 
 Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health, Azure Advisor, and Activity Log; define a monitoring solution for Azure Networks using Log Analytics and Network Watcher service; monitor security with Azure Security Center
 ### 6.3 Design an operations automation strategy
 Determine when to use Azure Automation, Chef, Puppet, PowerShell, Desired State Configuration (DSC), Event Grid, and Azure Logic Apps; define a strategy for auto-scaling; define a strategy for enabling periodic processes and tasks
+
+## Useful links
+
+* [Avail free training](https://azure.microsoft.com/en-us/training/learning-paths/azure-solution-architect/)
+* [Books to study](https://buildazure.com/2018/02/01/book-exam-ref-70-535-architecting-microsoft-azure-solutions/)[^](http://amzn.to/2Fsg5IG)
