@@ -41,9 +41,11 @@
 
 ## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
 ### 2.1 Design for Azure Storage solutions
-Determine when to use Azure Blob Storage, blob tiers, Azure Files, disks, and StorSimple
+Determine when to use Azure Blob Storage[^](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks), blob tiers, Azure Files, disks, and StorSimple
+* Notes [^](notes/DataStorage.md)
+
 ### 2.2 Design for Azure Data Services
-Determine when to use Data Catalog, Azure Data Factory, SQL Data Warehouse, Azure Data Lake Analytics, Azure Analysis Services, and Azure HDInsight
+Determine when to use Data Catalog[^](), Azure Data Factory[^](), SQL Data Warehouse[^](), Azure Data Lake Analytics[^](), Azure Analysis Services[^](), and Azure HDInsight[^]()
 ### 2.3 Design for relational database storage
 Determine when to use Azure SQL Database and SQL Server Stretch Database; design for scalability and features; determine when to use Azure Database for MySQL and Azure Database for PostgreSQL; design for HA/DR, geo-replication; design a backup and recovery strategy
 

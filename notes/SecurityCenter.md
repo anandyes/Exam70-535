@@ -1,8 +1,10 @@
 ## Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/security-center-intro)
 
 Why use Security Center:
-* Centralized policy management
-* Continuous security assessment
+* Centralized policy management:
+    - A security policy defines the desired configuration of the workloads
+* Continuous security assessment: 
+    - Security Center analyzes the security state of compute resources, virtual networks, storage and data services, and applications.
 * Actionable recommendations
 * Advanced cloud defenses
 * Prioritized alerts and incidents
