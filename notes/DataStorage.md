@@ -1,6 +1,4 @@
-## Design Data Implementation (15 - 20 %)
-
-### Determine when to use Azure Blob Storage, blob tiers, Azure Files, disks, and StorSimple
+### Azure Storage Types:
 
 * Blob Storage
   * Types - Block Blobs, Page Blobs, Append Blobs
@@ -34,6 +32,7 @@
   
 * Queue Storage
   * Messages can be up to 64 KB in size
+  
 * Table Storage
   * stores structured NoSQL data in the cloud, providing a key/attribute store with a schemaless design
 
