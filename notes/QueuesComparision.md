@@ -23,9 +23,9 @@
 
 ### When to use which Azure service for messages or events
 
-|||
-|--|--|--|--|--|--|--|
-| | Event Grid | Event Hubs | IoT Hub | Topics |Service Bus Queues | Storage Queues |
+||||||||
+|:--|:--|:--|:--|:--|:--|:--|
+|  | Event Grid | Event Hubs | IoT Hub | Topics |Service Bus Queues | Storage Queues |
 |Event ingestion | X | X | X |
 |Device management| | | X | | | |
 |Messaging|X|X|X|X|X|X|
@@ -34,4 +34,4 @@
 |Use for decoupling| |X |X |X |X |X |
 |Use for publish/subscribe| X |
 |Max message size| 64 KB |256 KB| 256 KB| 1 MB| 1 MB| 64 KB |
-||
+||||||||
