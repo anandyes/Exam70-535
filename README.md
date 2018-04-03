@@ -50,13 +50,16 @@ Notes:
 ### 2.2 Design for Azure Data Services
 Determine when to use Data Catalog[^](), Azure Data Factory[^](), SQL Data Warehouse[^](), Azure Data Lake Analytics[^](), Azure Analysis Services[^](), and Azure HDInsight[^]()
 ### 2.3 Design for relational database storage
-Determine when to use Azure SQL Database and SQL Server Stretch Database; design for scalability and features; determine when to use Azure Database for MySQL and Azure Database for PostgreSQL; design for HA/DR, geo-replication; design a backup and recovery strategy
+Determine when to use Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and SQL Server Stretch Database; design for scalability and features; determine when to use Azure Database for MySQL and Azure Database for PostgreSQL; design for HA/DR, geo-replication; design a backup and recovery strategy
 
+Notes and Usefull links:
+* [Database Notes](notes/Database.md)
 * [SQL Database Automated Backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
 * [Long-term backup retension upto 10 years using Azure Recovery Services vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention)
 * [Business continuity overview](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity)
 * [Designing highly available services using Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-designing-cloud-solutions-for-disaster-recovery)
 * [Disaster recovery strategies for applications using SQL Database elastic pools](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-disaster-recovery-strategies-for-applications-with-elastic-pool)
+
 
 ### 2.4 Design for NoSQL storage
 Determine when to use Azure Redis Cache, Azure Table Storage, Azure Data Lake, Azure Search, Time Series Insights
