@@ -97,3 +97,34 @@ Backup retention period
 
 Data Encryption at rest
 * Transparent data encryption with Bring your own key support (TDE with BYOK) [^](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql)
+
+### Stretch Database[^](https://docs.microsoft.com/en-us/sql/sql-server/stretch-database/stretch-database)
+
+Stretch Database migrates your cold data transparently and securely to the Microsoft Azure cloud
+
+Benifits of Stretch Database:
+* Provides cost effective cold data storage - Stretch warm and cold transactional data dynamically from SQL Server to Microsoft Azure with SQL Server Stretch Database
+* Doesn’t require changes to queries or applications - access data seamlessly whether on-prem SQL Server or stretched to the cloud 
+* Streamlines on-premises data maintenance - Reduce on-premises maintenance and storage for your data
+* Keeps your data secure even during migration - RLS, SQL Always Encryption for data in motion and all security features apply to Stretch Database
+
+Candidates for Stretch Database
+* Stretch Database targets transactional databases with large amounts of cold data, typically stored in a small number of tables
+* Use Microsoft Data Migration Assistant tool [^](https://docs.microsoft.com/en-us/sql/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor)
+* Data Migration Assistant replaces and extends Stretch Database Advisor
+
+### SQL Data Warehouse[^](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/)
+
+* SQL Data Warehouse is a relational database with Massively Parallel Processing (MPP) for big data analytics.
+* Polybase T-SQL queries imports big data into SQL Warehouse
+* MPP provides high-performance analytics.
+* SQL Data Warehouse stores data into relational tables with columnar storage
+
+Azure SQL Data Warehouse performance tiers
+* Optimized for Elasticity performance tier - lowest entry price and scale to support majority workloads
+* Optimized for Compute performance tier - NVMe SSD cache, for workloads of continuous, blazing fast performance.
+
+SQL Data Warehouse supports these sharding patterns:
+* Hash
+* Round Robin
+* Replicate
