@@ -41,16 +41,38 @@
 
 ## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
 ### 2.1 Design for Azure Storage solutions
-Determine when to use Azure Blob Storage[^](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks), blob tiers, Azure Files, disks, and StorSimple
+Determine when to use 
+* Azure Blob Storage[^](https://docs.microsoft.com/en-in/azure/storage/blobs/storage-blobs-introduction) [^](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks)
+* Blob tiers [^](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers)
+* Azure Files [^](https://docs.microsoft.com/en-in/azure/storage/files/storage-files-introduction)
+* Disks [^](https://docs.microsoft.com/en-in/azure/virtual-machines/windows/about-disks-and-vhds)
+* StorSimple [^](https://docs.microsoft.com/en-us/azure/storsimple/storsimple-ova-overview)
 
 Notes:
  * [Azure Storage](notes/DataStorage.md)
  * [Queues Comparision](notes/QueuesComparision.md)
 
 ### 2.2 Design for Azure Data Services
-Determine when to use Data Catalog[^](), Azure Data Factory[^](), SQL Data Warehouse[^](), Azure Data Lake Analytics[^](), Azure Analysis Services[^](), and Azure HDInsight[^]()
+Determine when to use 
+* Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog) [^](notes/Database.md#Azure-Data-Catalog)
+* Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/) [^](notes/Database.md#Azure-Data-Factory)
+* SQL Data Warehouse[^](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/) [^](notes/Database.md#sql-data-warehouse)
+* Azure Data Lake Analytics[^](https://docs.microsoft.com/en-us/azure/data-lake-analytics/data-lake-analytics-overview) [^](notes/Database.md#Azure-Data-Lake-Analytics)
+* Azure Analysis Services[^](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview) [^](notes/Database.md#Azure-Analysis-Services) and
+* Azure HDInsight[^](https://docs.microsoft.com/en-us/azure/hdinsight/) [^](notes/Database.md#azure-hdinsight)
+
 ### 2.3 Design for relational database storage
-Determine when to use Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and SQL Server Stretch Database; design for scalability and features; determine when to use Azure Database for MySQL and Azure Database for PostgreSQL; design for HA/DR, geo-replication; design a backup and recovery strategy
+Determine when to use
+* Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+* SQL Server Stretch Database[^](notes/Database.md#stretch-database)
+
+Design for scalability [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction) and features [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features)
+
+Determine when to use 
+* Azure Database for MySQL[^](https://docs.microsoft.com/en-us/azure/mysql/overview) 
+* Azure Database for PostgreSQL[^](https://docs.microsoft.com/en-us/azure/postgresql/overview)
+
+Design for HA/DR, geo-replication; design a backup and recovery strategy
 
 Notes and Usefull links:
 * [Database Notes](notes/Database.md)
@@ -62,9 +84,21 @@ Notes and Usefull links:
 
 
 ### 2.4 Design for NoSQL storage
-Determine when to use Azure Redis Cache, Azure Table Storage, Azure Data Lake, Azure Search, Time Series Insights
-### 2.5 Design for CosmosDB storage
-Determine when to use MongoDB API, DocumentDB API, Graph API, Azure Tables API; design for cost, performance, data consistency, availability, and business continuity
+Determine when to use
+* Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)[^](notes/Database.md#AzureRedisCache),
+* Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/) [^](notes/Database.md#Azure-Table-Storage),
+* Azure Data Lake[^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview) [^](notes/Database.md#Azure-Data-Lake-Store),
+* Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)[^](notes/Database.md#Azure-Search),
+* Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview) [^](notes/Database.md#Azure-Time-Series-Insights)
+
+### 2.5 Design for CosmosDB storage [^](https://azure.microsoft.com/en-us/services/cosmos-db/)
+Determine when to use 
+* MongoDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction),
+* DocumentDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction),
+* Graph API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction),
+* Azure Tables API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction)
+
+Design for cost [^](https://docs.microsoft.com/en-us/azure/cosmos-db/key-value-store-cost), performance [^](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data), data consistency [^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels), availability [^](https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore), and business continuity [^](https://docs.microsoft.com/en-us/azure/cosmos-db/regional-failover)
 
 ## 3. Design Networking Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=network)
 ### 3.1 Design Azure virtual networks

@@ -23,19 +23,19 @@ Built-in Intelligence
 * Automatic tuning - Azure SQL Database identifies CREATE INDEX, DROP INDEX, and FORCE LAST GOOD PLAN recommendations that can optimize the database and shows them in Azure portal
 
 ### Scaling out with Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction)
-Elastic Database features
-* Elastic Database client library [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-database-client-library) -  is used to manage a shard set.
-* Elastic Database split-merge tool [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-overview-split-and-merge) - is used to move data from one shard to another
-* Elastic Database jobs (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview) - runs scheduled or ad hoc T-SQL scripts against all databases
-* Elastic Database query (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-query-overview) - allows you to write a query that spans all databases in the shard set
-* Elastic transactions [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-transactions-overview) - allow you to run transactions that span several databases.
+* Elastic Database tools
+    * Elastic Database client library [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-database-client-library) -  is used to manage a shard set.
+    * Elastic Database split-merge tool [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-overview-split-and-merge) - is used to move data from one shard to another
+    * Elastic Database jobs (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview) - runs scheduled or ad hoc T-SQL scripts against all databases
+    * Elastic Database query (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-query-overview) - allows you to write a query that spans all databases in the shard set
+    * Elastic transactions [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-transactions-overview) - allow you to run transactions that span several databases.
 
 * Horizontal scaling / "scaling out" - using sharding,  managed using Elastic Database client library
 * Verticle scaling / "scaling up"  - using Azure powershell to change serivce tier or placing in elastic pool
 
-**Sharding** is a technique to distribute large amounts of identically structured data across a number of independent databases.
+* **Sharding** is a technique to distribute large amounts of identically structured data across a number of independent databases.
 
-Multi-tenant and Single-tenant sharding patterns.
+* Multi-tenant and Single-tenant sharding patterns.
 
 ### SQL Database Security
 
@@ -125,6 +125,240 @@ Azure SQL Data Warehouse performance tiers
 * Optimized for Compute performance tier - NVMe SSD cache, for workloads of continuous, blazing fast performance.
 
 SQL Data Warehouse supports these sharding patterns:
-* Hash
-* Round Robin
-* Replicate
+* Hash distributed tables - highest query performance for joins and aggregations on large tables
+* Round Robin distributed tables - used as staging tables
+* Replicated tables - for small tables
+
+### Azure Database for MySQL[^](https://docs.microsoft.com/en-us/azure/mysql/overview)
+
+Azure Database for MySQL is a relational database service in the Microsoft cloud based on the MySQL Community Edition database engine.
+* High availability built-in, 99.99% SLA
+* Dynamic scalability using tiers (Basic, General Purpose, and Memory Optimized)
+* Built-in performance monitoring and alerting to emails and webhooks
+* Automatic backups and point-in-time-restore for up to 35 days
+* Storage encryption (AES) for data at-rest and SSL connection for Data in-motion
+* Connection Security using SSL settings and firewall rules
+
+### Azure Database for PostgreSQL[^](https://docs.microsoft.com/en-us/azure/postgresql/overview)
+Azure Database for PostgreSQL is a relational database service based on the open source Postgres database engine. 
+All features are same as MySQL
+
+## Azure NoSQL Storage
+
+### Azure Redis Cache [^](https://azure.microsoft.com/en-in/services/cache/)
+Azure Redis Cache, a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications. In-Memory data store.
+
+Azure Redis Cache Tiers:
+* Basic - Single node, multiple sizes, ideal for development/test and non-critical workloads. No SLA. Size up to 53GB
+* Standard - Two-node Primary/Replica, with 99.9% SLA. Size up to 53GB. 
+* Premium - Two-node Primary/Replica with up to 10 shards, 99.9% SLA, DR, enhanced security, Redis Persistance, Redis Cluster (Shards data across multiple nodes), VNet deployment for security and isolation. For bigger workloads Sizes 6GB up to 530GB.
+
+### Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/)
+* A NoSQL key-value storage service, schemaless semi-structured datasets. Ideal for storing structured, non-relational data.
+
+Common uses of Table Storage
+
+* Storing TBs of structured data capable of serving web scale applications
+* Storing datasets that don't require complex joins, foreign keys, or stored procedures and can be denormalized for fast access
+* Quickly querying data using a clustered index
+* Accessing data using the OData protocol and LINQ queries with WCF Data Service .NET Libraries
+
+Table Storage Components
+* Storage Account - globally unique, part of URI
+* Table - collection of entities
+* Entity - similar to rows, a primary key and set of properties
+* Property - name, typed-value pair, similar to a column 
+
+An entity can have up to 252 properties and 3 system properties (Partition Key, Row Key, Timestamp)
+
+
+### Azure Cosmos DB [^](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
+Azure Cosmos DB is a globally distributed, multi-model database service that supports  document, key-value, wide-column, and graph databases.
+
+Key Capabilities:
+* Multi-homing APIs, distribute data across Azure regions, ensures  lowest possible latency.
+* Multiple data models and popular APIs for accessing and querying data
+    * The atom-record-sequence (ARS) based data model supports multiple data models
+    * Data model APIS supported:
+        * SQL API : A schema-less JSON database engine with rich SQL querying capabilities
+        * MongoDB API : A massively scalable MongoDB-as-a-Service powered by Azure Cosmos DB platform
+        * Cassandra API : A globally distributed Cassandra-as-a-Service powered by Azure Cosmos DB platform
+        * Graph (Gremlin) API: A fully managed, horizontally scalable graph database service that makes it easy to build and run applications that work with highly connected datasets supporting Open Graph APIs (based on the Apache TinkerPop specification, Apache Gremlin).
+        * Table API : A key-value database service built to provide premium capabilities (such as, automatic indexing, guaranteed low latency, global distribution) to existing Azure Table storage applications without making any app changes.
+        * Additional data models will be added soon
+* Elastically and independently scale throughput and storage on demand and worldwide
+    * Easily scale database throughput at a per-second granularity
+    * Scale storage size transparently and automatically to handle your size requirements 
+* Build highly responsive and mission-critical applications
+    *  guarantees end-to-end low latency at the 99th percentile
+* Ensure "always on" availability
+    * 99.99% availability SLA for all single region database accounts, and all 99.999% read availability on all multi-region database accounts
+    * Deploy to any number of Azure regions for higher availability and better performance.
+    * Dynamically set priorities to regions and simulate a failure of one or more regions with zero-data loss guarantees to test the end-to-end availability for the entire app 
+* Write globally distributed applications, the right way
+    * Five well-defined, practical, and intuitive consistency models
+* Money back guarantees
+    * Industry-leading, financially backed, comprehensive service level agreements for availability, latency, throughput, and consistency for your mission-critical data
+* No database schema/index management
+    * Rapidly iterate the schema of your application without worrying about database schema and/or index management.
+    * Azure Cosmos DB’s database engine is fully schema-agnostic – it automatically indexes all the data it ingests without requiring any schema or indexes and serves blazing fast queries
+* Low cost of ownership
+    * Five to ten times more cost effective than a non-managed solution or an on-prem NoSQL solution
+    * Three times cheaper than AWS DynamoDB or Google Spanne
+
+#### Concepts
+* **Serverless** database
+    * Serverless computing with Azure CosmosDB and Azure Functions
+        * create and deploy event-driven serverless apps with low-latency access to rich data for a global user base.
+    * Ways to integrate databases and serverless apps
+        * Azure Cosmos DB trigger
+        * Input binding
+        * Output binding
+        * works with SQL API and Graph API accounts only
+* Global distribution
+* Partitioning [^](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data)
+* Unique keys[^](https://docs.microsoft.com/en-us/azure/cosmos-db/unique-keys)
+* Consistency[^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)
+    * Strong
+    * Bounded Staleness
+    * Session
+    * Consistent Prefix
+    * Eventual
+* Throughput [^](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units)
+* Multi-Model APIs
+    * SQL API (DocumentDB API) [^](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction)
+    * MangoDB API [^](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+    * Graph API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction),
+    * Azure Tables API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction)
+    * Cassandra API [^](https://docs.microsoft.com/en-us/azure/cosmos-db/cassandra-introduction)
+* Security : Encryption at rest, Firewall support, Securing access to data using Master Key and Resource Tokens
+* TCO
+
+### Azure Data Lake Store [^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview)
+* Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.
+* Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics
+* Use Data Lake Store to create a hyper-scale, Hadoop-compatible repository for analytics on data of any size, type, and ingestion speed.
+* Specifically designed to enable analytics on the stored data and is tuned for performance for data analytics scenarios
+* Built for Hadoop - compatible with HDFS, WebHDFS API
+* Unlimited storage, petabyte files
+* Performance-tuned for big data analytics
+* Enterprise-ready: Highly-available and secure
+* Supports all Data - can store any data in their native format, as is, without requiring any prior transformations.
+
+Securing Data Lake
+* Authentication - Azure Active Directory (AAD), OAuth /OpenID, MFA, Federation
+* Access Control - POSIX ACL by WebHDFS, RBAC
+* Encryption - supports "on by default," transparent encryption
+* Network Isolation - Establish Firewalls
+* Data Protection - uses TLS / HTTPS for data in transit
+
+The two modes for managing the master encryption key (MEKs) are as follows:
+* Service managed keys
+* Customer managed keys - Key rotation
+
+Three types of Keys for design of data encryption:
+* Master Encryption Key (MEK)
+* Data Encryption Key (DEK)
+* Block Encryption Key (BEK)
+
+### Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)
+* Azure Search is a search-as-a-service cloud solution that gives developers APIs and tools for adding a rich search experience over your content in web, mobile, and enterprise applications
+* Features:
+    * Full text search and text analysis, Simple query and Lucene query syntax
+    * functionality accessed using REST API / .Net SDK
+    * Data integration - any source, JSON data structure
+    * Linguistic analysis
+    * Geo-search
+    * Core features common to search-centric apps: scoring, search suggestions, faceting, synonyms, geo-search, filters, hit highlighting, sorting, paging
+    * Relevance - simple scoring
+    * Monitoring and reporting
+    * Tools - Import data wizard, Search explorer
+    * Highly available, fully managed and scalable
+    * Supports OData version 4
+
+### Azure Time Series Insights [^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview)
+* Time Series Insights is built for storing, visualizing, and querying large amounts of time series data, such as that generated by IoT devices.
+* Four Key Jobs
+    * Fully integrated with cloud. It joins metadata with telemetry and indexes your data in a columnar store.
+    * manages storage of data, stores your data in memory and SSD’s for up to 400 days
+    * provides out-of-the-box visualization via the TSI explorer
+    * provides a query service that are easy to integrate for embedding your time series data into custom applications.
+
+## Azure Data Services
+
+### Azure Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog)
+Azure Data Catalog is a fully managed cloud service that serves as a system of registration and system of discovery for enterprise data sources. The enterprise users can discover the data sources they need and understand the data sources they find and it helps organizations to get more value from their existing data.
+
+Capabilities of Data Catalog
+* Register Data sources
+* Discover Data sources
+* Annotate Data sources
+* Document Data sources
+* Connect to Data sources
+* Register Big data sources - Hadoop HDFS
+* Data profiling - provides statistics and info about regiestered data assets
+* Manage ownership of data assets (standard edition, not in Free edition)
+* Save searches and pin data assets
+* Setup Business glossary , governed tagging
+* Secure Access (standard edition, not in Free edition)
+* View related data assets 
+
+### Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/)
+
+*  Azure Data Factory is a managed cloud service that's built for the complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects
+* It's a cloud-based data integration service that allows you to create data-driven workflows in the cloud for orchestrating and automating data movement and data transformation
+* Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores.
+* The pipelines (data-driven workflows) in Azure Data Factory typically perform the following four steps:
+    * Connect and Collect
+    * Transform and enrich
+    * Publish
+    * Monitor
+* Azure Data Factory is composed of four key components:
+    * Pipeline - A data factory can have one or more pipelines. A pipeline is a group of activities. Together, the activities in a pipeline perform a task
+    * Activity - A pipeline can have one or more activities. Activities define the actions to perform on your data. Activities represent a processing step in a pipeline.
+        * Data movement activities - Copy Activity in Data Factory copies data from a source data store to a sink data store.
+        * Data transformation activities - transformation activities that can be added to pipelines either individually or chained with another activity.
+        * Control activities
+    * Datasets - Datasets represent data structures within the data stores
+    * Linked services - Linked services are much like connection strings, which define the connection information that's needed for Data Factory to connect to external resources. Represents Data Store and Compuete resource.
+* Triggers - Triggers represent the unit of processing that determines when a pipeline execution needs to be kicked off
+* Pipeline runs - A pipeline run is an instance of the pipeline execution
+* Parameters - Parameters are key-value pairs of read-only configuration
+* Control flow - Control flow is an orchestration of pipeline activities that includes chaining activities in a sequence, branching, defining parameters at the pipeline level, and passing arguments while invoking the pipeline on-demand or from a trigger
+
+
+### Azure Data Lake Analytics[^](https://docs.microsoft.com/en-us/azure/data-lake-analytics/data-lake-analytics-overview)
+* Azure Data Lake Analytics (ADLA) is an on-demand analytics job service that simplifies big data
+* U-SQL lets you analyze data across Data Lake Store, SQL Server in Azure, Azure SQL Database, and Azure SQL Data Warehouse
+* U-SQL is a query language that extends the familiar, simple, declarative nature of SQL with the expressive power of C#
+* Use Data Lake Analytics to run big data analysis jobs that scale to massive data sets
+* Diagnostic logging allows you to collect data access audit trails.
+* ADLA Quota Limits
+    * Max ADLA accounts per subscription: 5
+    * Max Analytics Units (AUs) per account: 250
+    * Max concurrent U-SQL jobs per account: 20
+
+### Azure Analysis Services[^](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview)
+* Azure Analysis Services provides enterprise-grade data modeling in the cloud
+* full-managed PaaS service
+* you can mashup and combine data from multiple sources, define metrics, and secure your data in a single, trusted semantic data model
+* The data model provides an easier and faster way for your users to browse massive amounts of data with client applications like Power BI, Excel, Reporting Services, third-party, and custom apps.
+* built on SQL Server Analysis Services
+* supports tabular models at the 1200 and 1400 compatibility levels.
+* The on-premises data gateway acts as a bridge, providing secure data transfer between on-premises data sources and your Azure Analysis Services servers in the cloud.
+* Azure Analysis Services uses Azure Active Directory (Azure AD) for identity management and user authentication
+* Tabular Model Scripting Language (TMSL) is the command and object model definition syntax for Analysis Services tabular model databases at compatibility level 1200 or higher
+
+### Azure HDInsight[^](https://azure.microsoft.com/en-in/services/hdinsight/)
+Azure HDInsight is a cloud distribution of the Hadoop components from HDP. Azure HDInsight is a fully-managed cloud service that makes it easy, fast, and cost-effective to process massive amounts of data. Use popular open-source frameworks such as Hadoop, Spark, Hive, LLAP, Kafka, Storm, R & more. Azure HDInsight enables a broad range of scenarios such as ETL, Data Warehousing, Machine Learning, IoT and more.
+
+Azure HDInsight can be used for a variety of scenarios in big data processing. It can be historical data (data that's already collected and stored) or real-time data (data that's directly streamed from the source). The scenarios for processing such data can be summarized in the following categories: 
+
+* Batch processing (ETL) : unstructured or structured data is extracted from heterogeneous data sources, transformed into a structured format and loaded into a data store for data science or data warehousing
+* Internet of Things (IoT) : process streaming data that's received in real time from a variety of devices
+* Data science : build applications that extract critical insights from data, use ML on top to predict future trends
+* Data warehousing : perform interactive queries at petabyte scales over structured or unstructured data in any format
+* Hybrid: extend your existing on-premises big data infrastructure to Azure to leverage the advanced analytics capabilities of the cloud
+
+* HDInsight supports Java and Python as default programming languages. JVM languages (Clojure, Jython, Scala), Hadoop-specific
+languages (Pig Latin and HiveQL)
