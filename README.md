@@ -85,11 +85,11 @@ Notes and Usefull links:
 
 ### 2.4 Design for NoSQL storage
 Determine when to use
-* Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)[^](notes/Database.md#AzureRedisCache),
-* Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/) [^](notes/Database.md#Azure-Table-Storage),
-* Azure Data Lake[^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview) [^](notes/Database.md#Azure-Data-Lake-Store),
-* Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)[^](notes/Database.md#Azure-Search),
-* Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview) [^](notes/Database.md#Azure-Time-Series-Insights)
+* Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)[^](notes/Database.md#azure-redis-cache),
+* Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/) [^](notes/Database.md#azure-table-storage),
+* Azure Data Lake[^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview) [^](notes/Database.md#azure-data-lake-store),
+* Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)[^](notes/Database.md#azure-Search),
+* Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview) [^](notes/Database.md#azure-time-series-insights)
 
 ### 2.5 Design for CosmosDB storage [^](https://azure.microsoft.com/en-us/services/cosmos-db/)
 Determine when to use 
@@ -155,7 +155,7 @@ Useful Links :
 
 ## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
-Determine when to use the appropriate Cognitive Services, Azure Bot Service, Azure Machine Learning, and other categories that fall under cognitive AI
+Determine when to use the appropriate Cognitive Services[^](https://azure.microsoft.com/en-us/services/cognitive-services/), Azure Bot Service[^](https://docs.microsoft.com/en-in/azure/bot-service/), Azure Machine Learning[^](), and other categories that fall under cognitive AI
 ### 5.2 Design for IoT
 Determine when to use Stream Analytics, IoT Hubs, Event Hubs, real-time analytics, Time Series Insights, IoT Edge, Notification Hubs, Event Grid, and other categories that fall under IoT
 ### 5.3 Design messaging solution architectures
