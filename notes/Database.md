@@ -362,3 +362,12 @@ Azure HDInsight can be used for a variety of scenarios in big data processing. I
 
 * HDInsight supports Java and Python as default programming languages. JVM languages (Clojure, Jython, Scala), Hadoop-specific
 languages (Pig Latin and HiveQL)
+
+### Azure Databricks[^](https://docs.microsoft.com/en-us/azure/azure-databricks/what-is-azure-databricks)
+* Azure Databricks is an Apache Spark-based analytics platform
+* Spark in Azure Databricks includes the following components:
+    * Spark SQL and DataFrames
+    * Streaming
+    * MLib
+    * GraphX
+    * Spark Core API:  R, SQL, Python, Scala, and Java

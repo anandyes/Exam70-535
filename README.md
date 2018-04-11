@@ -88,7 +88,7 @@ Determine when to use
 * Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)[^](notes/Database.md#azure-redis-cache),
 * Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/) [^](notes/Database.md#azure-table-storage),
 * Azure Data Lake[^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview) [^](notes/Database.md#azure-data-lake-store),
-* Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)[^](notes/Database.md#azure-Search),
+* Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)[^](notes/Database.md#azure-search),
 * Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview) [^](notes/Database.md#azure-time-series-insights)
 
 ### 2.5 Design for CosmosDB storage [^](https://azure.microsoft.com/en-us/services/cosmos-db/)
@@ -155,13 +155,16 @@ Useful Links :
 
 ## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
-Determine when to use the appropriate Cognitive Services[^](https://azure.microsoft.com/en-us/services/cognitive-services/), Azure Bot Service[^](https://docs.microsoft.com/en-in/azure/bot-service/), Azure Machine Learning[^](), and other categories that fall under cognitive AI
+Determine when to use the appropriate Cognitive Services[^](https://azure.microsoft.com/en-us/services/cognitive-services/)[^](notes/PlatformServices.md#cognitive-services), Azure Bot Service[^](https://docs.microsoft.com/en-in/azure/bot-service/)[^](notes/PlatformServices.md#azure-bot-service), Azure Machine Learning[^](https://docs.microsoft.com/en-us/azure/machine-learning/)[^](notes/PlatformServices.md#azure-machine-learning), and other categories that fall under cognitive AI
 ### 5.2 Design for IoT
-Determine when to use Stream Analytics, IoT Hubs, Event Hubs, real-time analytics, Time Series Insights, IoT Edge, Notification Hubs, Event Grid, and other categories that fall under IoT
+Determine when to use Stream Analytics[^](https://azure.microsoft.com/en-us/services/stream-analytics/)[^](notes/PlatformServices.md#azure-stream-analytics), IoT Hubs[^](https://azure.microsoft.com/en-us/services/iot-hub/)[^](notes/PlatformServices.md#iot-hub), Event Hubs[^](https://azure.microsoft.com/en-us/services/event-hubs/)[^](notes/PlatformServices.md#event-hub), real-time analytics[^]()[^](), Time Series Insights[^](https://azure.microsoft.com/en-us/services/time-series-insights/)[^](notes/Database.md#azure-time-series-insights), IoT Edge[^](https://azure.microsoft.com/en-us/services/iot-edge/)[^](notes/PlatformServices.md#iot-edge), Notification Hubs[^](https://docs.microsoft.com/en-in/azure/notification-hubs/)[^](notes/PlatformServices.md#notification-hub), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/PlatformServices.md#event-grid), and other categories that fall under IoT[^](https://azure.microsoft.com/en-us/product-categories/iot/)
 ### 5.3 Design messaging solution architectures
 Design a messaging architecture; determine when to use Azure Storage Queues, Azure Service Bus, Azure Event Hubs, Event Grid, Azure Relay, Azure Functions, and Azure Logic Apps; design a push notification strategy for Mobile Apps; design for performance and scale
 ### 5.4 Design for media service solutions
 Define solutions using Azure Media Services, video indexer, video API, computer vision API, preview, and other media related services
+
+Notes:
+* [Azure Platform Services Notes](notes/PlatformServices.md)
 
 ## 6. Design for Operations (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=mgmt)
 ### 6.1 Design an application monitoring and alerting strategy
