@@ -100,7 +100,7 @@ Azure IoT Hub is a fully managed service that enables reliable and secure bidire
 
 Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
 
-| -- | -- | -- | -- |
+|||||
 |:--|:--|:--|:--|
 | IoT Capability | IoT Hub standard tier | IoT Hub basic tier | Event Hubs |
 | Device-to-cloud messaging | Yes | Yes | Yes |
@@ -112,9 +112,9 @@ Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/az
 | Cloud-to-device messaging | Yes | | |
 | Device twin and device management | Yes | | |
 | IoT Edge | Yes | | |
-| - | - | - | - |
+|||||
 
-IoT Hub communcation options: 
+IoT Hub communication options: 
 * Device Twins
 * Per-device authentication and secure connectivity
 * Route device-to-cloud messages to Azure services based on declarative rules
@@ -222,3 +222,39 @@ Notification Hub advantages:
     * Serverless application architectures
     * Ops Automation
     * Application integration
+
+### Azure IoT Central
+* A software as a service (SaaS) offering, to deploy a fully managed, end-to-end solution that enables powerful IoT scenarios without requiring cloud-solution expertise.
+
+### Azure IoT Suite
+* A platform as a service (PaaS) offering, fully customizable solutions for common scenarios to accelerate your IoT project.
+
+### Azure Relay
+* Hybrid connections and WCF Relay are part of Azure Relay service
+* Comminicate with on-premises resources without opening a firewall port
+* Hybrid connections support multi-platform scenarios
+* Hybrid connections can be used to connect to any TCP port including SQL DB's and Web API's 
+* WCF Relay can communicate with WCF services and .Net Framework only
+* Connect an Azure Web App to on-presmises via VPN
+* VNet integration gives a multi tenant Web App Access to resources accessible by an Azure VNet.
+* App Service Environment (ASE) can be deployed into an Azure VNet for bidirectional access.
+
+### Useful links
+* Compare Queues: [^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
+
+* Performance:[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-performance-improvements)
+
+* High-Availability:[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-async-messaging)
+
+* Premium messaging: [^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-premium-messaging)
+
+* Asynchronous Messaging Primer: [^](https://msdn.microsoft.com/library/dn589781.aspx)
+
+### Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview)
+* Microsoft Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications
+* Azure Media Services concepts[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-concepts)
+* Media Services Applications
+    * Live event Streaming service with CDN capabilities
+    * Studio grade encoding
+    * Content protection and encryption
+    * Distribute content across multiple channels and devices

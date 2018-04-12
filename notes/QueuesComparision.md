@@ -1,4 +1,4 @@
-## Storage Queues vs. Service Bus Queues
+## Storage Queues vs. Service Bus Queues [^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
 
 
 |||
@@ -21,7 +21,7 @@
 |||
 
 
-### When to use which Azure service for messages or events
+### When to use which Azure service for messages or events [^](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
 
 ||||||||
 |:--|:--|:--|:--|:--|:--|:--|
