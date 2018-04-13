@@ -161,23 +161,25 @@ Determine when to use Stream Analytics[^](https://azure.microsoft.com/en-us/serv
 ### 5.3 Design messaging solution architectures
 Design a messaging architecture [^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging); determine when to use Azure Storage Queues, Azure Service Bus[^](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview), Azure Event Hubs, Event Grid, Azure Relay, Azure Functions, and Azure Logic Apps[^](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)[^](https://azure.microsoft.com/en-in/blog/events-data-points-and-messages-choosing-the-right-azure-messaging-service-for-your-data/)[^](notes/QueuesComparsion.md); design a push notification strategy for Mobile Apps [^](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-enterprise-push-notification-architecture); design for performance[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-performance-improvements) and scale[^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/performance-scalability)
 ### 5.4 Design for media service solutions
-Define solutions using Azure Media Services[^](), video indexer[^](https://docs.microsoft.com/en-in/azure/cognitive-services/video-indexer/video-indexer-overview), video API[^](), computer vision API[^](https://azure.microsoft.com/en-in/services/cognitive-services/computer-vision/), preview, and other media related services
+Define solutions using Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview), video indexer[^](https://docs.microsoft.com/en-in/azure/cognitive-services/video-indexer/video-indexer-overview), video API, computer vision API[^](https://azure.microsoft.com/en-in/services/cognitive-services/computer-vision/), preview, and other media related services
 
 Notes:
 * [Azure Platform Services](notes/PlatformServices.md)
 
 ## 6. Design for Operations (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=mgmt)
 ### 6.1 Design an application monitoring and alerting strategy
-* Determine the appropriate Microsoft products and services for monitoring applications on Azure; 
-* Define solutions for analyzing logs and enabling alerts using Azure Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-overview);
-* Define solutions for analyzing performance metrics and enabling alerts using Azure Monitor; 
-* Define a solution for monitoring applications and enabling alerts using Application Insights
+* Determine the appropriate Microsoft products and services for monitoring applications on Azure [^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview)
+* Define solutions for analyzing logs and enabling alerts using Azure Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-overview)
+* Define solutions for analyzing performance metrics and enabling alerts using Azure Monitor[^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor/) 
+* Define a solution for monitoring applications and enabling alerts using Application Insights[^](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-overview)
+
 ### 6.2 Design a platform monitoring and alerting strategy
-Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health, Azure Advisor, and Activity Log; define a monitoring solution for Azure Networks using Log Analytics and Network Watcher service; monitor security with Azure Security Center
+Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health[^](https://docs.microsoft.com/en-us/azure/service-health/), Azure Advisor[^](https://azure.microsoft.com/en-us/services/advisor/), and Activity Log[^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs); define a monitoring solution for Azure Networks using Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-azure-networking-analytics) and Network Watcher service[^](https://azure.microsoft.com/en-us/services/network-watcher/); monitor security with Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/)
 ### 6.3 Design an operations automation strategy
-Determine when to use Azure Automation, Chef, Puppet, PowerShell, Desired State Configuration (DSC), Event Grid, and Azure Logic Apps; define a strategy for auto-scaling; define a strategy for enabling periodic processes and tasks
+Determine when to use Azure Automation[^](https://azure.microsoft.com/en-us/services/automation/), Chef[^](), Puppet[^](), PowerShell[^](https://docs.microsoft.com/en-in/powershell/dsc/overview), Desired State Configuration (DSC)[^](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/), and Azure Logic Apps[^](https://azure.microsoft.com/en-us/services/logic-apps/); define a strategy for auto-scaling[^](); define a strategy for enabling periodic processes and tasks[^]()
 
 ## Useful links
 
 * [Avail free training](https://azure.microsoft.com/en-us/training/learning-paths/azure-solution-architect/)
-* [Books to study](https://buildazure.com/2018/02/01/book-exam-ref-70-535-architecting-microsoft-azure-solutions/)[^](http://amzn.to/2Fsg5IG)
+* [Books to study](https://buildazure.com/2018/02/01/book-exam-ref-70-535-architecting-microsoft-azure-solutions/) [^](http://amzn.to/2Fsg5IG)
+* [Azure Services](https://azure.microsoft.com/en-in/services/)
