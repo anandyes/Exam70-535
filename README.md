@@ -37,7 +37,11 @@
 ### 1.4 Design web applications [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=web)
 * Design Azure App Service Web Apps; design custom web API; secure Web API; design Web Apps for scalability and performance; design for high availability using Azure Web Apps in multiple regions; determine which App service plan to use; design Web Apps for business continuity; determine when to use Azure App Service Environment (ASE); design for API apps; determine when to use API management service; determine when to use Web Apps on Linux; determine when to use a CDN; determine when to use a cache, including Azure Redis cache
 ### 1.5 Create compute-intensive application 
-* Design high-performance computing (HPC) and other compute-intensive applications using Azure Services; determine when to use Azure Batch; design stateless components to accommodate scale; design lifecycle strategy for Azure Batch
+* Design high-performance computing (HPC) and other compute-intensive applications using Azure Services[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/high-performance-computing) [^](https://azure.microsoft.com/en-in/solutions/high-performance-computing/#references); determine when to use Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview); design stateless components to accommodate scale[^](); design lifecycle strategy for Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-api-basics)
+
+Useful links:
+
+[Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
 
 ## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
 ### 2.1 Design for Azure Storage solutions
@@ -74,7 +78,7 @@ Determine when to use
 
 Design for HA/DR, geo-replication; design a backup and recovery strategy
 
-Notes and Usefull links:
+Useful links:
 * [Database Notes](notes/Database.md)
 * [SQL Database Automated Backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
 * [Long-term backup retension upto 10 years using Azure Recovery Services vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention)
@@ -176,7 +180,7 @@ Notes:
 ### 6.2 Design a platform monitoring and alerting strategy
 Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health[^](https://docs.microsoft.com/en-us/azure/service-health/), Azure Advisor[^](https://azure.microsoft.com/en-us/services/advisor/), and Activity Log[^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs); define a monitoring solution for Azure Networks using Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-azure-networking-analytics) and Network Watcher service[^](https://azure.microsoft.com/en-us/services/network-watcher/); monitor security with Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/)
 ### 6.3 Design an operations automation strategy
-Determine when to use Azure Automation[^](https://azure.microsoft.com/en-us/services/automation/)[^](notes/Operations.md#azure-automation), Chef[^](notes/Operations.md#chef), Puppet[^](notes/Operations.md#puppet), PowerShell[^](https://docs.microsoft.com/en-in/powershell/dsc/overview)[^](notes/Operations.md#powershell), Desired State Configuration (DSC)[^](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)[^](notes/Operations.md#desired-state-configuration-), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/Operations.md#azure-event-grid), and Azure Logic Apps[^](https://azure.microsoft.com/en-us/services/logic-apps/)[^](notes/Operations.md#azure-logic-apps); define a strategy for auto-scaling[^](https://azure.microsoft.com/en-us/features/autoscale/)[^](notes/Operations.md#azure-autoscale); define a strategy for enabling periodic processes and tasks[^](https://docs.microsoft.com/en-us/azure/scheduler/scheduler-intro)[^](notes/Operations.md#azure-scheduler)
+Determine when to use Azure Automation[^](https://azure.microsoft.com/en-us/services/automation/)[^](notes/Operations.md#azure-automation), Chef[^](notes/Operations.md#chef), Puppet[^](https://puppet.com/products/managed-technology/microsoft-windows-azure)[^](notes/Operations.md#puppet), PowerShell[^](https://docs.microsoft.com/en-in/powershell/dsc/overview)[^](notes/Operations.md#powershell), Desired State Configuration (DSC)[^](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)[^](notes/Operations.md#desired-state-configuration-), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/Operations.md#azure-event-grid), and Azure Logic Apps[^](https://azure.microsoft.com/en-us/services/logic-apps/)[^](notes/Operations.md#azure-logic-apps); define a strategy for auto-scaling[^](https://azure.microsoft.com/en-us/features/autoscale/)[^](notes/Operations.md#azure-autoscale); define a strategy for enabling periodic processes and tasks[^](https://docs.microsoft.com/en-us/azure/scheduler/scheduler-intro)[^](notes/Operations.md#azure-scheduler)
 
 Notes:
 * [Monitoring and Alerting, Operations Automation](notes/Operations.md)
