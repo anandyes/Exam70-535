@@ -156,12 +156,35 @@ A gateway is software that facilitates access to data that resides on a private,
 * Examples include Chats, dashboards and monitoring applications, collaborative applications (such as simultaneous editing of documents), job progress updates, and real-time forms.
 * The SignalR API contains two models for communicating between clients and servers: Persistent Connections and Hubs.
 ### Multi region, high availability Azure web apps[^](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region)
+
+Azure App Service application in multiple regions to achieve high availability![](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/images/multi-region-web-app-diagram.png)
+* A multi-region architecture can provide higher availability than deploying to a single region. 
+* If a regional outage affects the primary region, you can use Traffic Manager to fail over to the secondary region.
+*  General approaches to achieving high availability across regions:
+    * Active/passive with hot standby - Hot standby means the VMs in the secondary region are allocated and running at all times.
+    * Active/passive with cold standby - Cold standby means the VMs in the secondary region are not allocated until needed for failover. This approach costs less to run, but will generally take longer to come online during a failure.
+    * Active/active -  Both regions are active, and requests are load balanced between them
+
 ### App Service plans[^](https://docs.microsoft.com/en-in/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-### Business Continuity[^](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications)
+* An App Service plan defines a set of compute resources for a web app to run. These compute resources are analogous to the server farm in conventional web hosting. 
+*  categories of pricing tiers:
+    * Shared compute: Free and Shared -  runs an app on the same Azure VM as other App Service apps, including apps of other customers. The resources cannot scale out. Use only for development and testing purposes.
+    * Dedicated compute: The Basic, Standard, Premium, and PremiumV2 tiers -run apps on dedicated Azure VMs. Only apps in the same App Service plan share the same compute resources.
+    * Isolated: runs dedicated Azure VMs on dedicated Azure VNets, which provides network isolation on top of compute isolation. It provides the maximum scale-out capabilities.
+    * Consumption: only available to function apps. It scales the functions dynamically depending on workload.
+* The new PremiumV2 pricing tier provides Dv2-series VMs with faster processors, SSD storage, and double memory-to-core ratio compared to Standard tier. 
+### Business Continuity[^](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications)[^](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions)[^](https://docs.microsoft.com/en-in/azure/architecture/resiliency/index)
+* Business continuity (BC), is the ability to perform essential business functions during and after adverse conditions, such as a natural disaster or a downed service. BC covers the entire operation of the business, including physical facilities, people, communications, transportation, and IT.
+* Disaster recovery (DR) is focused on recovering from a catastrophic loss of application functionality.
+* Paired regions - Azure region is paired with another region within the same geography, together making a regional pair
+* Paired region benifits - Physical Isolation, Platform provided replication, region recovery order, sequential updates, Data residency.
+* Azure Site Recovery provides a simple way to replicate Azure VMs between regions
+* Azure Traffic Manager - uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints.
+* Azure disaster scenarios - Application failure, Data corruption, Network outage, Failure of a dependent service, Region-wide service disruption, Azure-wide service disruption, Reduced application functionality
 ### Azure App Service Environment (ASE)[^](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
 * The Azure App Service Environment is an Azure App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale.
 
-### API apps[^](https://azure.microsoft.com/en-in/services/app-service/api/)
+### API apps[^](https://azure.microsoft.com/en-in/services/app-service/api/)[^](https://docs.microsoft.com/en-in/azure/app-service/app-service-web-tutorial-rest-api)
 ### API management service[^](https://docs.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
 * API Management (APIM) helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services.
 * The **API gateway** is the endpoint that accepts API calls and routes them to your backends.
@@ -169,7 +192,28 @@ A gateway is software that facilitates access to data that resides on a private,
 * The **Developer portal** serves as the main web presence for developers
 
 ### Web Apps on Linux[^](https://docs.microsoft.com/en-in/azure/app-service/containers/app-service-linux-intro)
+* Customers can use App Service on Linux to host web apps natively on Linux for supported application stacks.
+* App Service on Linux supports a number of Built-in images
+* App Service on Linux is only supported with Basic and Standard app service plans and does not have a Free or Shared tier
+* You cannot create Web App for Containers in an App Service plan already hosting non-Linux Web Apps.
+
 ### CDN[^](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview)
+* A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users.
+* CDNs store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency. 
+* Benefits of using Azure CDN to deliver web site assets include:
+    * Better performance and improved user experience for end users, especially when using applications in which multiple round-trips are required to load content.
+    * Large scaling to better handle instantaneous high loads, such as the start of a product launch event.
+    * Distribution of user requests and serving of content directly from edge servers so that less traffic is sent to the origin server.
+* The file remains cached on the edge server in the POP until the time-to-live (TTL) specified by its HTTP headers expires
+* The default TTL is seven days.
+* Azure CDN offers the following key features:
+    * Dynamic site acceleration
+    * CDN caching rules
+    * HTTPS custom domain support
+    * Azure diagnostics logs
+    * File compression
+    * Geo-filtering
+
 ### Using Cache [^](https://docs.microsoft.com/en-us/azure/cdn/cdn-how-caching-works), Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)
 
 [Azure App Service, Virtual Machines, Service Fabric, and Cloud Services comparison](https://docs.microsoft.com/en-us/azure/app-service/choose-web-site-cloud-service-vm?toc=%2fazure%2fapp-service%2fcontainers%2ftoc.json)
