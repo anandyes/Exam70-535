@@ -25,9 +25,9 @@
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
 * Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](notes/Compute.md#design-application-solutions-by-using-azure-logic-apps-)
-* Determine when to use API management service[^](notes/Compute.md##api-management-service)
+* Determine when to use API management service[^](notes/Compute.md#api-management-service)
 
-### 1.3 Design microservices-based solutions [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
+### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
 * Determine when a container-based solution is appropriate
 * Determine when container-orchestration is appropriate
 * Determine when Azure Service Fabric (ASF) is appropriate
@@ -163,6 +163,7 @@ Note: The Azure SQL Database service is only available through TCP port 1433.
 
 Useful Links :
 * [Azure Database Security Best Practices](https://docs.microsoft.com/azure/security/azure-database-security-best-practices)
+* [Determine hybrid identity lifecycle adoption strategy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-hybrid-identity-design-considerations-lifecycle-adoption-strategy)
 
 ### 4.4 Design a mechanism of governance and policies for administering Azure resources
 * Determine when to use Azure RBAC standard roles and custom roles[^](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-what-is); 

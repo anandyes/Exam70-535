@@ -1,11 +1,28 @@
+# Compute[^](https://azure.microsoft.com/en-us/product-categories/compute/)
+
+|||
+|:--|:--|
+| **If you want to...** | **Use this** |
+|Provision Linux and Windows virtual machines in seconds with the configurations of your choice | Virtual Machines |
+|Achieve high availability by autoscaling to create thousands of VMs in minutes | Virtual Machine Scale Sets |
+|Simplify the deployment, management, and operations of Kubernetes with a fully managed service| Azure Container Service (AKS) |
+|Accelerate app development using an event-driven, serverless architecture| Functions|
+|Develop microservices and orchestrate containers on Windows and Linux| Service Fabric|
+|Quickly create cloud apps for web and mobile with fully managed platform| App Service |
+|Containerize apps and easily run containers with a single command| Container Instances |
+|Cloud-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of virtual machines | Batch |
+|Create highly available, scalable cloud applications and APIs that help you focus on apps instead of hardware | Cloud Services |
+|||
+
+
 ## Virtual Machines
- availability sets, fault domains, and update domains
- web app for containers
- VM Scale Sets
- compute-intensive tasks using Azure Batch
- migration strategy from cloud services
- Azure Backup
- Azure Site Recovery
+- availability sets, fault domains, and update domains
+- web app for containers
+- VM Scale Sets
+- compute-intensive tasks using Azure Batch
+- migration strategy from cloud services
+- Azure Backup
+- Azure Site Recovery
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy
@@ -19,7 +36,7 @@
 * Serverless computing is the abstraction of servers, infrastructure and operating systems.
 * Serverless computing is driven by the reaction to events and triggers happening in near-real-time—in the cloud
 
-### Use Azure Functions - implement event-driven actions[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
+### Use Azure Functions to implement event-driven actions[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
 * Azure Functions is a serverless compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure
 * Azure Functions is a solution for easily running small pieces of code, or "functions," in the cloud
 * Key features of Functions are:
@@ -103,6 +120,7 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
     * Session-based interactive applications - such as online gaming or instant messaging that require low latency reads and writes
     * Data analytics and workflows - transactional and financial systems - handles large scale and has low latency through its stateful services
 
+#### Comparision of Azure App Service, Virtual Machines, Service Fabric, and Cloud Services [^](https://docs.microsoft.com/en-in/azure/app-service/choose-web-site-cloud-service-vm)
 #### When to use what?
 |||||
 |:--|:--|:--|:--|
@@ -116,10 +134,10 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
 |Orchestrating with built-in orchestrator|||X|
 |||||
 
-### Determine when Azure Functions[^](#use-azure-function-)
+### Determine when Azure Functions is appropriate[^](#use-azure-function-)[^](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps)
 ### Determine when Web API is appropriate
 ### Platform for container orchestration[^](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship)
-### Migrating existing assets versus cloud native deployment
+### Migrating existing assets versus cloud native deployment[^](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/)
 ### Lifecycle management strategies
 
 ## Web Applications
@@ -150,9 +168,9 @@ Key features of App Service Web Apps:
     * Check for new data or events regularly with the **polling trigger pattern**
     * Wait and listen for new data or events with the **webhook trigger pattern**
 
-[On-Premises PowerBI Gateway](https://docs.microsoft.com/en-in/power-bi/service-gateway-getting-started)
+#### [On-Premises PowerBI Gateway](https://docs.microsoft.com/en-in/power-bi/service-gateway-getting-started)
 A gateway is software that facilitates access to data that resides on a private, on-premises network, for subsequent use in a cloud service like Power BI.
-
+#### [App Service Hybrid Connections](https://docs.microsoft.com/en-in/azure/app-service/app-service-hybrid-connections)
 
 ### Secure Web API [^](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/)[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-custom-api-authentication)
 * Authentication and Authorization in Web API
@@ -279,7 +297,7 @@ Azure App Service application in multiple regions to achieve high availability![
 * Paired regions - Azure region is paired with another region within the same geography, together making a regional pair
 * Paired region benifits - Physical Isolation, Platform provided replication, region recovery order, sequential updates, Data residency.
 * Azure Site Recovery provides a simple way to replicate Azure VMs between regions
-* Azure Traffic Manager - uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints.
+* Azure Traffic Manager[^](https://docs.microsoft.com/en-in/azure/traffic-manager/traffic-manager-overview) - uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints.
 * Azure disaster scenarios - Application failure, Data corruption, Network outage, Failure of a dependent service, Region-wide service disruption, Azure-wide service disruption, Reduced application functionality
 ### Azure App Service Environment (ASE)[^](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
 * The Azure App Service Environment is an Azure App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale.
