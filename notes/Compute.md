@@ -16,13 +16,25 @@
 
 
 ## Virtual Machines
-- availability sets, fault domains, and update domains
-- web app for containers
-- VM Scale Sets
-- compute-intensive tasks using Azure Batch
-- migration strategy from cloud services
-- Azure Backup
-- Azure Site Recovery
+* Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers
+
+### Availability sets, fault domains, and update domains[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets)[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#availability-sets)
+* An Availability Set is a logical grouping capability that Azure ensures VM resources are isolated. The VMs you place within an Availability Set run across multiple physical servers, compute racks, storage units, and network switches.
+* An update domain is a group of VMs and underlying physical hardware that can be rebooted at the same time
+* VMs in the same fault domain share common storage as well as a common power source and network switch.
+* You can't add an existing VM to an availability set after it is created.
+* A fault domain is a logical group of underlying hardware that share a common power source and network switch, similar to a rack within an on-premises datacenter.
+* An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. 
+
+### Web app for containers[^](https://azure.microsoft.com/en-in/services/app-service/containers/)
+### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)
+* Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs. 
+* Azure virtual machine scale sets provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic.
+* Differences between virtual machines and scale sets[^](https://docs.microsoft.com/en-in/azure/virtual-machine-scale-sets/overview#differences-between-virtual-machines-and-scale-sets)
+### compute-intensive tasks using Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/)
+### migration strategy from cloud services[^](https://azure.microsoft.com/en-us/documentation/learning-paths/cloud-services/)[^](https://docs.microsoft.com/en-in/azure/cloud-services/cloud-services-choose-me)
+### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)
+### Azure Site Recovery[^](https://docs.microsoft.com/en-in/azure/site-recovery/site-recovery-overview)
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy

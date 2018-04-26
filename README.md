@@ -6,21 +6,27 @@
 # Architecting Microsoft Azure Solutions (70-535)[^](https://www.microsoft.com/en-us/learning/exam-70-535.aspx)
 ## 1. Design Compute Infrastructure (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=Compute)
 ### 1.1 Design solutions using virtual machines 
-* Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure; use web app for containers; design VM Scale Sets; design for compute-intensive tasks using Azure Batch; define a migration strategy from cloud services; recommend use of Azure Backup and Azure Site Recovery
+* Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure
+* Use web app for containers
+* Design VM Scale Sets
+* Design for compute-intensive tasks using Azure Batch
+* Define a migration strategy from cloud services
+* Recommend use of Azure Backup and Azure Site Recovery
 
-#### Links:
+Useful Links:
 
 1. [Create a Windows virtual machine with the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
 2. [How to use availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets) ,
 [Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
 3. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
-4. [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability/) 
-5. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
-6. [What are virtual machine scale sets in Azure?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
-7. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
-8. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
-9. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-10. [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview) 
+4. [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability/)
+5. [Use Infrastructure Automation Tools with VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation) 
+6. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
+7. [What are virtual machine scale sets in Azure?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
+8. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
+9. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
+10. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+11. [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview) 
 ### 1.2 Design solutions for serverless computing 
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
@@ -46,7 +52,7 @@
 * Design for high availability using Azure Web Apps in multiple regions[^](notes/Compute.md#multi-region-)
 * Determine which App service plan to use[^](notes/Compute.md#app-service-plans)
 * Design Web Apps for business continuity[^](notes/Compute.md#business-continuity)
-* Determine when to use Azure App Service Environment (ASE)[^](notes/Compute.md#azure-app-service-environment)
+* Determine when to use Azure App Service Environment (ASE)[^](notes/Compute.md#azure-app-service-environment-ase)
 * Design for API apps
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 * Determine when to use Web Apps on Linux[^](notes/Compute.md#web-apps-on-linux)
@@ -199,9 +205,13 @@ Notes:
 * Define a solution for monitoring applications and enabling alerts using Application Insights[^](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-overview)
 
 ### 6.2 Design a platform monitoring and alerting strategy
-Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health[^](https://docs.microsoft.com/en-us/azure/service-health/), Azure Advisor[^](https://azure.microsoft.com/en-us/services/advisor/), and Activity Log[^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs); define a monitoring solution for Azure Networks using Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-azure-networking-analytics) and Network Watcher service[^](https://azure.microsoft.com/en-us/services/network-watcher/); monitor security with Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/)
+* Determine the appropriate Microsoft products and services for monitoring Azure platform solutions; define a monitoring solution using Azure Health[^](https://docs.microsoft.com/en-us/azure/service-health/), Azure Advisor[^](https://azure.microsoft.com/en-us/services/advisor/), and Activity Log[^](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs)
+* Define a monitoring solution for Azure Networks using Log Analytics[^](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-azure-networking-analytics) and Network Watcher service[^](https://azure.microsoft.com/en-us/services/network-watcher/)
+* Monitor security with Azure Security Center[^](https://docs.microsoft.com/en-us/azure/security-center/)
 ### 6.3 Design an operations automation strategy
-Determine when to use Azure Automation[^](https://azure.microsoft.com/en-us/services/automation/)[^](notes/Operations.md#azure-automation), Chef[^](notes/Operations.md#chef), Puppet[^](https://puppet.com/products/managed-technology/microsoft-windows-azure)[^](notes/Operations.md#puppet), PowerShell[^](https://docs.microsoft.com/en-in/powershell/dsc/overview)[^](notes/Operations.md#powershell), Desired State Configuration (DSC)[^](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)[^](notes/Operations.md#desired-state-configuration-), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/Operations.md#azure-event-grid), and Azure Logic Apps[^](https://azure.microsoft.com/en-us/services/logic-apps/)[^](notes/Operations.md#azure-logic-apps); define a strategy for auto-scaling[^](https://azure.microsoft.com/en-us/features/autoscale/)[^](notes/Operations.md#azure-autoscale); define a strategy for enabling periodic processes and tasks[^](https://docs.microsoft.com/en-us/azure/scheduler/scheduler-intro)[^](notes/Operations.md#azure-scheduler)
+* Determine when to use Azure Automation[^](https://azure.microsoft.com/en-us/services/automation/)[^](notes/Operations.md#azure-automation), Chef[^](notes/Operations.md#chef), Puppet[^](https://puppet.com/products/managed-technology/microsoft-windows-azure)[^](notes/Operations.md#puppet), PowerShell[^](https://docs.microsoft.com/en-in/powershell/dsc/overview)[^](notes/Operations.md#powershell), Desired State Configuration (DSC)[^](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)[^](notes/Operations.md#desired-state-configuration-), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/Operations.md#azure-event-grid), and Azure Logic Apps[^](https://azure.microsoft.com/en-us/services/logic-apps/)[^](notes/Operations.md#azure-logic-apps);
+* Define a strategy for auto-scaling[^](https://azure.microsoft.com/en-us/features/autoscale/)[^](notes/Operations.md#azure-autoscale);
+* Define a strategy for enabling periodic processes and tasks[^](https://docs.microsoft.com/en-us/azure/scheduler/scheduler-intro)[^](notes/Operations.md#azure-scheduler)
 
 Notes:
 * [Monitoring and Alerting, Operations Automation](notes/Operations.md)
