@@ -7,21 +7,120 @@
  Azure Backup
  Azure Site Recovery
 
-## Serverless Computing
-Azure Functions, event-driver
-Azure Container Instances
-Azure Logic Apps and Azure Functions
-API Management Service
+#### Recommended high availability "best practices" for virtual machines deployment:
+- Configure multiple virtual machines in an availability set - for redundancy
+- Use managed disks for VMs in an availability set
+- Use Scheduled Events to proactively response to VM impacting events
+- Configure each application tier into separate availability sets
+- Combine a Load Balancer with availability sets
+- Use availability zones to protect from datacenter level failures
 
-## Microservices
-container-based solution
-container-orchestration
-Azure Service Fabric (ASF) 
-Azure Functions
-Web API
-platform for container orchestration
-migrating existing assets versus cloud native deployment
-lifecycle management strategies
+## Serverless Computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/)
+* Serverless computing is the abstraction of servers, infrastructure and operating systems.
+* Serverless computing is driven by the reaction to events and triggers happening in near-real-time—in the cloud
+
+### Use Azure Functions - implement event-driven actions[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
+* Azure Functions is a serverless compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure
+* Azure Functions is a solution for easily running small pieces of code, or "functions," in the cloud
+* Key features of Functions are:
+    * Choice of language
+    * Pay-per-use pricing model
+    * Bring your own dependecies
+    * Integrated Security
+    * Simplified integration
+    * Flexible development
+    * Open-source
+* Functions is a great solution for processing data, integrating systems, working with the internet-of-things (IoT), and building simple APIs and microservices
+* Functions provides templates to get you started with key scenarios, including the following:
+    * HTTPTrigger
+    * TimerTrigger
+    * GitHub webhook
+    * Generic webhook
+    * CosmosDBTrigger
+    * BlobTrigger
+    * QueueTrigger
+    * EventHubTrigger
+    * ServiceBusQueueTrigger
+    * ServiceBusTopicTrigger
+* A trigger defines how a function is invoked. A function must have exactly one trigger. Triggers have associated data, which is usually the payload that triggered the function.
+* Input and output bindings provide a declarative way to connect to data from within your code. Bindings are optional and a function can have multiple input and output bindings.
+
+### Azure Container Instances
+* Azure Container Instances is a great solution for any scenario that can operate in isolated containers, including simple applications, task automation, and build jobs.
+* For scenarios where you need full container orchestration, including service discovery across multiple containers, automatic scaling, and coordinated application upgrades, use Azure Container Service (AKS).
+* Benifits of Containers:
+    * Fast startup times
+    * Public IP connectivity and DNS name
+    * Hypervisor-level security
+    * Custom Sizes
+    * Linux and Windows Containers
+    * Co-scheduled groups
+* Because of their small size and application orientation, containers are well suited for agile delivery environments and microservice-based architectures. 
+
+###  Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-serverless-overview)
+* Serverless applications offer benefits of an increase in speed of development, reduction in required code, and simplicity with scale.
+* The core services in Azure around Serverless are Azure Functions and Azure Logic Apps. 
+* Azure Functions is a solution for easily running small pieces of code, or "functions," in the cloud.
+* Azure Logic Apps provides a way to simplify and implement scalable integrations and workflows in the cloud.
+
+### Determine when to use API management service[^](#api-management-service)
+
+Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
+
+## Microservices[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices)[^](https://azure.microsoft.com/en-in/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+### when to use Container-based solution
+
+### Container-orchestration[^](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+*  The task of automating and managing a large number of containers and how they interact is known as orchestration. Popular container orchestrators include Kubernetes, DC/OS, and Docker Swarm.
+* Azure Container Service (AKS) makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured to run containerized applications.
+* As a managed Kubernetes service, AKS provides:
+    * Automated Kubernetes version upgrades and patching
+    * Easy cluster scaling
+    * Self-healing hosted control plane (masters)
+    * Cost savings - pay only for running agent pool nodes
+* Kubernetes provides a distributed platform for containerized applications. With AKS, provisioning of a production ready Kubernetes cluster is simple and quick.
+
+### Azure Service Fabric (ASF)[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview)
+* Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.
+* Service Fabric provides three broad areas to help you build applications that use a microservices approach:
+    * A platform that provides system services to deploy, upgrade, detect, and restart failed services, discover services, route messages, manage state, and monitor health. 
+    * Ability to deploy applications either running in containers or as processes. Service Fabric is a container and process orchestrator.
+    * Productive programming APIs, to help you build applications as microservices: ASP.NET Core, Reliable Actors, and Reliable Services.
+* A Service Fabric cluster is a network-connected set of virtual or physical machines into which your microservices are deployed and managed. Clusters can scale to thousands of machines.
+* A stateful service uses Service Fabric to manage your service's state via its Reliable Collections or Reliable Actors programming models.
+* A key differentation with Service Fabric is its strong focus on building stateful services, either with the built in programming models or with containerized stateful services
+* Service Fabric supported programming models:[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-choose-framework)
+    * Containers
+    * Reliable Services
+    * Reliable Actors - framework uses independent units of compute and state with single-threaded execution called actors
+    * ASP.NET Core
+    * Guest executables
+
+* Service Fabric Application Scenarios[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-application-scenarios) - The Service Fabric platform in Azure is ideal for the following categories of applications:
+    * Highly available services - provide fast failover
+    * Scalable services - services can be partitioned, allowing for state to be scaled out across the cluster
+    * Computation on nonstatic data - allows the collocation of processing (computation) and data in applications
+    * Session-based interactive applications - such as online gaming or instant messaging that require low latency reads and writes
+    * Data analytics and workflows - transactional and financial systems - handles large scale and has low latency through its stateful services
+
+#### When to use what?
+|||||
+|:--|:--|:--|:--|
+||Azure Container Services|Azure Container Instances|Azure Service Fabric|
+|production deployments of complex systems (with a container orchestrator)|X|||
+|For running simple configurations (possibly without orchestrator)||X||
+|For long-running workloads on containers|X|
+|For short-running workloads on containers||X||
+|For orchestrating a system based on containers|X||X|
+|Orchestrating with open-source orchestrators (DC/OS, Docker Swarm, Kubernetes)|X|||
+|Orchestrating with built-in orchestrator|||X|
+|||||
+
+### Determine when Azure Functions[^](#use-azure-function-)
+### Determine when Web API is appropriate
+### Platform for container orchestration[^](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship)
+### Migrating existing assets versus cloud native deployment
+### Lifecycle management strategies
 
 ## Web Applications
 [ASP.NET Overview](https://docs.microsoft.com/en-us/aspnet/overview)
@@ -155,6 +254,7 @@ A gateway is software that facilitates access to data that resides on a private,
 * SignalR can be used to add any sort of "real-time" web functionality to your ASP.NET application.
 * Examples include Chats, dashboards and monitoring applications, collaborative applications (such as simultaneous editing of documents), job progress updates, and real-time forms.
 * The SignalR API contains two models for communicating between clients and servers: Persistent Connections and Hubs.
+
 ### Multi region, high availability Azure web apps[^](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region)
 
 Azure App Service application in multiple regions to achieve high availability![](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/images/multi-region-web-app-diagram.png)
