@@ -31,8 +31,11 @@
 * Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs. 
 * Azure virtual machine scale sets provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic.
 * Differences between virtual machines and scale sets[^](https://docs.microsoft.com/en-in/azure/virtual-machine-scale-sets/overview#differences-between-virtual-machines-and-scale-sets)
-### compute-intensive tasks using Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/)
-### migration strategy from cloud services[^](https://azure.microsoft.com/en-us/documentation/learning-paths/cloud-services/)[^](https://docs.microsoft.com/en-in/azure/cloud-services/cloud-services-choose-me)
+### Compute-intensive tasks using Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/)[^](#azure-batch)
+### Migration strategy from Cloud Services[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cloud-services-migration-differences)[^](https://docs.microsoft.com/en-us/azure/architecture/service-fabric/migrate-from-cloud-services)[^](https://azure.microsoft.com/en-us/documentation/learning-paths/cloud-services/)[^](https://docs.microsoft.com/en-in/azure/cloud-services/cloud-services-choose-me)
+* There are two types of Azure Cloud Services roles:
+    * Web role: Automatically deploys and hosts your app through IIS.
+    * Worker role: Does not use IIS, and runs your app standalone.
 ### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)
 ### Azure Site Recovery[^](https://docs.microsoft.com/en-in/azure/site-recovery/site-recovery-overview)
 
@@ -150,7 +153,7 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
 ### Determine when Web API is appropriate
 ### Platform for container orchestration[^](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship)
 ### Migrating existing assets versus cloud native deployment[^](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/)
-### Lifecycle management strategies
+### Lifecycle management strategies[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-package-apps)
 
 ## Web Applications
 [ASP.NET Overview](https://docs.microsoft.com/en-us/aspnet/overview)
@@ -352,7 +355,6 @@ Azure App Service application in multiple regions to achieve high availability![
 Azure provides flexible solutions to distribute work and scale to thousands of VMs or cores and then scale down when you need fewer resources. 
 
 ### Design High-performance computing (HPC) and other Compute-intensive applications using Azure Services
-
 
 ### Azure Batch
 * Azure Batch creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes.

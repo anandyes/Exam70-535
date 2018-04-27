@@ -5,28 +5,14 @@
 
 # Architecting Microsoft Azure Solutions (70-535)[^](https://www.microsoft.com/en-us/learning/exam-70-535.aspx)
 ## 1. Design Compute Infrastructure (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=Compute)
-### 1.1 Design solutions using virtual machines 
+### 1.1 Design solutions using virtual machines[^](notes/Compute.md#virtual-machines) 
 * Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure
 * Use web app for containers
 * Design VM Scale Sets
 * Design for compute-intensive tasks using Azure Batch
 * Define a migration strategy from cloud services
 * Recommend use of Azure Backup and Azure Site Recovery
-
-Useful Links:
-
-1. [Create a Windows virtual machine with the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
-2. [How to use availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets) ,
-[Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
-3. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
-4. [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability/)
-5. [Use Infrastructure Automation Tools with VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation) 
-6. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
-7. [What are virtual machine scale sets in Azure?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
-8. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
-9. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
-10. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-11. [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview) 
+ 
 ### 1.2 Design solutions for serverless computing 
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
@@ -64,6 +50,9 @@ Useful Links:
 * Determine when to use Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview)
 * Design stateless components to accommodate scale[^]()
 * Design lifecycle strategy for Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-api-basics)
+
+Notes:
+ * [Azure Compuete](notes/Compute.md)
 
 Useful links:
 
