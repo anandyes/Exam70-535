@@ -36,8 +36,34 @@
 * There are two types of Azure Cloud Services roles:
     * Web role: Automatically deploys and hosts your app through IIS.
     * Worker role: Does not use IIS, and runs your app standalone.
-### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)
+### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)[^](notes/AzureBackup.md)
+Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup#which-azure-backup-components-should-i-use)
+* Azure Backup (MARS) agent - Back up files and folders on physical or virtual Windows OS, supports on-prem VMs, No Linux support. Stores backup in Recovery Services Vault (RSV).
+* System Center DPM - Application-aware snapshots, Cannot back up Oracle workload. RSV, Local disk, Tape (on-prem)
+* Azure Backup Server - Application-aware snapshots, Connot back up Oracle, No Tape support. RSV, Local Disk
+* Azure IaaS VM Backup - Native backups for Windows/Linux, Fabric-level backup with no backup infrastructure needed, Back up VMs once-a-day, Restore VMs at disk level, Cannot back up on-premises. RSV
+
 ### Azure Site Recovery[^](https://docs.microsoft.com/en-in/azure/site-recovery/site-recovery-overview)
+* Azure Recovery Services contribute to your BCDR strategy:
+    * Site Recovery service: Site Recovery replicates workloads running on physical and virtual machines (VMs) from a primary site to a secondary location during outages
+    * Backup Service: The Azure Backup service keeps your data safe and recoverable by backing it up to Azure.
+* Azure VMs replicating between Azure regions.
+* On-premises VMs and physical servers replicating to Azure, or to a secondary site.
+
+Useful Links:
+
+1. [Create a Windows virtual machine with the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
+2. [How to use availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets) ,
+[Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
+3. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
+4. [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability/)
+5. [Use Infrastructure Automation Tools with VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation) 
+6. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
+7. [What are virtual machine scale sets in Azure?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
+8. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
+9. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
+10. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
+11. [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview)
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy
@@ -150,7 +176,9 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
 |||||
 
 ### Determine when Azure Functions is appropriate[^](#use-azure-function-)[^](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps)
-### Determine when Web API is appropriate
+### Determine when Web API is appropriate[^](https://azure.microsoft.com/en-in/services/app-service/api/)
+* App Service has built-in support for Cross-Origin Resource Sharing (CORS) for RESTful APIs.
+
 ### Platform for container orchestration[^](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship)
 ### Migrating existing assets versus cloud native deployment[^](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/)
 ### Lifecycle management strategies[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-package-apps)

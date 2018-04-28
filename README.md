@@ -52,7 +52,7 @@
 * Design lifecycle strategy for Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-api-basics)
 
 Notes:
- * [Azure Compuete](notes/Compute.md)
+ * [Azure Compute](notes/Compute.md)
 
 Useful links:
 
