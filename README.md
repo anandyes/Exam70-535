@@ -16,14 +16,14 @@
 ### 1.2 Design solutions for serverless computing 
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
-* Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](notes/Compute.md#design-application-solutions-by-using-azure-logic-apps-)
+* Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](notes/Compute.md#design-application-solutions-by-using-azure-logic-apps-)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-create-serverless-api)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 
 ### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
 * Determine when a container-based solution is appropriate
 * Determine when container-orchestration is appropriate
 * Determine when Azure Service Fabric (ASF) is appropriate
-* Determine when Azure Functions is appropriate
+* Determine when Azure Functions is appropriate[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
 * Determine when to use API management service
 * Determine when Web API is appropriate
 * Determine which platform is appropriate for container orchestration
@@ -39,7 +39,7 @@
 * Determine which App service plan to use[^](notes/Compute.md#app-service-plans)
 * Design Web Apps for business continuity[^](notes/Compute.md#business-continuity)
 * Determine when to use Azure App Service Environment (ASE)[^](notes/Compute.md#azure-app-service-environment-ase)
-* Design for API apps
+* Design for API apps[^](notes/Compute.md#api-apps)
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 * Determine when to use Web Apps on Linux[^](notes/Compute.md#web-apps-on-linux)
 * Determine when to use a CDN[^](notes/Compute.md#cdn)
@@ -130,7 +130,7 @@ Determine when to use
 ### 3.3 Design security strategies
 * Determine when to use network virtual appliances[^](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-scenario-udr-gw-nva)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/nva-ha)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/hybrid-networking/considerations)
 * Design a perimeter network (DMZ)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/)[^](https://docs.microsoft.com/en-us/azure/best-practices-network-security)
-* Determine when to use a Web Application Firewall (WAF)[^](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-introduction#web-application-firewall), Network Security Group (NSG), and virtual network service tunneling[^](https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices)
+* Determine when to use a Web Application Firewall (WAF)[^](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-introduction#web-application-firewall), Network Security Group (NSG)[^](https://docs.microsoft.com/en-us/azure/virtual-network/security-overview#network-security-groups), and virtual network service tunneling[^](https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices)
 
 ### 3.4 Design connectivity for hybrid applications
 * Design connectivity to on-premises data from Azure applications using Azure Relay Service[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections),
@@ -184,11 +184,37 @@ Determine when to use
 
 ## 5. Design Solutions by using Platform Services (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=ai)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=iot)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=integration)
 ### 5.1 Design for Artificial Intelligence Services
-Determine when to use the appropriate Cognitive Services[^](https://azure.microsoft.com/en-us/services/cognitive-services/)[^](notes/PlatformServices.md#cognitive-services), Azure Bot Service[^](https://docs.microsoft.com/en-in/azure/bot-service/)[^](notes/PlatformServices.md#azure-bot-service), Azure Machine Learning[^](https://docs.microsoft.com/en-us/azure/machine-learning/)[^](notes/PlatformServices.md#azure-machine-learning), and other categories that fall under cognitive AI
-### 5.2 Design for IoT
-Determine when to use Stream Analytics[^](https://azure.microsoft.com/en-us/services/stream-analytics/)[^](notes/PlatformServices.md#azure-stream-analytics), IoT Hubs[^](https://azure.microsoft.com/en-us/services/iot-hub/)[^](notes/PlatformServices.md#iot-hub), Event Hubs[^](https://azure.microsoft.com/en-us/services/event-hubs/)[^](notes/PlatformServices.md#event-hub), real-time analytics[^]()[^](), Time Series Insights[^](https://azure.microsoft.com/en-us/services/time-series-insights/)[^](notes/Database.md#azure-time-series-insights), IoT Edge[^](https://azure.microsoft.com/en-us/services/iot-edge/)[^](notes/PlatformServices.md#iot-edge), Notification Hubs[^](https://docs.microsoft.com/en-in/azure/notification-hubs/)[^](notes/PlatformServices.md#notification-hub), Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/PlatformServices.md#event-grid), and other categories that fall under IoT[^](https://azure.microsoft.com/en-us/product-categories/iot/)
+Determine when to use the appropriate
+* Cognitive Services[^](https://azure.microsoft.com/en-us/services/cognitive-services/)[^](notes/PlatformServices.md#cognitive-services)
+* Azure Bot Service[^](https://docs.microsoft.com/en-in/azure/bot-service/)[^](notes/PlatformServices.md#azure-bot-service)
+* Azure Machine Learning[^](https://docs.microsoft.com/en-us/azure/machine-learning/)[^](notes/PlatformServices.md#azure-machine-learning)
+
+and other categories that fall under cognitive AI
+
+### 5.2 Design for IoT[^](https://docs.microsoft.com/en-in/azure/iot-fundamentals/iot-introduction)
+Determine when to use 
+* Stream Analytics[^](https://azure.microsoft.com/en-us/services/stream-analytics/)[^](notes/PlatformServices.md#azure-stream-analytics)
+* IoT Hubs[^](https://azure.microsoft.com/en-us/services/iot-hub/)[^](notes/PlatformServices.md#iot-hub)
+* Event Hubs[^](https://azure.microsoft.com/en-us/services/event-hubs/)[^](notes/PlatformServices.md#event-hub)
+* real-time analytics[^]()
+* Time Series Insights[^](https://azure.microsoft.com/en-us/services/time-series-insights/)[^](notes/Database.md#azure-time-series-insights)
+* IoT Edge[^](https://azure.microsoft.com/en-us/services/iot-edge/)[^](notes/PlatformServices.md#iot-edge)
+* Notification Hubs[^](https://docs.microsoft.com/en-in/azure/notification-hubs/)[^](notes/PlatformServices.md#notification-hub)
+* Event Grid[^](https://azure.microsoft.com/en-us/services/event-grid/)[^](notes/PlatformServices.md#event-grid)
+
+and other categories that fall under IoT[^](https://azure.microsoft.com/en-us/product-categories/iot/)
 ### 5.3 Design messaging solution architectures
-Design a messaging architecture [^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging); determine when to use Azure Storage Queues, Azure Service Bus[^](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview), Azure Event Hubs, Event Grid, Azure Relay, Azure Functions, and Azure Logic Apps[^](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)[^](https://azure.microsoft.com/en-in/blog/events-data-points-and-messages-choosing-the-right-azure-messaging-service-for-your-data/)[^](notes/QueuesComparsion.md); design a push notification strategy for Mobile Apps [^](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-enterprise-push-notification-architecture); design for performance[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-performance-improvements) and scale[^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/performance-scalability)
+* Design a messaging architecture [^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging)
+* determine when to use 
+    * Azure Storage Queues[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
+    * Azure Service Bus[^](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)[^](https://docs.microsoft.com/en-us/azure/service-bus-messaging/)
+    * Azure Event Hubs[^](notes/PlatformServices.md#event-hub)[^](https://docs.microsoft.com/en-us/azure/event-hubs/)
+    * Event Grid[^](notes/PlatformServices.md#event-grid)[^](https://docs.microsoft.com/en-us/azure/event-grid/)
+    * Azure Relay[^](notes/PlatformServices.md#azure-relay)
+    * Azure Functions[^](https://azure.microsoft.com/en-in/services/functions/)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-twitter-email)
+    * Azure Logic Apps[^](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)[^](https://azure.microsoft.com/en-in/blog/events-data-points-and-messages-choosing-the-right-azure-messaging-service-for-your-data/)[^](notes/QueuesComparsion.md)
+* design a push notification strategy for Mobile Apps [^](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-enterprise-push-notification-architecture)
+* design for performance[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-performance-improvements) and scale[^](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/performance-scalability)
 ### 5.4 Design for media service solutions
 Define solutions using Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview), video indexer[^](https://docs.microsoft.com/en-in/azure/cognitive-services/video-indexer/video-indexer-overview), video API, computer vision API[^](https://azure.microsoft.com/en-in/services/cognitive-services/computer-vision/), preview, and other media related services
 

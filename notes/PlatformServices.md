@@ -223,13 +223,13 @@ Notification Hub advantages:
     * Ops Automation
     * Application integration
 
-### Azure IoT Central
+### Azure IoT Central[^](https://docs.microsoft.com/en-us/azure/iot-central/overview-iot-central)
 * A software as a service (SaaS) offering, to deploy a fully managed, end-to-end solution that enables powerful IoT scenarios without requiring cloud-solution expertise.
 
-### Azure IoT Suite
+### Azure IoT Suite[^](https://docs.microsoft.com/en-us/azure/iot-suite/)
 * A platform as a service (PaaS) offering, fully customizable solutions for common scenarios to accelerate your IoT project.
 
-### Azure Relay
+### Azure Relay[^](https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-what-is-it)
 * Hybrid connections and WCF Relay are part of Azure Relay service
 * Comminicate with on-premises resources without opening a firewall port
 * Hybrid connections support multi-platform scenarios
@@ -249,6 +249,8 @@ Notification Hub advantages:
 * Premium messaging: [^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-premium-messaging)
 
 * Asynchronous Messaging Primer: [^](https://msdn.microsoft.com/library/dn589781.aspx)
+
+* Compare Azure IoT options[^](https://docs.microsoft.com/en-us/azure/iot-suite/iot-suite-options)
 
 ### Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview)
 * Microsoft Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications
