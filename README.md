@@ -48,14 +48,13 @@
 ### 1.5 Create compute-intensive application 
 * Design high-performance computing (HPC) and other compute-intensive applications using Azure Services[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/high-performance-computing)[^](https://azure.microsoft.com/en-in/solutions/high-performance-computing/#references)
 * Determine when to use Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview)
-* Design stateless components to accommodate scale[^]()
+* Design stateless components to accommodate scale[^](https://blogs.msdn.microsoft.com/microsoft_press/2015/05/04/from-the-mvps-application-design-going-stateless-on-azure/)
 * Design lifecycle strategy for Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-api-basics)
 
-Notes:
+#### Notes:
  * [Azure Compute](notes/Compute.md)
 
-Useful links:
-
+#### Useful links:
 [Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
 
 ## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
@@ -67,7 +66,7 @@ Determine when to use
 * Disks [^](https://docs.microsoft.com/en-in/azure/virtual-machines/windows/about-disks-and-vhds)
 * StorSimple [^](https://docs.microsoft.com/en-us/azure/storsimple/storsimple-ova-overview)
 
-Notes:
+#### Notes:
  * [Azure Storage](notes/DataStorage.md)
  * [Queues Comparision](notes/QueuesComparision.md)
 
@@ -81,19 +80,16 @@ Determine when to use
 * Azure HDInsight[^](https://docs.microsoft.com/en-us/azure/hdinsight/) [^](notes/Database.md#azure-hdinsight)
 
 ### 2.3 Design for relational database storage
-Determine when to use
-* Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-* SQL Server Stretch Database[^](notes/Database.md#stretch-database)
+* Determine when to use
+    * Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    * SQL Server Stretch Database[^](notes/Database.md#stretch-database)
+* Design for scalability[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction) and features[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features)
+* Determine when to use 
+    * Azure Database for MySQL[^](https://docs.microsoft.com/en-us/azure/mysql/overview) 
+    * Azure Database for PostgreSQL[^](https://docs.microsoft.com/en-us/azure/postgresql/overview)
+* Design for HA/DR, geo-replication; design a backup and recovery strategy[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-disaster-recovery-strategies-for-applications-with-elastic-pool)
 
-Design for scalability [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction) and features [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features)
-
-Determine when to use 
-* Azure Database for MySQL[^](https://docs.microsoft.com/en-us/azure/mysql/overview) 
-* Azure Database for PostgreSQL[^](https://docs.microsoft.com/en-us/azure/postgresql/overview)
-
-Design for HA/DR, geo-replication; design a backup and recovery strategy
-
-Useful links:
+#### Useful links:
 * [Database Notes](notes/Database.md)
 * [SQL Database Automated Backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups)
 * [Long-term backup retension upto 10 years using Azure Recovery Services vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention)
@@ -111,23 +107,36 @@ Determine when to use
 * Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview) [^](notes/Database.md#azure-time-series-insights)
 
 ### 2.5 Design for CosmosDB storage [^](https://azure.microsoft.com/en-us/services/cosmos-db/)
-Determine when to use 
-* MongoDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction),
-* DocumentDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction),
-* Graph API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction),
-* Azure Tables API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction)
-
-Design for cost [^](https://docs.microsoft.com/en-us/azure/cosmos-db/key-value-store-cost), performance [^](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data), data consistency [^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels), availability [^](https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore), and business continuity [^](https://docs.microsoft.com/en-us/azure/cosmos-db/regional-failover)
+* Determine when to use 
+    * MongoDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction),
+    * DocumentDB API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction),
+    * Graph API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction),
+    * Azure Tables API[^](https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction)
+* Design for cost [^](https://docs.microsoft.com/en-us/azure/cosmos-db/key-value-store-cost), performance [^](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data), data consistency [^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels), availability [^](https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore), and business continuity [^](https://docs.microsoft.com/en-us/azure/cosmos-db/regional-failover)
 
 ## 3. Design Networking Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=network)
 ### 3.1 Design Azure virtual networks
-Design solutions that use Azure networking services: design for load balancing using Azure Load Balancer and Azure Traffic Manager; define DNS, DHCP, and IP strategies; determine when to use Azure Application Gateway; determine when to use multi-node application gateways, Traffic Manager and load balancers
+* Design solutions that use Azure networking services[^](https://docs.microsoft.com/en-us/azure/networking/networking-overview)
+* Design for load balancing using Azure Load Balancer[^](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) and Azure Traffic Manager[^](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
+* Define DNS[^](https://docs.microsoft.com/en-us/azure/dns/dns-overview), DHCP, and IP strategies
+* Determine when to use Azure Application Gateway[^](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-introduction)
+* Determine when to use multi-node application gateways, Traffic Manager and load balancers
+
 ### 3.2 Design external connectivity for Azure Virtual Networks
-Determine when to use Azure VPN, ExpressRoute and Virtual Network Peering architecture and design; determine when to use User Defined Routes (UDRs); determine when to use VPN gateway site-to-site failover for ExpressRoute
+* Determine when to use Azure VPN, ExpressRoute[^](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-introduction) and Virtual Network Peering architecture and design
+* Determine when to use User Defined Routes (UDRs)[^](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview)
+* Determine when to use VPN gateway site-to-site failover for ExpressRoute[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover)
+
 ### 3.3 Design security strategies
-Determine when to use network virtual appliances; design a perimeter network (DMZ); determine when to use a Web Application Firewall (WAF), Network Security Group (NSG), and virtual network service tunneling
+* Determine when to use network virtual appliances[^](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-scenario-udr-gw-nva)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/nva-ha)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/hybrid-networking/considerations)
+* Design a perimeter network (DMZ)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/dmz/)[^](https://docs.microsoft.com/en-us/azure/best-practices-network-security)
+* Determine when to use a Web Application Firewall (WAF)[^](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-introduction#web-application-firewall), Network Security Group (NSG), and virtual network service tunneling[^](https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices)
+
 ### 3.4 Design connectivity for hybrid applications
-Design connectivity to on-premises data from Azure applications using Azure Relay Service[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections), Azure Data Management Gateway for Data Factory, Azure On-Premises Data Gateway, Hybrid Connections, or Azure Web App’s virtual private network (VPN) capability; identify constraints for connectivity with VPN; identify options for joining VMs to domains
+* Design connectivity to on-premises data from Azure applications using Azure Relay Service[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections),
+ Azure Data Management Gateway for Data Factory[^](https://docs.microsoft.com/en-in/azure/data-factory/v1/data-factory-data-management-gateway), Azure On-Premises Data Gateway[^](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-gateway), Hybrid Connections[^](https://docs.microsoft.com/en-in/azure/app-service/app-service-hybrid-connections), or Azure Web App’s virtual private network (VPN) capability[^](https://docs.microsoft.com/en-us/azure/app-service/environment/network-info)
+* Identify constraints for connectivity with VPN[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/hybrid-networking/vpn)
+* Identify options for joining VMs to domains[^](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/active-directory-ds-networking)
 
 ## 4. Design Security and Identity Solutions (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=security)
 ### 4.1 Design an identity solution
@@ -138,7 +147,7 @@ Design connectivity to on-premises data from Azure applications using Azure Rela
 * Determine when to use Azure AD Domain Services[^](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/active-directory-ds-overview); 
 * Design security for Mobile Apps using AAD[^](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)[^](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
 
-Notes:
+#### Notes:
 * [Azure AD Notes](notes/AzureAD.md)
 * [Introduction to Azure Security](https://docs.microsoft.com/en-us/azure/security/azure-security)
 
@@ -154,9 +163,9 @@ Notes:
 * Design a solution for managing certificates using Azure Key Vault[^](https://blogs.technet.microsoft.com/kv/2016/09/26/get-started-with-azure-key-vault-certificates/)[^](http://www.rahulpnath.com/blog/manage-certificates-in-azure-key-vault/); 
 * Design solutions that use Azure AD Managed Service Identity[^](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)
 
-Note: The Azure SQL Database service is only available through TCP port 1433.
+#### Note: The Azure SQL Database service is only available through TCP port 1433.
 
-Useful Links :
+#### Useful Links :
 * [Azure Database Security Best Practices](https://docs.microsoft.com/azure/security/azure-database-security-best-practices)
 * [Determine hybrid identity lifecycle adoption strategy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-hybrid-identity-design-considerations-lifecycle-adoption-strategy)
 
@@ -183,7 +192,7 @@ Design a messaging architecture [^](https://docs.microsoft.com/en-us/azure/archi
 ### 5.4 Design for media service solutions
 Define solutions using Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview), video indexer[^](https://docs.microsoft.com/en-in/azure/cognitive-services/video-indexer/video-indexer-overview), video API, computer vision API[^](https://azure.microsoft.com/en-in/services/cognitive-services/computer-vision/), preview, and other media related services
 
-Notes:
+#### Notes:
 * [Azure Platform Services](notes/PlatformServices.md)
 
 ## 6. Design for Operations (10-15%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=mgmt)
@@ -202,11 +211,10 @@ Notes:
 * Define a strategy for auto-scaling[^](https://azure.microsoft.com/en-us/features/autoscale/)[^](notes/Operations.md#azure-autoscale);
 * Define a strategy for enabling periodic processes and tasks[^](https://docs.microsoft.com/en-us/azure/scheduler/scheduler-intro)[^](notes/Operations.md#azure-scheduler)
 
-Notes:
+#### Notes:
 * [Monitoring and Alerting, Operations Automation](notes/Operations.md)
 
-## Useful links
-
+#### Useful links
 * [Avail free training](https://azure.microsoft.com/en-us/training/learning-paths/azure-solution-architect/)
 * [Books to study](https://buildazure.com/2018/02/01/book-exam-ref-70-535-architecting-microsoft-azure-solutions/) [^](http://amzn.to/2Fsg5IG)
 * [Azure Services](https://azure.microsoft.com/en-in/services/)

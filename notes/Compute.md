@@ -15,7 +15,7 @@
 |||
 
 
-## Virtual Machines
+## Virtual Machines[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
 * Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers
 
 ### Availability sets, fault domains, and update domains[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets)[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#availability-sets)
@@ -27,7 +27,7 @@
 * An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. 
 
 ### Web app for containers[^](https://azure.microsoft.com/en-in/services/app-service/containers/)
-### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)
+### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)[^](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
 * Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs. 
 * Azure virtual machine scale sets provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic.
 * Differences between virtual machines and scale sets[^](https://docs.microsoft.com/en-in/azure/virtual-machine-scale-sets/overview#differences-between-virtual-machines-and-scale-sets)
@@ -50,20 +50,14 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 * Azure VMs replicating between Azure regions.
 * On-premises VMs and physical servers replicating to Azure, or to a secondary site.
 
-Useful Links:
-
-1. [Create a Windows virtual machine with the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
-2. [How to use availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets) ,
-[Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
-3. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
-4. [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability/)
-5. [Use Infrastructure Automation Tools with VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation) 
-6. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
-7. [What are virtual machine scale sets in Azure?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
-8. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
-9. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
-10. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-11. [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview)
+#### Useful Links:
+1. [Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
+2. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
+3. [Use Infrastructure Automation Tools with VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/infrastructure-automation) 
+4. [Use a custom Docker image for Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image) 
+5. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
+6. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
+7. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy
