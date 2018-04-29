@@ -13,7 +13,7 @@
 * Define a migration strategy from cloud services
 * Recommend use of Azure Backup and Azure Site Recovery
  
-### 1.2 Design solutions for serverless computing 
+### 1.2 Design solutions for serverless computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/) 
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
 * Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](notes/Compute.md#design-application-solutions-by-using-azure-logic-apps-)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-create-serverless-api)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
