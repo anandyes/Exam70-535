@@ -6,12 +6,12 @@
 # Architecting Microsoft Azure Solutions (70-535)[^](https://www.microsoft.com/en-us/learning/exam-70-535.aspx)
 ## 1. Design Compute Infrastructure (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=Compute)
 ### 1.1 Design solutions using virtual machines[^](notes/Compute.md#virtual-machines) 
-* Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure
-* Use web app for containers
-* Design VM Scale Sets
-* Design for compute-intensive tasks using Azure Batch
-* Define a migration strategy from cloud services
-* Recommend use of Azure Backup and Azure Site Recovery
+* Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure[^](notes/Compute.md#Compute.md#availability-sets-fault-domains-and-update-domains)
+* Use web app for containers[^](notes/Compute.md#web-app-for-containers)
+* Design VM Scale Sets[^](notes/Compute.md#vm-scale-sets)
+* Design for compute-intensive tasks using Azure Batch[^](notes/Compute.md#compute-intensive-tasks-using-azure-batch)
+* Define a migration strategy from cloud services[^](notes/Compute.md##migration-strategy-from-cloud-services)
+* Recommend use of Azure Backup and Azure Site Recovery[^](notes/Compute.md#azure-backup)
  
 ### 1.2 Design solutions for serverless computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/) 
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
@@ -20,15 +20,15 @@
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 
 ### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
-* Determine when a container-based solution is appropriate
-* Determine when container-orchestration is appropriate
-* Determine when Azure Service Fabric (ASF) is appropriate
+* Determine when a container-based solution is appropriate[^](notes/Compute.md#azure-container-instances)
+* Determine when container-orchestration is appropriate[^](notes/Compute.md#container-orchestration)
+* Determine when Azure Service Fabric (ASF) is appropriate[^]notes/Compute.md#azure-service-fabric-asf)
 * Determine when Azure Functions is appropriate[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
-* Determine when to use API management service
-* Determine when Web API is appropriate
-* Determine which platform is appropriate for container orchestration
+* Determine when to use API management service[^](notes/Compute.md#api-management-service)
+* Determine when Web API is appropriate[^](notes/Compute.md#custom-web-api)
+* Determine which platform is appropriate for container orchestration[^](notes/Compute.md#container-orchestration)
 * Consider migrating existing assets versus cloud native deployment[^](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/)
-* Design lifecycle management strategies
+* Design lifecycle management strategies[^]()
 
 ### 1.4 Design web applications [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=web)[^](notes/Compute.md#web-applications)
 * Design Azure App Service Web Apps[^](https://docs.microsoft.com/en-us/azure/app-service/)[^](notes/Compute.md#azure-app-service-)

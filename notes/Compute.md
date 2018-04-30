@@ -38,6 +38,11 @@
 * An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. 
 
 ### Web app for containers[^](https://azure.microsoft.com/en-in/services/app-service/containers/)
+* Deploy container-based web apps by just pulling container images from Docker Hub or a private Azure Container Registry
+* Web App for Containers will deploy the containerised app with your preferred dependencies to production in seconds
+* The platform automatically takes care of OS patching, capacity provisioning and load balancing.
+* Streamline CI/CD with Docker Hub, Azure Container Registry and GitHub
+
 ### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)[^](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
 * Azure virtual machine scale sets let you create and manage a group of  **identical**, load balanced VMs. 
 * Azure virtual machine scale sets provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic.
@@ -83,6 +88,8 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 ## Serverless Computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/)
 * Serverless computing is the abstraction of servers, infrastructure and operating systems.
 * Serverless computing is driven by the reaction to events and triggers happening in near-real-time—in the cloud
+
+### Web Jobs[^](https://docs.microsoft.com/en-in/azure/app-service/web-sites-create-web-jobs)
 
 ### Use Azure Functions to implement event-driven actions[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
 * Azure Functions is a serverless compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure
@@ -351,6 +358,10 @@ Azure App Service application in multiple regions to achieve high availability![
 * Azure disaster scenarios - Application failure, Data corruption, Network outage, Failure of a dependent service, Region-wide service disruption, Azure-wide service disruption, Reduced application functionality
 ### Azure App Service Environment (ASE)[^](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
 * The Azure App Service Environment is an Azure App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale.
+* App Service environments (ASEs) are appropriate for application workloads that require:
+    * Very high scale.
+    * Isolation and secure network access.
+    * High memory utilization.
 
 ### API apps[^](https://azure.microsoft.com/en-in/services/app-service/api/)[^](https://docs.microsoft.com/en-in/azure/app-service/app-service-web-tutorial-rest-api)
 ### API management service[^](https://docs.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
