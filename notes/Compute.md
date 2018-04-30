@@ -18,7 +18,18 @@
 ## Virtual Machines[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
 * Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers
 
-### Availability sets, fault domains, and update domains[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets)[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#availability-sets)
+||||
+|:--|:--|:--|
+| VM Type | Sizes | Description|
+| General Purpose | B, Dsv3, Dv3, DSv2, Dv2, DS, D, Av2, A0-7 | Balanced CPU-to-memory ratio. Ideal for testing and development, small to medium databases, and low to medium traffic web servers.|
+| Compute Optimized | Fsv2, Fs, F |High CPU-to-memory ratio. Good for medium traffic web servers, network appliances, batch processes, and application servers.|
+| Memory Optimized | Esv3, Ev3, M, GS, G, DSv2, DS, Dv2, D | High memory-to-CPU ratio. Great for relational database servers, medium to large caches, and in-memory analytics.|
+| Storage Optimized | Ls |  High disk throughput and IO. Ideal for Big Data, SQL, and NoSQL databases.|
+| GPU | NV, NC, NCv2, NCv3, ND |Specialized virtual machines targeted for heavy graphic rendering and video editing. Available with single or multiple GPUs.|
+| High Performance Compute | H, A8-11 | Our fastest and most powerful CPU virtual machines with optional high-throughput network interfaces (RDMA).
+||||
+
+### Availability sets, fault domains, and update domains[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets)[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#availability-sets)[^](https://docs.microsoft.com/en-in/azure/virtual-machines/windows/manage-availability)
 * An Availability Set is a logical grouping capability that Azure ensures VM resources are isolated. The VMs you place within an Availability Set run across multiple physical servers, compute racks, storage units, and network switches.
 * An update domain is a group of VMs and underlying physical hardware that can be rebooted at the same time
 * VMs in the same fault domain share common storage as well as a common power source and network switch.
@@ -28,15 +39,17 @@
 
 ### Web app for containers[^](https://azure.microsoft.com/en-in/services/app-service/containers/)
 ### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)[^](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
-* Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs. 
+* Azure virtual machine scale sets let you create and manage a group of  **identical**, load balanced VMs. 
 * Azure virtual machine scale sets provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic.
+* VM scale sets are designed to support true auto-scale – no pre-provisioning of VMs is required – and as such makes it easier to build large-scale services targeting big compute, big data, and containerized workloads.
+* You can set the maximum, minimum and default number of VMs, and define triggers – action rules based on resource consumption.
 * Differences between virtual machines and scale sets[^](https://docs.microsoft.com/en-in/azure/virtual-machine-scale-sets/overview#differences-between-virtual-machines-and-scale-sets)
 ### Compute-intensive tasks using Azure Batch[^](https://docs.microsoft.com/en-us/azure/batch/)[^](#azure-batch)
 ### Migration strategy from Cloud Services[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cloud-services-migration-differences)[^](https://docs.microsoft.com/en-us/azure/architecture/service-fabric/migrate-from-cloud-services)[^](https://azure.microsoft.com/en-us/documentation/learning-paths/cloud-services/)[^](https://docs.microsoft.com/en-in/azure/cloud-services/cloud-services-choose-me)
 * There are two types of Azure Cloud Services roles:
     * Web role: Automatically deploys and hosts your app through IIS.
     * Worker role: Does not use IIS, and runs your app standalone.
-### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)[^](notes/AzureBackup.md)
+### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)[^](AzureBackup.md)
 Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup#which-azure-backup-components-should-i-use)
 * Azure Backup (MARS) agent - Back up files and folders on physical or virtual Windows OS, supports on-prem VMs, No Linux support. Stores backup in Recovery Services Vault (RSV).
 * System Center DPM - Application-aware snapshots, Cannot back up Oracle workload. RSV, Local disk, Tape (on-prem)
@@ -399,6 +412,8 @@ Azure provides flexible solutions to distribute work and scale to thousands of V
 * Batch supports large-scale rendering workloads with rendering tools including Autodesk Maya, 3ds Max, Arnold, and V-Ray. 
 * R users can install the doAzureParallel R package to easily scale out the execution of R algorithms on Batch pools.
 * Run Batch jobs as part of a larger Azure workflow to transform data, managed by tools such as Azure Data Factory.
+* Use Low priority VMs with Batch[^](https://docs.microsoft.com/en-us/azure/batch/batch-low-pri-vms) for Development and Testing, Suplimenting on-demand capacity, and for jobs with flexible execution time.
+* Long-running MPI jobs that utilize multiple VMs are not well suited to use low-priority VMs
 
 Batch Service Resources:[^](https://docs.microsoft.com/en-in/azure/batch/batch-api-basics#batch-service-resources)
 
