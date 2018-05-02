@@ -116,3 +116,6 @@
 * CORS is not supported for Premium Storage accounts
 * CORS to be enabled for each service (Blob, File, Queue and Table) separately
 * By default, CORS is disabled for each service
+
+Useful Link:
+	* Storage Concpets in Windows Server[^](https://docs.microsoft.com/en-us/windows-server/storage/storage)

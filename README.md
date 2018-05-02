@@ -22,13 +22,13 @@
 ### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
 * Determine when a container-based solution is appropriate[^](notes/Compute.md#azure-container-instances)
 * Determine when container-orchestration is appropriate[^](notes/Compute.md#container-orchestration)
-* Determine when Azure Service Fabric (ASF) is appropriate[^]notes/Compute.md#azure-service-fabric-asf)
+* Determine when Azure Service Fabric (ASF) is appropriate[^](notes/Compute.md#azure-service-fabric-asf)
 * Determine when Azure Functions is appropriate[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-overview)
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 * Determine when Web API is appropriate[^](notes/Compute.md#custom-web-api)
 * Determine which platform is appropriate for container orchestration[^](notes/Compute.md#container-orchestration)
 * Consider migrating existing assets versus cloud native deployment[^](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/)
-* Design lifecycle management strategies[^]()
+* Design lifecycle management strategies
 
 ### 1.4 Design web applications [^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=web)[^](notes/Compute.md#web-applications)
 * Design Azure App Service Web Apps[^](https://docs.microsoft.com/en-us/azure/app-service/)[^](notes/Compute.md#azure-app-service-)
