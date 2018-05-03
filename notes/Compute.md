@@ -42,6 +42,7 @@
 * Web App for Containers will deploy the containerised app with your preferred dependencies to production in seconds
 * The platform automatically takes care of OS patching, capacity provisioning and load balancing.
 * Streamline CI/CD with Docker Hub, Azure Container Registry and GitHub
+* App Service on Linux is only supported with Basic and Standard app service plans and does not have a Free or Shared tier.
 
 ### VM Scale Sets[^](https://azure.microsoft.com/en-in/services/virtual-machine-scale-sets/)[^](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)
 * Azure virtual machine scale sets let you create and manage a group of  **identical**, load balanced VMs. 
@@ -375,6 +376,9 @@ Azure App Service application in multiple regions to achieve high availability![
 * App Service on Linux supports a number of Built-in images
 * App Service on Linux is only supported with Basic and Standard app service plans and does not have a Free or Shared tier
 * You cannot create Web App for Containers in an App Service plan already hosting non-Linux Web Apps.
+* App Service on Linux offers two different paths to getting your application published to the web:
+    * Custom image deployment: "Dockerize" your app into a Docker image that contains all of your files and dependencies in a ready-to-run package.
+    * App deployment with a built-in platform image: Our built-in platform images contain common web app runtimes and dependencies, such as Node and PHP. 
 
 ### CDN[^](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview)
 * A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users.
