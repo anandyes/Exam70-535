@@ -138,8 +138,9 @@ Determine when to use
 * Identify constraints for connectivity with VPN[^](https://docs.microsoft.com/en-in/azure/architecture/reference-architectures/hybrid-networking/vpn)
 * Identify options for joining VMs to domains[^](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/active-directory-ds-networking)
 
-#### Notes:
- * [Networking](notes/Networking.md)
+#### Useful links:
+ * [Networking Notes](notes/Networking.md)
+ * [VPN Gateway FAQ](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vpn-faq)
 
 ## 4. Design Security and Identity Solutions (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=security)
 ### 4.1 Design an identity solution

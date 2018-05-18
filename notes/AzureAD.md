@@ -49,13 +49,27 @@ Important Azure AD features:
     - enables IT departments to discover cloud applications used in their organization
     - allows the applications to be brought under IT control to help mitigate risk of potential data leakage or other security threats
 
+* Azure AD Connect
+	- Manages user sign-in options
+	- Sign-on methods: Password Synchronization, Pass-through authentication, and Federation with AD FS.
+	- Write-back for password, devices and groups
+	- Tools to support AD FS	
+	
 * Azure AD Connect Health [^](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
 
     - enables you to monitor and gain insights into the overall health of the integration between your on-premises Windows Server Active Directory/Active Directory Federation Service and Azure AD (or Office 365).
+	- Agents installed on identity infrastructure components, Monitoring and alerts, email notifications and critical alerts, trends, usage report.
+	- Requires a P1 license
 
 * Azure AD Identity Protection [^](https://azure.microsoft.com/documentation/articles/active-directory-identityprotection/) 
 
     - is a security service that enables you to gain insights into potential security vulnerabilities affecting users in your organization (more specifically, their identities)
+
+* Azure AD Pass-through Authentication[^](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+	- Allows your users to sign in to both on-premises and cloud-based applications using the same passwords.
+	- This feature is an alternative to Azure AD Password Hash Synchronization, which provides the same benefit of cloud authentication to organizations
+	- ![Azure AD PTA](https://docs.microsoft.com/en-us/azure/active-directory/connect/media/active-directory-aadconnect-pass-through-authentication/pta1.png)
+
 
 ### Active Directory editions [^](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis#choose-an-edition) [^](https://azure.microsoft.com/en-us/pricing/details/active-directory/)
 
@@ -73,4 +87,7 @@ Important Azure AD features:
 | SSO for 10 apps / user |  No SSO app limit |
 | Azure AD Application Proxy | MDM auto-enrollment|
 | | P2: Identity Protection and Privileged Identity Management|
+
+Azure AD DS
+
 
