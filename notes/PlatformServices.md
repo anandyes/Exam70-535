@@ -191,6 +191,7 @@ Notification Hub advantages:
  App Service Mobile Apps has built-in support for push notifications using Notification Hubs.
 
 ### Event Grid[^](https://docs.microsoft.com/en-in/azure/event-grid/overview)
+![Event Grid Functional Model](https://docs.microsoft.com/en-us/azure/event-grid/media/overview/functional-model.png)
 * Event Grid is a fully managed event routing service which provides reliable message delivery at massive scale
 * Azure Event Grid is a fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe mode
 * Azure Event Grid allows you to easily build applications with event-based architectures
@@ -251,6 +252,8 @@ Notification Hub advantages:
 * Asynchronous Messaging Primer: [^](https://msdn.microsoft.com/library/dn589781.aspx)
 
 * Compare Azure IoT options[^](https://docs.microsoft.com/en-us/azure/iot-suite/iot-suite-options)
+
+* Azure Machine Learning Key Concepts[^](https://docs.microsoft.com/en-in/azure/machine-learning/desktop-workbench/overview-general-concepts)
 
 ### Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview)
 * Microsoft Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications
