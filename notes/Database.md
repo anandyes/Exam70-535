@@ -213,6 +213,21 @@ Key Capabilities:
     * Five to ten times more cost effective than a non-managed solution or an on-prem NoSQL solution
     * Three times cheaper than AWS DynamoDB or Google Spanne
 
+* Azure Cosmos DB offers multiple, well defined (relaxed) consistency models to choose from[^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)
+
+![](https://docs.microsoft.com/en-us/azure/cosmos-db/media/consistency-levels/five-consistency-levels.png)
+
+**Consistency Levels and guarantees**
+
+| Consistency Level	| Guarantees |
+| --- | --- |
+| Strong | Linearizability. Reads are guaranteed to return the most recent version of an item.|
+| Bounded Staleness	| Consistent Prefix. Reads lag behind writes by at most k prefixes or t interval |
+| Session	| Consistent Prefix. Monotonic reads, monotonic writes, read-your-writes, write-follows-reads |
+| Consistent Prefix	| Updates returned are some prefix of all the updates, with no gaps |
+| Eventual	| Out of order reads |
+
+
 #### Concepts
 * **Serverless** database
     * Serverless computing with Azure CosmosDB and Azure Functions
