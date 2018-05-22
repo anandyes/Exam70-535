@@ -70,10 +70,14 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 * On-premises VMs and physical servers replicating to Azure, or to a secondary site.
 
 [VMware to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-architecture)
+
 ![VMware to Azure Replication](https://docs.microsoft.com/en-us/azure/site-recovery/media/vmware-azure-architecture/arch-enhanced.png)
+
 [Hyper-V to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture)
+
 ![Hyper-V to Azure architecture (without VMM)](https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-azure-hypervsite.png)
-![Hyper-V to Azure architecture (with VMM)]((https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-onprem-azure-vmm.png)
+
+![Hyper-V to Azure architecture (with VMM)](https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-onprem-azure-vmm.png)
 
 #### Useful Links:
 1. [Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
