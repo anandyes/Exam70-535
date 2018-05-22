@@ -360,7 +360,7 @@ Azure App Service application in multiple regions to achieve high availability![
 ### Business Continuity[^](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications)[^](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions)[^](https://docs.microsoft.com/en-in/azure/architecture/resiliency/index)
 * Business continuity (BC), is the ability to perform essential business functions during and after adverse conditions, such as a natural disaster or a downed service. BC covers the entire operation of the business, including physical facilities, people, communications, transportation, and IT.
 * Disaster recovery (DR) is focused on recovering from a catastrophic loss of application functionality.
-* Paired regions - Azure region is paired with another region within the same geography, together making a regional pair
+* Paired regions[^](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions) - Azure region is paired with another region within the same geography, together making a regional pair
 * Paired region benifits - Physical Isolation, Platform provided replication, region recovery order, sequential updates, Data residency.
 * Azure Site Recovery provides a simple way to replicate Azure VMs between regions
 * Azure Traffic Manager[^](https://docs.microsoft.com/en-in/azure/traffic-manager/traffic-manager-overview) - uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints.
