@@ -60,6 +60,10 @@
     * Combine on-premises and Cloud-based applications - supports external, non-Azure endpoints
     * Distribute traffic for large, complex deployments - use nested Traffic Manager profiles
 * Traffic Manager routing methods - Priority, Weighted, Performance, Geographic
+    * **[Priority](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods#priority):** Select **Priority** when you want to use a primary service endpoint for all traffic, and provide backups in case the primary or the backup endpoints are unavailable.
+    * **[Weighted](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods#weighted):** Select **Weighted** when you want to distribute traffic across a set of endpoints, either evenly or according to weights, which you define.
+    * **[Performance](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods#performance):** Select **Performance** when you have endpoints in different geographic locations and you want end users to use the "closest" endpoint in terms of the lowest network latency.
+    * **[Geographic](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods#geographic):** Select **Geographic** so that users are directed to specific endpoints (Azure, External, or Nested) based on which geographic location their DNS query originates from. This empowers Traffic Manager customers to enable scenarios where knowing a user’s geographic region and routing them based on that is important. Examples include complying with data sovereignty mandates, localization of content & user experience and measuring traffic from different regions.
 
 ### Azure DNS[^](https://docs.microsoft.com/en-us/azure/dns/dns-overview)
 * The Domain Name System, or DNS, is responsible for translating (or resolving) a website or service name to its IP address. 
