@@ -57,9 +57,14 @@ Three basic roles:
 * **Contributor** can create and manage all types of Azure resources but can’t grant access to others.
 * **Reader** can view existing Azure resources.
 
+[Built-in Roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
+
 ### Azure AD P2 features
 
 * Previliged Identity Management - Just in time privilege elevation
 * Identity Protection
 
 Azure Security Center gives overview of overall security
+
+[B2B users access on-prem application](https://docs.microsoft.com/en-us/azure/active-directory/b2b/hybrid-cloud-to-on-premises)
+![Authorization via a B2B user object in the on-premises directory](https://docs.microsoft.com/en-us/azure/active-directory/b2b/media/hybrid-cloud-to-on-premises/mimscriptsolution.png)

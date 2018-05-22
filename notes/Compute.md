@@ -78,6 +78,7 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 6. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
 7. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
 8. [VMware to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-architecture)
+9. [ARM Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy

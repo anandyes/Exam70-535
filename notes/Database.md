@@ -261,6 +261,8 @@ Three types of Keys for design of data encryption:
 * Data Encryption Key (DEK)
 * Block Encryption Key (BEK)
 
+[Comparision of Azure Data Lake and Azure Blob Storage](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-comparison-with-blob-storage)
+
 ### Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)
 * Azure Search is a search-as-a-service cloud solution that gives developers APIs and tools for adding a rich search experience over your content in web, mobile, and enterprise applications
 * Features:

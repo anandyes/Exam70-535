@@ -196,7 +196,7 @@ Notification Hub advantages:
 * Azure Event Grid is a fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe mode
 * Azure Event Grid allows you to easily build applications with event-based architectures
 * Event Grid has built-in support for events coming from Azure services, like storage blobs and resource groups
-* Event sources
+* Event sources (Topics)
     * Azure Subscriptions (management operations)
     * Custom Topics
     * Event Hubs
