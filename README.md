@@ -153,6 +153,7 @@ Determine when to use
 
 #### Notes:
 * [Azure AD Notes](notes/AzureAD.md)
+* [Security and Identity Notes](notes/NotesS&I.md)
 * [Introduction to Azure Security](https://docs.microsoft.com/en-us/azure/security/azure-security)
 
 ### 4.2 Secure resources by using identity providers
