@@ -69,6 +69,12 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 * Azure VMs replicating between Azure regions.
 * On-premises VMs and physical servers replicating to Azure, or to a secondary site.
 
+[VMware to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-architecture)
+![VMware to Azure Replication](https://docs.microsoft.com/en-us/azure/site-recovery/media/vmware-azure-architecture/arch-enhanced.png)
+[Hyper-V to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture)
+![Hyper-V to Azure architecture (without VMM)](https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-azure-hypervsite.png)
+![Hyper-V to Azure architecture (with VMM)]((https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-onprem-azure-vmm.png)
+
 #### Useful Links:
 1. [Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
 2. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
@@ -77,8 +83,7 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 5. [Run intrinsically parallel workloads with Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) 
 6. [About Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) 
 7. [Back up Azure virtual machines to a Recovery Services vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-vms)
-8. [VMware to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-architecture)
-9. [ARM Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
+8. [ARM Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
 
 #### Recommended high availability "best practices" for virtual machines deployment:
 - Configure multiple virtual machines in an availability set - for redundancy

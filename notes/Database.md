@@ -180,10 +180,17 @@ Key Capabilities:
 * Multiple data models and popular APIs for accessing and querying data
     * The atom-record-sequence (ARS) based data model supports multiple data models
     * Data model APIS supported:
-        * SQL API : A schema-less JSON database engine with rich SQL querying capabilities
+        * SQL API (Document DB): A schema-less JSON database engine with rich SQL querying capabilities
         * MongoDB API : A massively scalable MongoDB-as-a-Service powered by Azure Cosmos DB platform
+            * Supports **MapReduce**
+            * aggregation pipeline
+            * full text index 
         * Cassandra API : A globally distributed Cassandra-as-a-Service powered by Azure Cosmos DB platform
+            * Data is automatically replicated to multiple nodes for fault-tolerance.
+            * Replication across multiple data centers is supported. 
+            * Failed nodes can be replaced with no downtime.
         * Graph (Gremlin) API: A fully managed, horizontally scalable graph database service that makes it easy to build and run applications that work with highly connected datasets supporting Open Graph APIs (based on the Apache TinkerPop specification, Apache Gremlin).
+            * used for managing Azure Active Directory 
         * Table API : A key-value database service built to provide premium capabilities (such as, automatic indexing, guaranteed low latency, global distribution) to existing Azure Table storage applications without making any app changes.
         * Additional data models will be added soon
 * Elastically and independently scale throughput and storage on demand and worldwide
