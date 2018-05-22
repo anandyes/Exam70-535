@@ -155,7 +155,7 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
     * Cost savings - pay only for running agent pool nodes
 * Kubernetes provides a distributed platform for containerized applications. With AKS, provisioning of a production ready Kubernetes cluster is simple and quick.
 
-### Azure Service Fabric (ASF)[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview)
+### Azure Service Fabric (ASF)[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview)[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-content-roadmap)
 * Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.
 * Service Fabric provides three broad areas to help you build applications that use a microservices approach:
     * A platform that provides system services to deploy, upgrade, detect, and restart failed services, discover services, route messages, manage state, and monitor health. 
@@ -234,6 +234,8 @@ A gateway is software that facilitates access to data that resides on a private,
 ![On-prem Gateway and Gateway Could Service](https://docs.microsoft.com/en-in/power-bi/media/service-gateway-getting-started/gateway-how-it-works.png)
 
 #### [App Service Hybrid Connections](https://docs.microsoft.com/en-in/azure/app-service/app-service-hybrid-connections)
+![Hybrid Connection high level flow](https://docs.microsoft.com/en-in/azure/app-service/media/app-service-hybrid-connections/hybridconn-connectiondiagram.png)
+
 
 ### Secure Web API [^](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/)[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-custom-api-authentication)
 * Authentication and Authorization in Web API
