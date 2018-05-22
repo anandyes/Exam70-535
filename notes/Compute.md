@@ -230,6 +230,9 @@ Key features of App Service Web Apps:
 
 #### [On-Premises PowerBI Gateway](https://docs.microsoft.com/en-in/power-bi/service-gateway-getting-started)
 A gateway is software that facilitates access to data that resides on a private, on-premises network, for subsequent use in a cloud service like Power BI.
+
+![On-prem Gateway and Gateway Could Service](https://docs.microsoft.com/en-in/power-bi/media/service-gateway-getting-started/gateway-how-it-works.png)
+
 #### [App Service Hybrid Connections](https://docs.microsoft.com/en-in/azure/app-service/app-service-hybrid-connections)
 
 ### Secure Web API [^](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/)[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-custom-api-authentication)
