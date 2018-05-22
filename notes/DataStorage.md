@@ -118,4 +118,4 @@
 * By default, CORS is disabled for each service
 
 Useful Link:
-	  * Storage Concpets in Windows Server[^](https://docs.microsoft.com/en-us/windows-server/storage/storage)
+* Storage Concpets in Windows Server[^](https://docs.microsoft.com/en-us/windows-server/storage/storage)
