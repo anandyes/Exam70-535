@@ -235,6 +235,7 @@ A gateway is software that facilitates access to data that resides on a private,
 
 #### [App Service Hybrid Connections](https://docs.microsoft.com/en-in/azure/app-service/app-service-hybrid-connections)
 ![Hybrid Connection high level flow](https://docs.microsoft.com/en-in/azure/app-service/media/app-service-hybrid-connections/hybridconn-connectiondiagram.png)
+* Hybrid Connections is both a service in Azure and a feature in Azure App Service.
 
 
 ### Secure Web API [^](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/)[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-custom-api-authentication)
