@@ -54,9 +54,6 @@
 #### Notes:
  * [Azure Compute](notes/Compute.md)
 
-#### Useful links:
-[Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
-
 ## 2. Design Data Implementation (15-20%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=storage)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=databases)
 ### 2.1 Design for Azure Storage solutions
 Determine when to use 
@@ -68,12 +65,15 @@ Determine when to use
 
 #### Notes:
  * [Azure Storage](notes/DataStorage.md)
+
+#### Useful links:
  * [Queues Comparision](notes/QueuesComparision.md)
+ * [Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
 
 ### 2.2 Design for Azure Data Services
 Determine when to use 
-* Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog) [^](notes/Database.md#Azure-Data-Catalog)
-* Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/) [^](notes/Database.md#Azure-Data-Factory)
+* Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog) [^](notes/Database.md#azure-data-catalog)
+* Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/) [^](notes/Database.md#azure-data-factory)
 * SQL Data Warehouse[^](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/) [^](notes/Database.md#sql-data-warehouse)
 * Azure Data Lake Analytics[^](https://docs.microsoft.com/en-us/azure/data-lake-analytics/data-lake-analytics-overview) [^](notes/Database.md#Azure-Data-Lake-Analytics)
 * Azure Analysis Services[^](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview) [^](notes/Database.md#Azure-Analysis-Services) and
