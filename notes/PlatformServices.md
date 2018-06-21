@@ -158,9 +158,9 @@ Azure IoT Hub is a fully managed service that enables reliable and secure bidire
 
 Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
 
-|||||
+
 |:--|:--|:--|:--|
-| IoT Capability | IoT Hub standard tier | IoT Hub basic tier | Event Hubs |
+| **IoT Capability** | **IoT Hub standard tier** | **IoT Hub basic tier** | **Event Hubs** |
 | Device-to-cloud messaging | Yes | Yes | Yes |
 | Protocols: HTTPS, AMQP, AMQP over websockets | Yes | Yes | Yes |
 | Protocols: MQTT, MQTT over websockets | Yes | Yes | |
@@ -170,7 +170,7 @@ Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/az
 | Cloud-to-device messaging | Yes | | |
 | Device twin and device management | Yes | | |
 | IoT Edge | Yes | | |
-|||||
+
 
 IoT Hub communication options: 
 * Device Twins
