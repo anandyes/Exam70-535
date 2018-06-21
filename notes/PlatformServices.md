@@ -46,35 +46,93 @@
 Infuse your apps, websites and bots with intelligent algorithms to see, hear, speak, understand and interpret your user needs through natural methods of communication
 
 * Vision
-    * Computer Vision API
-    * Face API
-    * Content Moderator
-    * Emotion API
-    * Custom Vision Service 
-    * Video Indexer
-* Speech
-    * Translator Speech API 
-    * Speaker Recognition API 
-    * Bing Speech API
-    * Custom Speech Service
+    * Computer Vision API[^](https://docs.microsoft.com/en-in/azure/cognitive-services/computer-vision/home)
+        * Tag images based on content
+        * Categorize images - 86-category taxonomy classifier
+        * Identify the type and quality of images
+        * Detect human faces and return their coordinates
+        * Recognize domain-specific content
+            * Scoped Analysis
+            * Enhanced Analysis - 86-category taxonomy classifier 
+        * Generate descriptions of the content
+        * Use optical character recognition to identify printed text found in images - supports Language detection
+        * Recognize text - printer text and handwritten text
+        * Distinguish color schemes
+        * Flag adult content
+        * Crop photos to be used as thumbnails
+    * Face API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview) - face detection with attributes and face recognition.
+    * Content Moderator[^](https://docs.microsoft.com/en-us/azure/cognitive-services/content-moderator/overview)
+        * The process of monitoring for possible offensive, undesirable, and risky content
+    * Emotion API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/emotion/home) - emotion recognition algorithm
+    * Custom Vision Service[^](https://docs.microsoft.com/en-us/azure/cognitive-services/Custom-Vision-Service/home) - build custom image classifiers
+    * Video Indexer[^](https://docs.microsoft.com/en-us/azure/cognitive-services/video-indexer/video-indexer-overview)
+        * Automatic language detection
+        * Audio transcription
+        * Face tracking and identification
+        * Speaker indexing
+        * Visual text recognition
+        * Voice activity detection
+        * Scene detection
+        * Keyframe extraction
+        * Sentiment analysis
+        * Translation
+        * Visual content moderation
+        * Keywords extraction
+        * Annotation
+        * Brands
+* Speech - The Speech Translation API can be used either to translate streaming audio in near-real-time or to process recorded speech. 
+    * Translator Speech API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/translator-speech/) - real time multi-language speech translation. Newral Machine Translation (NMT)
+    * Speaker Recognition API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/speaker-recognition/home) - Speaker verification and Speaker Identification
+    * Bing Speech API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/speech/home) - speech recognition and speech synthesis
+    * Custom Speech Service[^](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-speech-service/cognitive-services-custom-speech-home) -  create customized language models and acoustic models
 * Knowledge
-    * QnA Maker API
-    * Custom Decision Service
+    * QnA Maker API[^](https://docs.microsoft.com/en-in/azure/cognitive-services/QnAMaker/overview/overview)
+    * Custom Decision Service[^](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-decision-service/) - The system incorporates user feedback into its decisions in real time and responds to emergent trends and breaking stories in minutes.
+        * Personalizing articles on a news website
+        * Personalizing video content on a media portal
+        * Optimizing ad placements or web pages that the ad directs to
+        * Ranking recommended items on a shopping website.
 * Language
-    * Language Understanding (LUIS)
-    * Text Analytics API 
-    * Bing Spell Check API 
-    * Translator Text API
-    * Web Language Model API
-    * Linguistic Analysis API
+    * Language Understanding (LUIS)[^](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
+        * applies custom machine-learning to a user's conversational, natural language text to predict overall meaning and pull out relevant, detailed information
+    * Text Analytics API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/)
+        * provides advanced natural language processing over raw text
+        * includes four main functions: sentiment analysis, key phrase extraction, language detection, and entity linking.
+    * Bing Spell Check API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-spell-check/)
+        * perform contextual grammar and spell checking
+    * Translator Text API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/)
+        * cloud-based machine translation service
+    * Web Language Model API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/web-language-model/home)
+        * REST-based cloud service providing state-of-the-art tools for natural language processing.
+        * The Web Language Model API supports four lookup operations:
+            * Joint (log10) probability of a sequence of words.
+            * Conditional (log10) probability of one word given a sequence of preceding words.
+            * List of words (completions) most likely to follow a given sequence of words.
+            * Word breaking of strings that contain no spaces.
+    * Linguistic Analysis API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/linguisticanalysisapi/home)
+        * NLP tools that identify the structure of text
+            * The current release provides three types of analysis:
+                * Sentence separation and tokenization
+                * Part-of-speech tagging
+                * Constituency parsing - phrase structure parsing - identify the phrases in the text
 * Search
-    * Bing Autosuggest API
-    * Bing Image Search API
-    * Bing News Search API
-    * Bing Video Search API
-    * Bing Web Search API
-    * Bing Custom Search API
-    * Bing Entity Search API
+    * Bing Autosuggest API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/Bing-Autosuggest)
+        * returns a list of suggested queries based on the partial query string the user enters in the search box
+    * Bing Image Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-image-search/overview)
+        *  send a user search query to Bing and get back a list of relevant images.
+    * Bing News Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-news-search/)
+        * send a search query to Bing and get back a list of relevant news articles
+    * Bing Video Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/Bing-Video-Search/)
+        * send a search query to Bing and get back a list of relevant videos
+    * Bing Web Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/)
+        * search query results may include Web pages, images, videos, news, and entities, along with related search queries, spelling corrections, time zones, unit conversion, translations, and calculations.
+    * Bing Custom Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-custom-search)
+        * create tailored search experiences for topics that you care about.
+    * Bing Entity Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-entities-search/search-the-web)
+        * Sends a search query to Bing and gets results that include entities and places.
+        * Place results include restaurants, hotel, or other local businesses
+    * Bing Visual Search API[^](https://docs.microsoft.com/en-us/azure/cognitive-services/bing-visual-search)
+        * upload a picture and get back insights about the image such as visually similar images / products, shopping sources, webpages that include the image, shopping sources, recipes.
 
 ## Azure IoT
 
