@@ -1,4 +1,7 @@
 ## Application Monitoring and Alerting strategy
+
+![Components that work together to provide monitoring of Azure resources](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/media/monitoring-overview/monitoring-products-overview.png)
+
 ### Monitoring Azure applications and resources
 
 Components that work together to provide monitoring of Azure resources:
