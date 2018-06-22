@@ -1,8 +1,7 @@
 # Compute[^](https://azure.microsoft.com/en-us/product-categories/compute/)
 
-|||
-|:--|:--|
 | **If you want to...** | **Use this** |
+|:--|:--|
 |Provision Linux and Windows virtual machines in seconds with the configurations of your choice | Virtual Machines |
 |Achieve high availability by autoscaling to create thousands of VMs in minutes | Virtual Machine Scale Sets |
 |Simplify the deployment, management, and operations of Kubernetes with a fully managed service| Azure Container Service (AKS) |
@@ -12,22 +11,19 @@
 |Containerize apps and easily run containers with a single command| Container Instances |
 |Cloud-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of virtual machines | Batch |
 |Create highly available, scalable cloud applications and APIs that help you focus on apps instead of hardware | Cloud Services |
-|||
 
 
 ## Virtual Machines[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
 * Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers
 
-||||
-|:--|:--|:--|
 | VM Type | Sizes | Description|
+|:--|:--|:--|
 | General Purpose | B, Dsv3, Dv3, DSv2, Dv2, DS, D, Av2, A0-7 | Balanced CPU-to-memory ratio. Ideal for testing and development, small to medium databases, and low to medium traffic web servers.|
 | Compute Optimized | Fsv2, Fs, F |High CPU-to-memory ratio. Good for medium traffic web servers, network appliances, batch processes, and application servers.|
 | Memory Optimized | Esv3, Ev3, M, GS, G, DSv2, DS, Dv2, D | High memory-to-CPU ratio. Great for relational database servers, medium to large caches, and in-memory analytics.|
 | Storage Optimized | Ls |  High disk throughput and IO. Ideal for Big Data, SQL, and NoSQL databases.|
 | GPU | NV, NC, NCv2, NCv3, ND |Specialized virtual machines targeted for heavy graphic rendering and video editing. Available with single or multiple GPUs.|
 | High Performance Compute | H, A8-11 | Our fastest and most powerful CPU virtual machines with optional high-throughput network interfaces (RDMA).
-||||
 
 ### Availability sets, fault domains, and update domains[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets)[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#availability-sets)[^](https://docs.microsoft.com/en-in/azure/virtual-machines/windows/manage-availability)
 * An Availability Set is a logical grouping capability that Azure ensures VM resources are isolated. The VMs you place within an Availability Set run across multiple physical servers, compute racks, storage units, and network switches.
