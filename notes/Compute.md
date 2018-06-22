@@ -2,15 +2,15 @@
 
 | **If you want to...** | **Use this** |
 |:--|:--|
-|Provision Linux and Windows virtual machines in seconds with the configurations of your choice | Virtual Machines |
-|Achieve high availability by autoscaling to create thousands of VMs in minutes | Virtual Machine Scale Sets |
-|Simplify the deployment, management, and operations of Kubernetes with a fully managed service| Azure Container Service (AKS) |
-|Accelerate app development using an event-driven, serverless architecture| Functions|
-|Develop microservices and orchestrate containers on Windows and Linux| Service Fabric|
-|Quickly create cloud apps for web and mobile with fully managed platform| App Service |
-|Containerize apps and easily run containers with a single command| Container Instances |
-|Cloud-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of virtual machines | Batch |
-|Create highly available, scalable cloud applications and APIs that help you focus on apps instead of hardware | Cloud Services |
+|Provision Linux and Windows virtual machines in seconds with the configurations of your choice | [Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/) |
+|Achieve high availability by autoscaling to create thousands of VMs in minutes | [Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/) |
+|Simplify the deployment, management, and operations of Kubernetes with a fully managed service| [Azure Container Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/) |
+|Accelerate app development using an event-driven, serverless architecture| [Functions](https://azure.microsoft.com/en-us/services/functions/)|
+|Develop microservices and orchestrate containers on Windows and Linux| [Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)|
+|Quickly create cloud apps for web and mobile with fully managed platform| [App Service](https://azure.microsoft.com/en-us/services/app-service/) |
+|Containerize apps and easily run containers with a single command| [Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) |
+|Cloud-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of virtual machines | [Batch](https://azure.microsoft.com/en-us/services/batch/) |
+|Create highly available, scalable cloud applications and APIs that help you focus on apps instead of hardware | [Cloud Services](https://azure.microsoft.com/en-us/services/cloud-services/)|
 
 
 ## Virtual Machines[^](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal) 
