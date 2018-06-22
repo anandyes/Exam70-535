@@ -57,7 +57,7 @@ Azure Monitor enables core monitoring for Azure services by allowing the collect
 * Components of Azure Health:
     * Azure Status - a global view of health of Azure services, real time status updates and history pages
     * Service Health - a personalized view of health of Azure services, provides a customizable dashboard. Tracks 3 types of health events:
-        * Serviec issues (any ongoing problems)
+        * Service issues (any ongoing problems)
         * Planned maintenance
         * Health advisories
     * Resource Health - a deeper view of the health of the individual resources provisioned to you by your Azure services, provides technical support to help you mitigate problems. Resource Health statuses are:
