@@ -67,7 +67,21 @@ Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction
 
 [VMware to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-architecture)
 
+#### Architectural components
+
+The following table and graphic provide a high-level view of the components used for VMware replication to Azure.
+
+**Component** | **Requirement** | **Details**
+--- | --- | ---
+**Azure** | An Azure subscription, Azure Storage account, and Azure network. | Replicated data from on-premises VMs is stored in the storage account. Azure VMs are created with the replicated data when you run a failover from on-premises to Azure. The Azure VMs connect to the Azure virtual network when they're created.
+**Configuration server machine** | A single on-premises machine. We recommend that you run it as a VMware VM that can be deployed from a downloaded OVF template.<br/><br/> The machine runs all on-premises Site Recovery components, which include the configuration server, process server, and master target server. | **Configuration server**: Coordinates communications between on-premises and Azure, and manages data replication.<br/><br/> **Process server**: Installed by default on the configuration server. It receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. The process server also installs Azure Site Recovery Mobility Service on VMs you want to replicate, and performs automatic discovery of on-premises machines. As your deployment grows, you can add additional, separate process servers to handle larger volumes of replication traffic.<br/><br/> **Master target server**: Installed by default on the configuration server. It handles replication data during failback from Azure. For large deployments, you can add an additional, separate master target server for failback.
+**VMware servers** | VMware VMs are hosted on on-premises vSphere ESXi servers. We recommend a vCenter server to manage the hosts. | During Site Recovery deployment, you add VMware servers to the Recovery Services vault.
+**Replicated machines** | Mobility Service is installed on each VMware VM that you replicate. | We recommend that you allow automatic installation from the process server. Alternatively, you can install the service manually or use an automated deployment method, such as System Center Configuration Manager.
+
+
 ![VMware to Azure Replication](https://docs.microsoft.com/en-us/azure/site-recovery/media/vmware-azure-architecture/arch-enhanced.png)
+
+![VMware to Azure replication process](https://docs.microsoft.com/en-us/azure/site-recovery/media/vmware-azure-architecture/v2a-architecture-henry.png)
 
 [Hyper-V to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture)
 
@@ -185,9 +199,8 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
 
 #### Comparision of Azure App Service, Virtual Machines, Service Fabric, and Cloud Services [^](https://docs.microsoft.com/en-in/azure/app-service/choose-web-site-cloud-service-vm)
 #### When to use what?
-|||||
-|:--|:--|:--|:--|
 ||Azure Container Services|Azure Container Instances|Azure Service Fabric|
+|:--|:--|:--|:--|
 |production deployments of complex systems (with a container orchestrator)|X|||
 |For running simple configurations (possibly without orchestrator)||X||
 |For long-running workloads on containers|X|
@@ -195,7 +208,7 @@ Serverless Comparision[^](https://docs.microsoft.com/en-in/azure/azure-functions
 |For orchestrating a system based on containers|X||X|
 |Orchestrating with open-source orchestrators (DC/OS, Docker Swarm, Kubernetes)|X|||
 |Orchestrating with built-in orchestrator|||X|
-|||||
+
 
 ### Determine when Azure Functions is appropriate[^](#use-azure-function-)[^](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps)
 ### Determine when Web API is appropriate[^](https://azure.microsoft.com/en-in/services/app-service/api/)

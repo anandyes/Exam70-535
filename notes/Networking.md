@@ -32,12 +32,16 @@
 * Use Traffic Manager for global DNS load balancing.
 * Load Balancer features:
     * Load balancing - can create a load-balancing rule to distribute traffic that arrives at front-end to back-end pool instances.Load Balancer uses a hash-based algorithm (5 tuple hash by default)
+    ![Hash Based Load Balancing](https://docs.microsoft.com/en-us/azure/load-balancer/media/load-balancer-overview/load-balancer-distribution.png)
     * Port forwarding - create an inbound NAT rule to port forward traffic from a specific port of a specific front-end IP address to a specific port of a specific back-end instance inside the virtual network. Remote Desktop Protocol (RDP) or Secure Shell (SSH) sessions.
     * Application agnostic and transparent - does not directly interact with TCP or UDP or the application layer
     * Automatic reconfiguration - reconfigures itself when you scale instances up or down
     * Health probes - stops sending new connections to the unhealthy instances. (HTTP custom probe, TCP custom probe, Guest agent probe)
     * Outbound connections (source NAT / SNAT)
 * Supports both Basic and Standard SKUs.
+
+![Public Load Balancer](https://docs.microsoft.com/en-us/azure/load-balancer/media/load-balancer-overview/IC727496.png)
+![Internal load balancer](https://docs.microsoft.com/en-us/azure/load-balancer/media/load-balancer-overview/IC744147.png)
 
 ### Application Gateway[^](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-introduction)
 * Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. 
