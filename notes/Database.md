@@ -1,16 +1,20 @@
-## Auzre SQL Database Service
+# Database Notes
 
-* SQL Database is a genreal purpose relational database managed service in Azure.
-* Supports structres such as relational data, JSON, spatial, and XML
-* Dynamimcally Scalable performance
-* Columnstore indexes for extream analytic analysis and reporting (Data Warehousing) and real time operational analytics
+## Azure SQL Database Service
+
+* SQL Database is a general purpose relational database managed service in Azure.
+* Supports structures such as relational data, JSON, spatial, and XML
+* Dynamically Scalable performance
+* Columnstore indexes for extreme analytic analysis and reporting (Data Warehousing) and real time operational analytics
 
 SQL Database types:
+
 * managed Single SQL databases
 * managed SQL databases in an elastic pool
 * managed SQL Instances (SQL Database Managed Instance - preview) with near 100% compatibility with SQL server on-prem
 
 Availability Capabilities
+
 * 99.99% availability SLA
 * Automatic Backups
 * Point-in-time restores
@@ -19,19 +23,21 @@ Availability Capabilities
 * Zone redundant databases (preview)
 
 Built-in Intelligence
-* Automatic Performance monitoring and tuning - performance tuning recomendations and Intelligent Insights
+
+* Automatic Performance monitoring and tuning - performance tuning recommendations and Intelligent Insights
 * Automatic tuning - Azure SQL Database identifies CREATE INDEX, DROP INDEX, and FORCE LAST GOOD PLAN recommendations that can optimize the database and shows them in Azure portal
 
 ### Scaling out with Azure SQL Database[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction)
+
 * Elastic Database tools
-    * Elastic Database client library [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-database-client-library) -  is used to manage a shard set.
-    * Elastic Database split-merge tool [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-overview-split-and-merge) - is used to move data from one shard to another
-    * Elastic Database jobs (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview) - runs scheduled or ad hoc T-SQL scripts against all databases
-    * Elastic Database query (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-query-overview) - allows you to write a query that spans all databases in the shard set
-    * Elastic transactions [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-transactions-overview) - allow you to run transactions that span several databases.
+  * Elastic Database client library [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-database-client-library) -  is used to manage a shard set.
+  * Elastic Database split-merge tool [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-overview-split-and-merge) - is used to move data from one shard to another
+  * Elastic Database jobs (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview) - runs scheduled or ad hoc T-SQL scripts against all databases
+  * Elastic Database query (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-query-overview) - allows you to write a query that spans all databases in the shard set
+  * Elastic transactions [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-transactions-overview) - allow you to run transactions that span several databases.
 
 * Horizontal scaling / "scaling out" - using sharding,  managed using Elastic Database client library
-* Verticle scaling / "scaling up"  - using Azure powershell to change serivce tier or placing in elastic pool
+* Vertical scaling / "scaling up"  - using Azure powershell to change service tier or placing in elastic pool
 
 * **Sharding** is a technique to distribute large amounts of identically structured data across a number of independent databases.
 
@@ -42,13 +48,14 @@ Built-in Intelligence
 Protect Data:
 
 * Data in motion - Transport layer security
-* Data at rest - Tranparent data encryption
-* Data in use - Always encripted
+* Data at rest - Transparent data encryption
+* Data in use - Always encrypted
 * column-level encryption, or cell-level encryption. 
 
 Data Discovery & Classification (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification) - provides capabilities for discovering, classifying, labeling and protecting the sensitive data.
 
 Control Access
+
 * Firewall and Firewall rules
 * Authentication ( SQL Authentication and Azure active directory authentication)
 * Authorization - database role memberships and object-level permissions
@@ -56,59 +63,65 @@ Control Access
 * Dynamic data masking limits sensitive data exposure by masking it to non-privileged users
 
 Proactive monitoring
+
 * Auditing - records database events to Azure storage account
 * Threat Detection - detects unusual and potentially harmful attempts to access or exploit databases
 
 SQL Vulnerability Assessment[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment)
+
 * SQL Vulnerability Assessment (VA) is a service that provides visibility into your security state, and includes actionable steps to resolve security issues, and enhance your database security
 * Compliance reports generated by VA scans
 
 Business Continuity Features[^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity)
+
 * Recovery Time Objective (RTO) - the maximum acceptable time before the application fully recovers after the disruptive event.
 * Recovery point objective (RPO) - the maximum amount of recent data updates (time interval) the application can tolerate losing when recovering after the disruptive event
 
-Comparision of ERT and RTO for the common scenarios
+Comparison of ERT and RTO for the common scenarios
 
-|||||
-|:--|:--|:--|:--|
 | Capability | Basic tier | Standard tier | Premium tier |
+|:--|:--|:--|:--|
 |Point in Time Restore from backup|Any restore point within 7 days|Any restore point within 35 days|Any restore point within 35 days|
 |Geo-restore from geo-replicated backups|ERT < 12h, RPO < 1h|ERT < 12h, RPO < 1h|ERT < 12h, RPO < 1h|
 |Restore from Azure Backup Vault|ERT < 12h, RPO < 1 wk|ERT < 12h, RPO < 1 wk|ERT < 12h, RPO < 1 wk|
 |Active geo-replication|ERT < 30s, RPO < 5s|ERT < 30s, RPO < 5s|ERT < 30s, RPO < 5s|
-|||||
-
 
 Database Backups
+
 * SQL Database automatically performs a combination of full database backups weekly, differential database backups hourly, and transaction log backups every five - ten minutes to protect your business from data loss
-*  Backups are stored in geo-redundant storage for 35 days for databases in the Standard and Premium service tiers and 7 days for databases in the Basic service tier
+* Backups are stored in geo-redundant storage for 35 days for databases in the Standard and Premium service tiers and 7 days for databases in the Basic service tier
 * The full and differential database backups are also replicated to a paired data center for protection against a data center outage.
-* Long term retention (LTR policy) upto 10 years using Azure Recovery Services vault [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention)
+* Long term retention (LTR policy) up to 10 years using Azure Recovery Services vault [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention)
 
 Frequency of data backups
+
 * Full database backups happen weekly
 * Differential database backups generally happen every few hours
 * Transaction log backups generally happen every 5 - 10 minutes
 
 Backup retention period
+
 * Basic service tier is 7 days.
 * Standard service tier is 35 days.
 * Premium service tier is 35 days.
 
 Data Encryption at rest
+
 * Transparent data encryption with Bring your own key support (TDE with BYOK) [^](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql)
 
 ### Stretch Database[^](https://docs.microsoft.com/en-us/sql/sql-server/stretch-database/stretch-database)
 
 Stretch Database migrates your cold data transparently and securely to the Microsoft Azure cloud
 
-Benifits of Stretch Database:
+Benefits of Stretch Database:
+
 * Provides cost effective cold data storage - Stretch warm and cold transactional data dynamically from SQL Server to Microsoft Azure with SQL Server Stretch Database
 * Doesn’t require changes to queries or applications - access data seamlessly whether on-prem SQL Server or stretched to the cloud 
 * Streamlines on-premises data maintenance - Reduce on-premises maintenance and storage for your data
 * Keeps your data secure even during migration - RLS, SQL Always Encryption for data in motion and all security features apply to Stretch Database
 
 Candidates for Stretch Database
+
 * Stretch Database targets transactional databases with large amounts of cold data, typically stored in a small number of tables
 * Use Microsoft Data Migration Assistant tool [^](https://docs.microsoft.com/en-us/sql/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor)
 * Data Migration Assistant replaces and extends Stretch Database Advisor
@@ -121,10 +134,12 @@ Candidates for Stretch Database
 * SQL Data Warehouse stores data into relational tables with columnar storage
 
 Azure SQL Data Warehouse performance tiers
+
 * Optimized for Elasticity performance tier - lowest entry price and scale to support majority workloads
 * Optimized for Compute performance tier - NVMe SSD cache, for workloads of continuous, blazing fast performance.
 
 SQL Data Warehouse supports these sharding patterns:
+
 * Hash distributed tables - highest query performance for joins and aggregations on large tables
 * Round Robin distributed tables - used as staging tables
 * Replicated tables - for small tables
@@ -132,6 +147,7 @@ SQL Data Warehouse supports these sharding patterns:
 ### Azure Database for MySQL[^](https://docs.microsoft.com/en-us/azure/mysql/overview)
 
 Azure Database for MySQL is a relational database service in the Microsoft cloud based on the MySQL Community Edition database engine.
+
 * High availability built-in, 99.99% SLA
 * Dynamic scalability using tiers (Basic, General Purpose, and Memory Optimized)
 * Built-in performance monitoring and alerting to emails and webhooks
@@ -140,30 +156,35 @@ Azure Database for MySQL is a relational database service in the Microsoft cloud
 * Connection Security using SSL settings and firewall rules
 
 ### Azure Database for PostgreSQL[^](https://docs.microsoft.com/en-us/azure/postgresql/overview)
+
 Azure Database for PostgreSQL is a relational database service based on the open source Postgres database engine. 
 All features are same as MySQL
 
 ## Azure NoSQL Storage
 
 ### Azure Redis Cache[^](https://azure.microsoft.com/en-in/services/cache/)
+
 Azure Redis Cache, a secure data cache and messaging broker that provides high throughput and low-latency access to data for applications. In-Memory data store.
 
 Azure Redis Cache Tiers:
+
 * Basic - Single node, multiple sizes, ideal for development/test and non-critical workloads. No SLA. Size up to 53GB
 * Standard - Two-node Primary/Replica, with 99.9% SLA. Size up to 53GB. 
 * Premium - Two-node Primary/Replica with up to 10 shards, 99.9% SLA, DR, enhanced security, Redis Persistance, Redis Cluster (Shards data across multiple nodes), VNet deployment for security and isolation. For bigger workloads Sizes 6GB up to 530GB.
 
 ### Azure Table Storage[^](https://azure.microsoft.com/en-in/services/storage/tables/)
+
 * A NoSQL key-value storage service, schemaless semi-structured datasets. Ideal for storing structured, non-relational data.
 
 Common uses of Table Storage
 
 * Storing TBs of structured data capable of serving web scale applications
-* Storing datasets that don't require complex joins, foreign keys, or stored procedures and can be denormalized for fast access
+* Storing datasets that don't require complex joins, foreign keys, or stored procedures and can be de-normalized for fast access
 * Quickly querying data using a clustered index
 * Accessing data using the OData protocol and LINQ queries with WCF Data Service .NET Libraries
 
 Table Storage Components
+
 * Storage Account - globally unique, part of URI
 * Table - collection of entities
 * Entity - similar to rows, a primary key and set of properties
@@ -171,11 +192,12 @@ Table Storage Components
 
 An entity can have up to 252 properties and 3 system properties (Partition Key, Row Key, Timestamp)
 
-
 ### Azure Cosmos DB[^](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
+
 Azure Cosmos DB is a globally distributed, multi-model database service that supports  document, key-value, wide-column, and graph databases.
 
 Key Capabilities:
+
 * Multi-homing APIs, distribute data across Azure regions, ensures  lowest possible latency.
 * Multiple data models and popular APIs for accessing and querying data
     * The atom-record-sequence (ARS) based data model supports multiple data models
@@ -219,16 +241,16 @@ Key Capabilities:
 
 **Consistency Levels and guarantees**
 
-| Consistency Level	| Guarantees |
+| Consistency Level| Guarantees |
 | --- | --- |
 | Strong | Linearizability. Reads are guaranteed to return the most recent version of an item.|
-| Bounded Staleness	| Consistent Prefix. Reads lag behind writes by at most k prefixes or t interval |
-| Session	| Consistent Prefix. Monotonic reads, monotonic writes, read-your-writes, write-follows-reads |
-| Consistent Prefix	| Updates returned are some prefix of all the updates, with no gaps |
-| Eventual	| Out of order reads |
-
+| Bounded Staleness| Consistent Prefix. Reads lag behind writes by at most k prefixes or t interval |
+| Session| Consistent Prefix. Monotonic reads, monotonic writes, read-your-writes, write-follows-reads |
+| Consistent Prefix| Updates returned are some prefix of all the updates, with no gaps |
+| Eventual| Out of order reads |
 
 #### Concepts
+
 * **Serverless** database
     * Serverless computing with Azure CosmosDB and Azure Functions
         * create and deploy event-driven serverless apps with low-latency access to rich data for a global user base.
@@ -257,6 +279,7 @@ Key Capabilities:
 * TCO
 
 ### Azure Data Lake Store[^](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview)
+
 * Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.
 * Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics
 * Use Data Lake Store to create a hyper-scale, Hadoop-compatible repository for analytics on data of any size, type, and ingestion speed.
@@ -268,6 +291,7 @@ Key Capabilities:
 * Supports all Data - can store any data in their native format, as is, without requiring any prior transformations.
 
 Securing Data Lake
+
 * Authentication - Azure Active Directory (AAD), OAuth /OpenID, MFA, Federation
 * Access Control - POSIX ACL by WebHDFS, RBAC
 * Encryption - supports "on by default," transparent encryption
@@ -275,17 +299,20 @@ Securing Data Lake
 * Data Protection - uses TLS / HTTPS for data in transit
 
 The two modes for managing the master encryption key (MEKs) are as follows:
+
 * Service managed keys
 * Customer managed keys - Key rotation
 
 Three types of Keys for design of data encryption:
+
 * Master Encryption Key (MEK)
 * Data Encryption Key (DEK)
 * Block Encryption Key (BEK)
 
-[Comparision of Azure Data Lake and Azure Blob Storage](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-comparison-with-blob-storage)
+[Comparison of Azure Data Lake and Azure Blob Storage](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-comparison-with-blob-storage)
 
 ### Azure Search[^](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)
+
 * Azure Search is a search-as-a-service cloud solution that gives developers APIs and tools for adding a rich search experience over your content in web, mobile, and enterprise applications
 * Features:
     * Full text search and text analysis, Simple query and Lucene query syntax
@@ -301,6 +328,7 @@ Three types of Keys for design of data encryption:
     * Supports OData version 4
 
 ### Azure Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview)
+
 * Time Series Insights is built for storing, visualizing, and querying large amounts of time series data, such as that generated by IoT devices.
 * Four Key Jobs
     * Fully integrated with cloud. It joins metadata with telemetry and indexes your data in a columnar store.
@@ -311,16 +339,18 @@ Three types of Keys for design of data encryption:
 ## Azure Data Services
 
 ### Azure Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog)
+
 Azure Data Catalog is a fully managed cloud service that serves as a system of registration and system of discovery for enterprise data sources. The enterprise users can discover the data sources they need and understand the data sources they find and it helps organizations to get more value from their existing data.
 
 Capabilities of Data Catalog
+
 * Register Data sources
 * Discover Data sources
 * Annotate Data sources
 * Document Data sources
 * Connect to Data sources
 * Register Big data sources - Hadoop HDFS
-* Data profiling - provides statistics and info about regiestered data assets
+* Data profiling - provides statistics and info about registered data assets
 * Manage ownership of data assets (standard edition, not in Free edition)
 * Save searches and pin data assets
 * Setup Business glossary , governed tagging
@@ -329,7 +359,7 @@ Capabilities of Data Catalog
 
 ### Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/)
 
-*  Azure Data Factory is a managed cloud service that's built for the complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects
+* Azure Data Factory is a managed cloud service that's built for the complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects
 * It's a cloud-based data integration service that allows you to create data-driven workflows in the cloud for orchestrating and automating data movement and data transformation
 * Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores.
 * The pipelines (data-driven workflows) in Azure Data Factory typically perform the following four steps:
@@ -344,14 +374,14 @@ Capabilities of Data Catalog
         * Data transformation activities - transformation activities that can be added to pipelines either individually or chained with another activity.
         * Control activities
     * Datasets - Datasets represent data structures within the data stores
-    * Linked services - Linked services are much like connection strings, which define the connection information that's needed for Data Factory to connect to external resources. Represents Data Store and Compuete resource.
+    * Linked services - Linked services are much like connection strings, which define the connection information that's needed for Data Factory to connect to external resources. Represents Data Store and Compute resource.
 * Triggers - Triggers represent the unit of processing that determines when a pipeline execution needs to be kicked off
 * Pipeline runs - A pipeline run is an instance of the pipeline execution
 * Parameters - Parameters are key-value pairs of read-only configuration
 * Control flow - Control flow is an orchestration of pipeline activities that includes chaining activities in a sequence, branching, defining parameters at the pipeline level, and passing arguments while invoking the pipeline on-demand or from a trigger
 
-
 ### Azure Data Lake Analytics[^](https://docs.microsoft.com/en-us/azure/data-lake-analytics/data-lake-analytics-overview)
+
 * Azure Data Lake Analytics (ADLA) is an on-demand analytics job service that simplifies big data
 * U-SQL lets you analyze data across Data Lake Store, SQL Server in Azure, Azure SQL Database, and Azure SQL Data Warehouse
 * U-SQL is a query language that extends the familiar, simple, declarative nature of SQL with the expressive power of C#
@@ -363,6 +393,7 @@ Capabilities of Data Catalog
     * Max concurrent U-SQL jobs per account: 20
 
 ### Azure Analysis Services[^](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview)
+
 * Azure Analysis Services provides enterprise-grade data modeling in the cloud
 * full-managed PaaS service
 * you can mashup and combine data from multiple sources, define metrics, and secure your data in a single, trusted semantic data model
@@ -374,6 +405,7 @@ Capabilities of Data Catalog
 * Tabular Model Scripting Language (TMSL) is the command and object model definition syntax for Analysis Services tabular model databases at compatibility level 1200 or higher
 
 ### Azure HDInsight[^](https://azure.microsoft.com/en-in/services/hdinsight/)
+
 Azure HDInsight is a cloud distribution of the Hadoop components from HDP. Azure HDInsight is a fully-managed cloud service that makes it easy, fast, and cost-effective to process massive amounts of data. Use popular open-source frameworks such as Hadoop, Spark, Hive, LLAP, Kafka, Storm, R & more. Azure HDInsight enables a broad range of scenarios such as ETL, Data Warehousing, Machine Learning, IoT and more.
 
 Azure HDInsight can be used for a variety of scenarios in big data processing. It can be historical data (data that's already collected and stored) or real-time data (data that's directly streamed from the source). The scenarios for processing such data can be summarized in the following categories: 
@@ -383,11 +415,10 @@ Azure HDInsight can be used for a variety of scenarios in big data processing. I
 * Data science : build applications that extract critical insights from data, use ML on top to predict future trends
 * Data warehousing : perform interactive queries at petabyte scales over structured or unstructured data in any format
 * Hybrid: extend your existing on-premises big data infrastructure to Azure to leverage the advanced analytics capabilities of the cloud
-
-* HDInsight supports Java and Python as default programming languages. JVM languages (Clojure, Jython, Scala), Hadoop-specific
-languages (Pig Latin and HiveQL)
+* HDInsight supports Java and Python as default programming languages. JVM languages (Clojure, Jython, Scala), Hadoop-specific languages (Pig Latin and HiveQL)
 
 ### Azure Databricks[^](https://docs.microsoft.com/en-us/azure/azure-databricks/what-is-azure-databricks)
+
 * Azure Databricks is an Apache Spark-based analytics platform
 * Spark in Azure Databricks includes the following components:
     * Spark SQL and DataFrames

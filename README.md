@@ -1,23 +1,29 @@
+
 | Disclaimer: This guide is being updated as I am preparing for the Exam 70-535. All the content referred here are available in public domain and not my creation. This is just a collection for easy reference. Use it with your own discretion. |
 |:-:|
 
 # Architecting Microsoft Azure Solutions (70-535)[^](https://www.microsoft.com/en-us/learning/exam-70-535.aspx)
+
 ## 1. Design Compute Infrastructure (20-25%)[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=Compute)
-### 1.1 Design solutions using virtual machines[^](notes/Compute.md#virtual-machines) 
+
+### 1.1 Design solutions using virtual machines[^](notes/Compute.md#virtual-machines)
+
 * Design VM deployments by leveraging availability sets, fault domains, and update domains in Azure[^](notes/Compute.md#Compute.md#availability-sets-fault-domains-and-update-domains)
 * Use web app for containers[^](notes/Compute.md#web-app-for-containers)
 * Design VM Scale Sets[^](notes/Compute.md#vm-scale-sets)
 * Design for compute-intensive tasks using Azure Batch[^](notes/Compute.md#compute-intensive-tasks-using-azure-batch)
 * Define a migration strategy from cloud services[^](notes/Compute.md##migration-strategy-from-cloud-services)
 * Recommend use of Azure Backup and Azure Site Recovery[^](notes/Compute.md#azure-backup)
- 
-### 1.2 Design solutions for serverless computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/) 
+
+### 1.2 Design solutions for serverless computing[^](https://azure.microsoft.com/en-in/overview/serverless-computing/)
+
 * Use Azure Functions to implement event-driven actions[^](notes/Compute.md#use-azure-functions-)
 * Design for serverless computing using Azure Container Instances[^](notes/Compute.md#azure-container-instances)
 * Design application solutions by using Azure Logic Apps, Azure Functions, or both[^](notes/Compute.md#design-application-solutions-by-using-azure-logic-apps-)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-create-serverless-api)[^](https://docs.microsoft.com/en-in/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 * Determine when to use API management service[^](notes/Compute.md#api-management-service)
 
-### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)   
+### 1.3 Design microservices-based solutions[^](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=containers)[^](notes/Compute.md#microservices)
+
 * Determine when a container-based solution is appropriate[^](notes/Compute.md#azure-container-instances)
 * Determine when container-orchestration is appropriate[^](notes/Compute.md#container-orchestration)
 * Determine when Azure Service Fabric (ASF) is appropriate[^](notes/Compute.md#azure-service-fabric-asf)
@@ -61,14 +67,17 @@ Determine when to use
 * Disks [^](https://docs.microsoft.com/en-in/azure/virtual-machines/windows/about-disks-and-vhds)
 * StorSimple [^](https://docs.microsoft.com/en-us/azure/storsimple/storsimple-ova-overview)
 
-#### Notes:
- * [Azure Storage](notes/DataStorage.md)
+#### Notes
 
-#### Useful links:
- * [Queues Comparision](notes/QueuesComparision.md)
- * [Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
+* [Azure Storage](notes/DataStorage.md)
+
+#### Useful links
+
+* [Queues Comparison](notes/QueuesComparison.md)
+* [Microsoft Azure Storage Performance and Scalability Checklist](https://docs.microsoft.com/en-in/azure/storage/storage-performance-checklist)
 
 ### 2.2 Design for Azure Data Services
+
 Determine when to use 
 * Data Catalog[^](https://docs.microsoft.com/en-us/azure/data-catalog/data-catalog-what-is-data-catalog) [^](notes/Database.md#azure-data-catalog)
 * Azure Data Factory[^](https://azure.microsoft.com/en-us/services/data-factory/) [^](notes/Database.md#azure-data-factory)

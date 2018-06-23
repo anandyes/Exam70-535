@@ -1,4 +1,6 @@
-### Azure Storage Types:
+# Data Storage Notes
+
+## Azure Storage Types
 
 * Blob Storage
   * Types - Block Blobs, Page Blobs, Append Blobs
@@ -16,13 +18,13 @@
   * LRS, ZRS, GRS
   * Capacity - up to 1TB/file 
   * Object Size - Up to 1TB/file
-  * Shared accross multiple VMs
+  * Shared across multiple VMs
   * 1000 IOps
   * Max Size - 5 TB File Share and 1 TB file within share
 
 * Disk Storage
   * provides managed and unmanage disk capabilities
-  * persistant data accessible from within the VM (VHDs)
+  * persistent data accessible from within the VM (VHDs)
   * Scope - single VM
   * Provides Snapshots and Copy
   * Built-in authentication
@@ -48,11 +50,13 @@
   * Cool access tier - Cost of storage is less and higher cost for accessing blobs
 
 ### Securing access to Storage
+
 * controlling access to storage account key using RBAC in Azure AD
 * using shared access signatures.
-* pulic access to blobs for anonymous read
+* public access to blobs for anonymous read
   
 #### SAS (Shared Access Signature)[^](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)
+
 * Provides access to Storage account resources to clients without sharing storage account keys
 * Types of Access Control
   * Time Interval
@@ -77,8 +81,9 @@
   * Storage client libraries
   
 ### Replication
+
 * Locally-redundant storage (LRS)
-  *  99.999999999% (11 9's) durability
+  * 99.999999999% (11 9's) durability
 * Zone-redundant storage (ZRS) (Preview)
   * at least 99.9999999999% (12 9's) durability
   * synchronous data replication across multiple availability zones
@@ -91,11 +96,13 @@
 * Read-access geo-redundant storage (RA-GRS)
   * provides read access to data in secondary region
 
-### Transfering Data to and from storage
+### Transferring Data to and from storage
+
 * AZCopy tool for Windows and Linux
 * Azure Import/Export services - for large amounts of blob data using hard drives
 
 ### StorSimple
+
 * Microsoft Azure StorSimple device -  an on-premises hybrid storage array that contains SSDs and HDDs, together with redundant controllers and automatic failover capabilities.
 * StorSimple Cloud Appliance (Virtual Appliance) - is a software version of the StorSimple device that replicates the architecture and most capabilities of the physical hybrid storage device
 * The Microsoft Azure StorSimple Virtual Array is an integrated storage solution that manages storage tasks between an on-premises virtual array running in a hypervisor and Microsoft Azure cloud storage.
@@ -103,6 +110,7 @@
 * The virtual array has a maximum capacity of 6.4 TB on the device (with an underlying storage requirement of 8 TB) and 64 TB including cloud storage.
 
 ### Storage Analytics
+
 * Azure Storage Analytics performs logging and provides metrics data for a storage account
 * Storage Analytics metrics are available for the Blob, Queue, Table, and File services
 * Storage Analytics logging is available for the Blob, Queue, and Table services
@@ -110,6 +118,7 @@
 * Storage Analytics has a 20TB limit independent of storage account limit
 
 ### CORS (Cross-Origin Resource Sharing) Support for Azure Services
+
 * CORS is an HTTP feature that enables a web application running under one domain to access resources in another domain.
 * Web browsers implement a security restriction known as same-origin policy that prevents a web page from calling APIs in a different domain
 * CORS provides a secure way to allow one domain (the origin domain) to call APIs in another domain.
@@ -118,4 +127,7 @@
 * By default, CORS is disabled for each service
 
 Useful Link:
-* Storage Concpets in Windows Server[^](https://docs.microsoft.com/en-us/windows-server/storage/storage)
+
+* Storage Concepts in Windows Server[^](https://docs.microsoft.com/en-us/windows-server/storage/storage)
+* Choose the right data store[^](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+* Data Store comparison[^](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-comparison)
