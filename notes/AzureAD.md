@@ -90,4 +90,11 @@ Important Azure AD features:
 
 Azure AD DS
 
+Using Shared Access Signatures (SAS)[^](https://docs.microsoft.com/en-in/azure/storage/common/storage-dotnet-shared-access-signature-part-1)
+* Service SAS
+* Account SAS
 
+* Ad hoc SAS
+* SAS with stored access policy
+
+[Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications)

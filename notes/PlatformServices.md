@@ -1,6 +1,9 @@
+#
+
 ## Artificial Intelligence Services
 
 ### Azure Machine Learning[^](https://docs.microsoft.com/en-in/azure/machine-learning/preview/overview-what-is-azure-ml)
+
 * Azure Machine Learning services (preview) enable building, deploying, and managing machine learning and AI models using any Python tools and libraries.
 * Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends
 * Azure Machine Learning Components:
@@ -22,6 +25,9 @@
     * Azure Machine Learning has two types of web services:
         * Request-Response Service (RRS): A low latency, highly scalable service that provides an interface to the stateless models created and deployed by using Machine Learning Studio.
         * Batch Execution Service (BES): An asynchronous service that scores a batch for data records. 
+
+![](https://docs.microsoft.com/en-us/azure/machine-learning/studio/media/what-is-ml-studio/azure-ml-studio-diagram.jpg)
+![](https://docs.microsoft.com/en-us/azure/machine-learning/studio/media/studio-overview-diagram/ml_studio_overview_v1.1.png)
 
 ### Azure Bot Service[^](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction)
 
@@ -137,6 +143,7 @@ Infuse your apps, websites and bots with intelligent algorithms to see, hear, sp
 ## Azure IoT
 
 ### Azure Stream Analytics[^](https://docs.microsoft.com/en-us/azure/stream-analytics/)
+
 * Azure Stream Analytics is a managed event-processing engine set up real-time analytic computations on streaming data
 * The data can come from devices, sensors, web sites, social media feeds, applications, infrastructure systems, and more
 * Use Stream Analytics to examine high volumes of data streaming from devices or processes, extract information from that data stream, identify patterns, trends, and relationships.
@@ -154,11 +161,10 @@ Infuse your apps, websites and bots with intelligent algorithms to see, hear, sp
 * Stream Analytics enables developers to use Tumbling, Hopping and Sliding windows to perform temporal operations on streaming data
 
 ### IoT Hub[^](https://docs.microsoft.com/en-us/azure/iot-hub/)[^](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub)
+
 Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end
 
-Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
-
-
+Comparison between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
 
 | **IoT Capability** | **IoT Hub standard tier** | **IoT Hub basic tier** | **Event Hubs** |
 |:--|:--|:--|:--|
@@ -172,8 +178,8 @@ Comparision between IoT Hub and Event Hub[^](https://docs.microsoft.com/en-us/az
 | Device twin and device management | Yes | | |
 | IoT Edge | Yes | | |
 
-
 IoT Hub communication options: 
+
 * Device Twins
 * Per-device authentication and secure connectivity
 * Route device-to-cloud messages to Azure services based on declarative rules
@@ -195,6 +201,7 @@ Gateways:
 * A field gateway differs from a simple traffic routing device (NAT / firewall)
 
 ### Event Hub[^](https://docs.microsoft.com/en-in/azure/event-hubs/event-hubs-what-is-event-hubs)
+
 * Azure Event Hubs is a highly scalable data streaming platform and event ingestion service, capable of receiving and processing millions of events per second.
 * Data sent to an event hub can be transformed and stored using any real-time analytics provider or batching/storage adapters
 * Event Hub is different from Azure Service Bus messaging, and does not implement some of the capabilities that are available for Service Bus messaging entities, such as topics.
@@ -211,6 +218,7 @@ Event Hubs features:
 ### Time Series Insights[^](https://docs.microsoft.com/en-us/azure/time-series-insights/time-series-insights-overview)[^](notes/Database.md#azure-time-series-insights)
 
 ### IoT Edge[^]()
+
 * Azure IoT Edge moves cloud analytics and custom business logic to devices
 * Azure IoT Edge is only available in the standard tier of IoT Hub
 * Azure IoT Edge is made up of three components:
@@ -219,6 +227,7 @@ Event Hubs features:
     * IoT Edge cloud interface - to configure workloads, monitor and manage IoT Edge devices
 
 ### Notification Hub[^](https://docs.microsoft.com/en-in/azure/notification-hubs/notification-hubs-push-notification-overview)
+
 * Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine.
 * a single cross-platform API call to send targeted and personalized push notifications to any mobile platform from any cloud or on-premises backend
 * Push notifications is a form of app-to-user communication where users of mobile apps are notified of certain desired information, usually in a pop-up or dialog box
@@ -226,9 +235,12 @@ Event Hubs features:
 * Notification Hubs is offered in three tiers—free, basic and standard. Base charge and quotas are applied at the namespace level[^](https://azure.microsoft.com/en-in/pricing/details/notification-hubs/)
 
 Challenges of Push Notifications:
+
 * Platform dependency
 * Scale - device tokens must be refreshed upon every app launch, broadcast support
 * Routing - backend must maintain a registry to associate devices with interest groups, users, properties, etc.
+
+Cross Platform Push notifications using Azure[^](https://msdn.microsoft.com/en-us/magazine/dn879353.aspx)
 
 Notification Hub advantages:
 * Cross platforms - iOS, Android, Windows, and Kindle and Baidu
@@ -250,6 +262,7 @@ Notification Hub advantages:
  App Service Mobile Apps has built-in support for push notifications using Notification Hubs.
 
 ### Event Grid[^](https://docs.microsoft.com/en-in/azure/event-grid/overview)
+
 ![Event Grid Functional Model](https://docs.microsoft.com/en-us/azure/event-grid/media/overview/functional-model.png)
 * Event Grid is a fully managed event routing service which provides reliable message delivery at massive scale
 * Azure Event Grid is a fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe mode
@@ -284,12 +297,15 @@ Notification Hub advantages:
     * Application integration
 
 ### Azure IoT Central[^](https://docs.microsoft.com/en-us/azure/iot-central/overview-iot-central)
+
 * A software as a service (SaaS) offering, to deploy a fully managed, end-to-end solution that enables powerful IoT scenarios without requiring cloud-solution expertise.
 
 ### Azure IoT Suite[^](https://docs.microsoft.com/en-us/azure/iot-suite/)
+
 * A platform as a service (PaaS) offering, fully customizable solutions for common scenarios to accelerate your IoT project.
 
 ### Azure Relay[^](https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-what-is-it)
+
 * Hybrid connections and WCF Relay are part of Azure Relay service
 * Comminicate with on-premises resources without opening a firewall port
 * Hybrid connections support multi-platform scenarios
@@ -300,6 +316,7 @@ Notification Hub advantages:
 * App Service Environment (ASE) can be deployed into an Azure VNet for bidirectional access.
 
 ### Useful links
+
 * Compare Queues: [^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
 
 * Performance:[^](https://docs.microsoft.com/en-in/azure/service-bus-messaging/service-bus-performance-improvements)
@@ -315,10 +332,30 @@ Notification Hub advantages:
 * Azure Machine Learning Key Concepts[^](https://docs.microsoft.com/en-in/azure/machine-learning/desktop-workbench/overview-general-concepts)
 
 ### Azure Media Services[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-overview)
+
 * Microsoft Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications
 * Azure Media Services concepts[^](https://docs.microsoft.com/en-in/azure/media-services/media-services-concepts)
 * Media Services Applications
-    * Live event Streaming service with CDN capabilities
-    * Studio grade encoding
-    * Content protection and encryption
-    * Distribute content across multiple channels and devices
+  * Live event Streaming service with CDN capabilities
+  * Studio grade encoding
+  * Content protection and encryption
+  * Distribute content across multiple channels and devices
+
+![Commonly used objects when developing against the AMS OData model
+](https://docs.microsoft.com/en-us/azure/media-services/previous/media/media-services-overview/media-services-overview-object-model.png)
+
+Scenarios[^](https://docs.microsoft.com/en-us/azure/media-services/previous/scenarios-and-availability)
+
+![Protect content in storage and deliver streaming media in the clear (non-encrypted)
+](https://docs.microsoft.com/en-us/azure/media-services/previous/media/scenarios-and-availability/scenarios-and-availability01.png)
+
+![Protect content in storage, deliver dynamically encrypted streaming media
+](https://docs.microsoft.com/en-us/azure/media-services/previous/media/media-services-content-protection-overview/media-services-content-protection-with-multi-drm.png)
+
+1. Upload a high-quality media file into an asset. Apply storage encryption option to the asset.
+2. Encode to a set of adaptive bitrate MP4 files. Apply storage encryption option to the output asset.
+3. Create encryption content key for the asset you want to be dynamically encrypted during playback.
+4. Configure content key authorization policy.
+5. Configure asset delivery policy (used by dynamic packaging and dynamic encryption).
+6. Publish the asset by creating an OnDemand locator.
+7. Stream published content.

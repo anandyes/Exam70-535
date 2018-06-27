@@ -58,6 +58,10 @@
   * Web role: Automatically deploys and hosts your app through IIS.
   * Worker role: Does not use IIS, and runs your app standalone.
 
+* The Azure Linux Agent is installed on the Linux VM and is responsible to communicate with the Azure Frabric Controller.
+* It is a prerequisite that the Virtual Machines can receive ip addresses from DHCP.
+* Azure does not use VHDX, only VHD. We are required to convert VHDX to VHD.
+
 ### Azure Backup[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup)[^](AzureBackup.md)
 
 Components:[^](https://docs.microsoft.com/en-in/azure/backup/backup-introduction-to-azure-backup#which-azure-backup-components-should-i-use)
@@ -98,7 +102,7 @@ The following table and graphic provide a high-level view of the components used
 
 ![Hyper-V to Azure architecture (with VMM)](https://docs.microsoft.com/en-us/azure/site-recovery/media/hyper-v-azure-architecture/arch-onprem-onprem-azure-vmm.png)
 
-#### Useful Links:
+#### Useful Links
 
 1. [Manage Availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability) 
 2. [Azure Exam Prep – Fault Domains and Update Domains](https://blogs.msdn.microsoft.com/plankytronixx/2015/05/01/azure-exam-prep-fault-domains-and-update-domains/) 
@@ -209,18 +213,18 @@ Serverless Comparison[^](https://docs.microsoft.com/en-in/azure/azure-functions/
 
 * Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.
 * Service Fabric provides three broad areas to help you build applications that use a microservices approach:
-    * A platform that provides system services to deploy, upgrade, detect, and restart failed services, discover services, route messages, manage state, and monitor health. 
-    * Ability to deploy applications either running in containers or as processes. Service Fabric is a container and process orchestrator.
-    * Productive programming APIs, to help you build applications as microservices: ASP.NET Core, Reliable Actors, and Reliable Services.
+  * A platform that provides system services to deploy, upgrade, detect, and restart failed services, discover services, route messages, manage state, and monitor health. 
+  * Ability to deploy applications either running in containers or as processes. Service Fabric is a container and process orchestrator.
+  * Productive programming APIs, to help you build applications as microservices: ASP.NET Core, Reliable Actors, and Reliable Services.
 * A Service Fabric cluster is a network-connected set of virtual or physical machines into which your microservices are deployed and managed. Clusters can scale to thousands of machines.
 * A stateful service uses Service Fabric to manage your service's state via its Reliable Collections or Reliable Actors programming models.
 * A key differentiation with Service Fabric is its strong focus on building stateful services, either with the built in programming models or with containerized stateful services
 * Service Fabric supported programming models:[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-choose-framework)
-    * Containers
-    * Reliable Services
-    * Reliable Actors - framework uses independent units of compute and state with single-threaded execution called actors
-    * ASP.NET Core
-    * Guest executables
+  * Containers
+  * Reliable Services
+  * Reliable Actors - framework uses independent units of compute and state with single-threaded execution called actors
+  * ASP.NET Core
+  * Guest executables
 
 * Service Fabric Application Scenarios[^](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-application-scenarios) - The Service Fabric platform in Azure is ideal for the following categories of applications:
     * Highly available services - provide fast failover
@@ -276,6 +280,24 @@ Key features of App Service Web Apps:
 * API and mobile features
 * Serverless code
 
+[Mobile Apps in App Service](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-value-prop)
+![Mobile App Architecture](https://docs.microsoft.com/en-us/azure/app-service-mobile/media/app-service-mobile-value-prop/overview.png)
+
+Mobile Apps features:
+
+* Authentication and authorization
+* Data access
+* Offline Data Sync [^](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)
+* Push notifications[^](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-push-notification-overview)
+
+Azure App Service features:
+
+* [Autoscaling](https://docs.microsoft.com/en-us/azure/app-service/web-sites-scale)
+* [Staging environments](https://docs.microsoft.com/en-us/azure/app-service/web-sites-staged-publishing)
+* [Continuous deployment](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git)
+* Virtual networking: [hybrid connections](https://docs.microsoft.com/en-us/azure/biztalk-services/integration-hybrid-connection-overview), [virtual networks](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet), [ExpressRoute](https://docs.microsoft.com/en-us/azure/app-service/environment/app-service-app-service-environment-network-configuration-expressroute)
+* Isolated and dedicated environments [App Service environments](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
+
 ### Custom Web API[^](https://docs.microsoft.com/en-in/azure/logic-apps/logic-apps-create-api-app)
 
 * Custom APIs and custom connectors are web APIs that use REST for pluggable interfaces, Swagger metadata format for documentation, and JSON as their data exchange format. 
@@ -289,6 +311,7 @@ Key features of App Service Web Apps:
   * Wait and listen for new data or events with the **webhook trigger pattern**
 
 #### [On-Premises PowerBI Gateway](https://docs.microsoft.com/en-in/power-bi/service-gateway-getting-started)
+
 A gateway is software that facilitates access to data that resides on a private, on-premises network, for subsequent use in a cloud service like Power BI.
 
 ![On-Prem Gateway and Gateway Could Service](https://docs.microsoft.com/en-in/power-bi/media/service-gateway-getting-started/gateway-how-it-works.png)
@@ -416,11 +439,11 @@ Azure App Service application in multiple regions to achieve high availability![
 ### App Service plans[^](https://docs.microsoft.com/en-in/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 
 * An App Service plan defines a set of compute resources for a web app to run. These compute resources are analogous to the server farm in conventional web hosting. 
-*  categories of pricing tiers:
-    * Shared compute: Free and Shared -  runs an app on the same Azure VM as other App Service apps, including apps of other customers. The resources cannot scale out. Use only for development and testing purposes.
-    * Dedicated compute: The Basic, Standard, Premium, and PremiumV2 tiers -run apps on dedicated Azure VMs. Only apps in the same App Service plan share the same compute resources.
-    * Isolated: runs dedicated Azure VMs on dedicated Azure VNets, which provides network isolation on top of compute isolation. It provides the maximum scale-out capabilities.
-    * Consumption: only available to function apps. It scales the functions dynamically depending on workload.
+* categories of pricing tiers:
+  * **Shared compute** : Free and Shared -  runs an app on the same Azure VM as other App Service apps, including apps of other customers. The resources cannot scale out. Use only for development and testing purposes.
+  * **Dedicated compute**: The Basic, Standard, Premium, and PremiumV2 tiers -run apps on dedicated Azure VMs. Only apps in the same App Service plan share the same compute resources.
+  * **Isolated** : runs dedicated Azure VMs on dedicated Azure VNets, which provides network isolation on top of compute isolation. It provides the maximum scale-out capabilities.
+  * **Consumption**: only available to function apps. It scales the functions dynamically depending on workload.
 * The new PremiumV2 pricing tier provides Dv2-series VMs with faster processors, SSD storage, and double memory-to-core ratio compared to Standard tier. 
 
 ### Business Continuity[^](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications)[^](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions)[^](https://docs.microsoft.com/en-in/azure/architecture/resiliency/index)

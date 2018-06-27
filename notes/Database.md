@@ -43,14 +43,25 @@ Built-in Intelligence
 
 * Multi-tenant and Single-tenant sharding patterns.
 
-### SQL Database Security
+### SQL Database Security[^](https://docs.microsoft.com/en-us/azure/security/azure-database-security-overview)
 
-Protect Data:
+Protection of Data:
 
-* Data in motion - Transport layer security
-* Data at rest - Transparent data encryption
-* Data in use - Always encrypted
-* column-level encryption, or cell-level encryption. 
+* Encryption of Data in motion - Transport layer security, use TLS/SSL to authenticate servers and clients
+* Encryption of Data at rest - Transparent data encryption, encrypts the storage of an entire database by using a symmetric key
+* Encryption of Data in use - Always encrypted
+* column-level encryption, or cell-level encryption.
+
+Database Access Control:
+
+* Firewall and firewall rules
+* Authentication - SQL Authentication and Azure AD Authentication
+* Authorization - role memberships, object-level permissions
+
+Application Access:
+
+* Dynamic data masking (DDM)- limits sensitive data exposure by masking it to non-privileged users, protect personally identifiable information (PII) data
+* Row-Level Security - security requirement for multi-tenant databases, control access to rows in a database table based on the characteristics of the user who's executing a query, predicate-based access control
 
 Data Discovery & Classification (preview) [^](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification) - provides capabilities for discovering, classifying, labeling and protecting the sensitive data.
 
@@ -200,46 +211,46 @@ Key Capabilities:
 
 * Multi-homing APIs, distribute data across Azure regions, ensures  lowest possible latency.
 * Multiple data models and popular APIs for accessing and querying data
-    * The atom-record-sequence (ARS) based data model supports multiple data models
-    * Data model APIS supported:
-        * SQL API (Document DB): A schema-less JSON database engine with rich SQL querying capabilities
-        * MongoDB API : A massively scalable MongoDB-as-a-Service powered by Azure Cosmos DB platform
-            * Supports **MapReduce**
-            * aggregation pipeline
-            * full text index 
-        * Cassandra API : A globally distributed Cassandra-as-a-Service powered by Azure Cosmos DB platform
-            * Data is automatically replicated to multiple nodes for fault-tolerance.
-            * Replication across multiple data centers is supported. 
-            * Failed nodes can be replaced with no downtime.
-        * Graph (Gremlin) API: A fully managed, horizontally scalable graph database service that makes it easy to build and run applications that work with highly connected datasets supporting Open Graph APIs (based on the Apache TinkerPop specification, Apache Gremlin).
-            * used for managing Azure Active Directory 
-        * Table API : A key-value database service built to provide premium capabilities (such as, automatic indexing, guaranteed low latency, global distribution) to existing Azure Table storage applications without making any app changes.
-        * Additional data models will be added soon
+  * The atom-record-sequence (ARS) based data model supports multiple data models
+  * Data model APIS supported:
+    * SQL API (Document DB): A schema-less JSON database engine with rich SQL querying capabilities
+    * MongoDB API : A massively scalable MongoDB-as-a-Service powered by Azure Cosmos DB platform
+      * Supports **MapReduce**
+      * aggregation pipeline
+      * full text index 
+    * Cassandra API : A globally distributed Cassandra-as-a-Service powered by Azure Cosmos DB platform
+      * Data is automatically replicated to multiple nodes for fault-tolerance.
+      * Replication across multiple data centers is supported. 
+      * Failed nodes can be replaced with no downtime.
+    * Graph (Gremlin) API: A fully managed, horizontally scalable graph database service that makes it easy to build and run applications that work with highly connected datasets supporting Open Graph APIs (based on the Apache TinkerPop specification, Apache Gremlin).
+      * used for managing Azure Active Directory 
+    * Table API : A key-value database service built to provide premium capabilities (such as, automatic indexing, guaranteed low latency, global distribution) to existing Azure Table storage applications without making any app changes.
+      * Additional data models will be added soon
 * Elastically and independently scale throughput and storage on demand and worldwide
-    * Easily scale database throughput at a per-second granularity
-    * Scale storage size transparently and automatically to handle your size requirements 
+  * Easily scale database throughput at a per-second granularity
+  * Scale storage size transparently and automatically to handle your size requirements 
 * Build highly responsive and mission-critical applications
-    *  guarantees end-to-end low latency at the 99th percentile
+  * guarantees end-to-end low latency at the 99th percentile
 * Ensure "always on" availability
-    * 99.99% availability SLA for all single region database accounts, and all 99.999% read availability on all multi-region database accounts
+  * 99.99% availability SLA for all single region database accounts, and all 99.999% read availability on all multi-region database accounts
     * Deploy to any number of Azure regions for higher availability and better performance.
     * Dynamically set priorities to regions and simulate a failure of one or more regions with zero-data loss guarantees to test the end-to-end availability for the entire app 
 * Write globally distributed applications, the right way
-    * Five well-defined, practical, and intuitive consistency models
+  * Five well-defined, practical, and intuitive consistency models
 * Money back guarantees
-    * Industry-leading, financially backed, comprehensive service level agreements for availability, latency, throughput, and consistency for your mission-critical data
+  * Industry-leading, financially backed, comprehensive service level agreements for availability, latency, throughput, and consistency for your mission-critical data
 * No database schema/index management
-    * Rapidly iterate the schema of your application without worrying about database schema and/or index management.
+  * Rapidly iterate the schema of your application without worrying about database schema and/or index management.
     * Azure Cosmos DB’s database engine is fully schema-agnostic – it automatically indexes all the data it ingests without requiring any schema or indexes and serves blazing fast queries
 * Low cost of ownership
-    * Five to ten times more cost effective than a non-managed solution or an on-prem NoSQL solution
-    * Three times cheaper than AWS DynamoDB or Google Spanne
+  * Five to ten times more cost effective than a non-managed solution or an on-prem NoSQL solution
+  * Three times cheaper than AWS DynamoDB or Google Spanne
 
 * Azure Cosmos DB offers multiple, well defined (relaxed) consistency models to choose from[^](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels)
 
 ![](https://docs.microsoft.com/en-us/azure/cosmos-db/media/consistency-levels/five-consistency-levels.png)
 
-**Consistency Levels and guarantees**
+#### **Consistency Levels and guarantees**
 
 | Consistency Level| Guarantees |
 | --- | --- |
@@ -268,7 +279,7 @@ Key Capabilities:
     * Session
     * Consistent Prefix
     * Eventual
-* Throughput [^](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units)
+* Throughput / Request Units [^](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units)
 * Multi-Model APIs
     * SQL API (DocumentDB API) [^](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction)
     * MangoDB API [^](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
@@ -380,6 +391,17 @@ Capabilities of Data Catalog
 * Parameters - Parameters are key-value pairs of read-only configuration
 * Control flow - Control flow is an orchestration of pipeline activities that includes chaining activities in a sequence, branching, defining parameters at the pipeline level, and passing arguments while invoking the pipeline on-demand or from a trigger
 
+Transform Data activities using Azure Data Factory[^](https://docs.microsoft.com/en-us/azure/data-factory/transform-data)
+
+* HDInsight Activities (Hive, Pig, MapReduce, Hadoop Streaming, Spark)
+* Machine Learning Activities
+* Stored procedure activity
+* Data Lake Analytics U-SQL activity
+* .NET custom activity
+
+Compute environments supported by Data Factory and the activities that can run on them[^](https://docs.microsoft.com/en-us/azure/data-factory/compute-linked-services)
+
+
 ### Azure Data Lake Analytics[^](https://docs.microsoft.com/en-us/azure/data-lake-analytics/data-lake-analytics-overview)
 
 * Azure Data Lake Analytics (ADLA) is an on-demand analytics job service that simplifies big data
@@ -421,8 +443,22 @@ Azure HDInsight can be used for a variety of scenarios in big data processing. I
 
 * Azure Databricks is an Apache Spark-based analytics platform
 * Spark in Azure Databricks includes the following components:
-    * Spark SQL and DataFrames
-    * Streaming
-    * MLib
-    * GraphX
-    * Spark Core API:  R, SQL, Python, Scala, and Java
+  * Spark SQL and DataFrames
+  * Streaming
+  * MLib
+  * GraphX
+  * Spark Core API:  R, SQL, Python, Scala, and Java
+
+### Polyglot Persistence[^](https://www.jamesserra.com/archive/2015/07/what-is-polyglot-persistence/)
+
+|**Functionality**|**Considerations**|**Database Type**|
+|:--|:--|:--|
+|User Sessions|Rapid Access for reads and writes.  No need to be durable.|Key-Value|
+|Financial Data|Needs transactional updates.  Tabular structure fits data.|RDBMS|
+|POS Data|Depending on size and rate of ingest.  Lots of writes, infrequent reads mostly for analytics.|RDBMS (if modest), Key Value or Document (if ingest very high) or Column if analytics is key.|
+|Shopping Cart|High availability across multiple locations.  Can merge inconsistent writes.|Document, (Key Value maybe)|
+|Recommendations|Rapidly traverse links between friends, product purchases, and ratings.|Graph, (Column if simple)|
+|Product Catalog|Lots of reads, infrequent writes.  Products make natural aggregates.|Document|
+|Reporting|SQL interfaces well with reporting tools|RDBMS, Column|
+|Analytics|Large scale analytics on large cluster|Column|
+|User activity logs, CSR logs, Social Media analysis|High volume of writes on multiple nodes|Key Value or Document|

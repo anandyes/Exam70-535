@@ -49,11 +49,13 @@
   * Hot for frequent data access Higher cost for storage but cost of access is low
   * Cool access tier - Cost of storage is less and higher cost for accessing blobs
 
-### Securing access to Storage
+### Securing access to Storage / Authorization for the Azure Storage Services[^](https://docs.microsoft.com/en-in/rest/api/storageservices/Authorization-for-the-Azure-Storage-Services)
 
-* controlling access to storage account key using RBAC in Azure AD
-* using shared access signatures.
-* public access to blobs for anonymous read
+* [Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-in/rest/api/storageservices/authenticate-with-azure-active-directory) - controlling access to storage account key using RBAC in Azure AD
+* [Shared Key](https://docs.microsoft.com/en-in/rest/api/storageservices/authorize-with-shared-key)
+* [Shared access signatures](https://docs.microsoft.com/en-in/rest/api/storageservices/delegating-access-with-a-shared-access-signature) - using shared access signatures.
+* [Anonymous access to containers and blobs](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)- public access to blobs for anonymous read
+
   
 #### SAS (Shared Access Signature)[^](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)
 
@@ -109,6 +111,9 @@
 * The virtual array is particularly well-suited for the storage of infrequently accessed archival data.
 * The virtual array has a maximum capacity of 6.4 TB on the device (with an underlying storage requirement of 8 TB) and 64 TB including cloud storage.
 
+[StorSimple Data Manager solution overview](https://docs.microsoft.com/en-in/azure/storsimple/storsimple-data-manager-overview)
+![StorSimple Data Manager](https://docs.microsoft.com/en-in/azure/storsimple/media/storsimple-data-manager-overview/storsimple-data-manager-overview2.png)
+
 ### Storage Analytics
 
 * Azure Storage Analytics performs logging and provides metrics data for a storage account
@@ -116,6 +121,9 @@
 * Storage Analytics logging is available for the Blob, Queue, and Table services
 * Storage account with ZRS do not have metrics and logging capabilities
 * Storage Analytics has a 20TB limit independent of storage account limit
+
+[About Storage Analytics Logging](https://docs.microsoft.com/en-us/rest/api/storageservices/About-Storage-Analytics-Logging)
+Log Naming Conventions: "<http://<accountname>.blob.core.windows.net/$logs/<service-name>/YYYY/MM/DD/hhmm/<counter>.log>"
 
 ### CORS (Cross-Origin Resource Sharing) Support for Azure Services
 
